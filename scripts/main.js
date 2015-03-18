@@ -5,7 +5,7 @@ $("#menu-toggle").click(function(e) {
 
 });
 $(".sidebar-nav-links a").click(function(e) {
-        e.preventDefault();
+      
 
         $(this).children().addClass('sidebar-active-tab')
          .parent().siblings().find('.sidebar-active-tab').removeClass('sidebar-active-tab');
