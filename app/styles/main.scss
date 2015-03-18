@@ -34,7 +34,7 @@ header img{
 
 .user-dashboard{
   float: right;
-  width: 360px;
+  width: 300px;
 padding-top: 10px;
   height: 100%;
 }
@@ -166,10 +166,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
   transition: all 0.3s ease;
    text-decoration: none;
    padding-left: 10px;
-   padding-bottom: 25px;
-    padding-top: 25px;
+   padding-bottom: 12px;
+    padding-top: 12px;
    font-size: 1.1em;
    color: white;
+
+   display: block;
 }
 
 .sidebar-nav-links a{
@@ -180,7 +182,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 .sidebar-nav-links li:hover{
   background: #1f487c;
 
- opacity: .8;
+ opacity: .6;
+
  -webkit-box-shadow: -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  -moz-box-shadow:    -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
@@ -188,8 +191,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 
 .sidebar-nav-links .sidebar-active-tab{
   background: #1f487c;
-
- opacity: .8;
+   border-top: 1px solid #373737;
+      border-bottom: 1px solid #1A1A1A;
+ opacity: 1;
  -webkit-box-shadow: -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  -moz-box-shadow:    -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
