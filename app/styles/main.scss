@@ -58,7 +58,7 @@ padding-top: 10px;
 }
 
 .user-dashboard a:hover{
-color: #319fff;
+color:#337ab7;
 text-decoration: underline;
 }
 .user-dashboard li{
@@ -176,8 +176,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
    font-size: 1.1em;
    color: white;
    display: block;
-   border-top: 1px solid #2974ba;
-      border-bottom: 1px solid#2974ba;
+   border-top: 1px solid transparent;
+      border-bottom: 1px solid transparent;
 }
 
 .sidebar-nav-links a{
@@ -256,6 +256,7 @@ min-width: 700px;
 }
 .nav-tabs>li>a{
   color: white;
+  transition: all 0.3s ease;
 
 }
 
@@ -296,23 +297,33 @@ select{
   margin-top:3px;
 }
 .work-order-list-container{
-
-
   padding: 20px;
-
   margin-top: 10px;
 
 }
 
 .search-form-container{
   padding: 20px;
-
   margin-top: 10px;
 }
+
+.update-work-order-container{
+  padding: 20px;
+  margin-top: 10px;
+}
+
+
 #work-order-list-heading a{
   padding-left: 20px;
   font-size: 14px;
 }
+
+#work-order-list-heading span{
+  padding-left: 20px;
+  font-size: 14px;
+}
+
+
 .work-order-list-console{
   margin: 10px;
   margin-bottom: 20px;
@@ -324,6 +335,20 @@ select{
 #work-order-views{
   width: 250px;
   display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#search-input{
+  width: 250px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#small-search-button{
+  position: absolute;
+  margin-left: -140pxpx;
 }
 .table-footer{
   overflow: auto;
@@ -360,4 +385,17 @@ button i{
 
 .help-block{
   font-size: 12px;
+}
+
+
+#work-order-info-grid{
+  border: 2px solid #ddd;
+  width: 100%;
+  overflow: auto;
+  margin:0;
+
+}
+.tri-column{
+  float: left;
+  width: 33.3333%;
 }
