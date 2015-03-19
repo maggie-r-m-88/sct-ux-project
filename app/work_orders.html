@@ -59,10 +59,11 @@
     <div class="tab-container">
     <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#work-order-list"><i class="fa fa-list-alt"></i>Work Order List</a></a></li>
-           <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-search"></i>Find Customer</a></li>
-           <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-file-o"></i>Create Work Order</a></li>
+           <li><a data-toggle="tab" href="#search-form"><i class="fa fa-search"></i>Find Customer</a></li>
+           <li><a data-toggle="tab" href="#create-work-order"><i class="fa fa-file-o"></i>Create Work Order</a></li>
            <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-pencil-square-o"></i>Update Work Order</a></li>
            <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-exchange"></i>Quick Status</a></li>
+
 
        </ul>
     </div><!--end of tab container-->
@@ -86,7 +87,7 @@
               <option value="three">Open Work Orders</option>
               <option value="four">Ready for Pickup</option>
               <option value="five">Ready for Repair</option>
-           </select><button>Search</button>
+           </select>  <button type="submit" class="btn btn-primary">Select</button>
             </p>
           </div><!---end work work order list console-->
 
@@ -132,6 +133,18 @@
         <td><a href="#">WOO0708</a></td>
         <td>Sally Jones</td>
         <td>11/03/2014 3:21 PM</td>
+        <td>Finish Repair</td>
+        <td>1139388482020</td>
+        <td>Lenovo Program</td>
+        <td>9600</td>
+        <td>False</td>
+
+      </tr>
+
+      <tr>
+        <td><a href="#">XO19308</a></td>
+        <td>José Martínez</td>
+        <td>10/03/2014 11:05 PM</td>
         <td>Parts Delivered</td>
         <td>679388482020</td>
         <td>Lenovo Program</td>
@@ -155,24 +168,91 @@
 <li><a href="#">5</a></li>
 <li><a href="#">&raquo;</a></li>
 </ul>
+
 </div>
-<button><i class="fa fa-download"></i>CSV</button>
- <button><i class="fa fa-download"></i>XML</button>
+<button type="button" class="btn btn-default"><i class="fa fa-download"></i>CSV</button>
+<button type="button" class="btn btn-default"><i class="fa fa-download"></i>XML</button>
+
+
+
 
         </div><!---end of work order list container-->
            </div><!--end of work order list-->
 
 
-           <div id="sectionB" class="tab-pane fade">
-               <h3>Section B</h3>
-               <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+           <div id="search-form" class="tab-pane fade">
+             <div class="search-form-container">
+             <div class="panel panel-default">
+               <div id="work-order-list-heading" class="panel-heading">
+        <h4>Find a Customer</h4>
+        </div>
            </div>
+           <div class="work-order-list-console">
+             <p>Locate a Customer or Work Order by entering one of the following.
+           </div><!--end of console-->
 
+           <form class="form-horizontal">
+    <div class="form-group">
+        <label for="mobilephone" class="control-label col-xs-2">Mobile Phone #:</label>
+        <div class="col-xs-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mobilephone" class="control-label col-xs-2">Name:</label>
+        <div class="col-xs-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="">
+          <span class="help-block">To search last name, write "Smith".</span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mobilephone" class="control-label col-xs-2">Serial #:</label>
+        <div class="col-xs-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="">
+
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label for="mobilephone" class="control-label col-xs-2">Work Order #:</label>
+        <div class="col-xs-10">
+          <input type="text" class="form-control" id="inputPassword" placeholder="">
+        </div>
+    </div>
+ <div class="form-group">
+        <label for="inputPassword" class="control-label col-xs-2">Program:</label>
+        <div class="col-xs-10">
+          <select class="form-control" id="search-program">
+            <option>Motorola Program</option>
+            <option>Samsung Program</option>
+            <option>Lenovo</option>
+</select>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-xs-offset-2 col-xs-10">
+            <button type="submit" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+</form>
+         </div><!--end of search form container-->
+
+
+
+
+       </div><!--end of tab content-->
+
+       <div id="create-work-order" class="tab-pane fade">
+         <div class="create-work-order-container">
+           hello!
+         </div>
        </div>
 
 
-
-    </div>   <!-- Keep all page content within the page-content inset div! -->
+    </div>  <!--end of tab content--> <!-- Keep all page content within the page-content inset div! -->
   </div>   <!--end of wrapper-->
 
 
