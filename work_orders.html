@@ -52,8 +52,8 @@
     <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#work-order-list"><i class="fa fa-list-alt"></i>Work Order List</a></a></li>
            <li><a data-toggle="tab" href="#search-form"><i class="fa fa-search"></i>Find Customer</a></li>
-           <li><a data-toggle="tab" href="#create-work-order"><i class="fa fa-file-o"></i>Create Work Order</a></li>
-           <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-pencil-square-o"></i>Update Work Order</a></li>
+           <li><a data-toggle="tab" href="#"><i class="fa fa-file-o"></i>Create Work Order</a></li>
+           <li><a data-toggle="tab" href="#update-work-order"><i class="fa fa-pencil-square-o"></i>Update Work Order</a></li>
            <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-exchange"></i>Quick Status</a></li>
 
 
@@ -237,11 +237,24 @@
 
        </div><!--end of tab content-->
 
-       <div id="create-work-order" class="tab-pane fade">
-         <div class="create-work-order-container">
-           hello!
-         </div>
-       </div>
+       <div id="update-work-order" class="tab-pane fade">
+         <div class="update-work-order-container">
+           <div class="panel panel-default">
+             <div id="work-order-list-heading" class="panel-heading">
+      <h4>Update Work Order
+        <span> WO Code:   <input id="search-input" type="search" class="form-control" placeholder="Search" /><button type="submit" id="small-search-button" class="btn btn-default"><i class="fa fa-search"></i></button>
+       </span>
+      </h4>
+      </div>
+    </div><!--end of panel-->
+    <div id="work-order-info-grid">
+        <div class="tri-column">WO Code:</div>
+        <div class="tri-column">Serial #:</div>
+        <div class="tri-column">Warranty Status:</div>
+    </div>
+    </div><!--end of update work order container-->
+
+       </div><!--end of update work order-->
 
 
     </div>  <!--end of tab content--> <!-- Keep all page content within the page-content inset div! -->
