@@ -256,10 +256,128 @@
       </div>
     </div><!--end of panel-->
     <div id="work-order-info-grid">
-        <div class="tri-column">WO Code:</div>
-        <div class="tri-column">Serial #:</div>
-        <div class="tri-column">Warranty Status:</div>
+      <div class="tri-column">
+        <div id="textbox">
+    <p class="alignleft">WO Code:</p>
+    <p class="alignright">WO189039</p>
+  </div>
+
+      </div><!--end of tricolumn1-->
+
+      <div class="tri-column">
+      </div>
+
+      <div class="tri-column">
+      </div>
+    </div> <!--end of work order info grid-->
+
+    <div class="work-order-button-container">
+      <button class="btn btn-primary"><i class="fa fa-check-square-o"></i>Repair Complete</button>
+      <button class="btn btn-primary"><i class="fa fa-file-text"></i>Return NTF</button>
+      <button class="btn btn-primary"><i class="fa fa-print"></i>Print</button>
+      <button class="btn btn-danger"><i class="fa fa-ban"></i>Cancel</button>
     </div>
+
+<!--  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Work Order   <i class="fa fa-minus-circle"></i></h3>
+
+  </div>
+</div>-->
+
+  <div class="panel panel-default">
+    <div id="expand-parts-table" class="panel-heading">
+      <h3 class="panel-title"><i class="fa fa-minus-circle"></i> Parts</h3>
+
+  </div>
+  </div>
+  <table class="table table-bordered" id="parts-table">
+    <thead>
+       <tr>
+           <th data-field="id">Part Type</th>
+           <th data-field="name">Part Number</th>
+           <th data-field="price">Description</th>
+           <th data-field="status">Quantity</th>
+           <th data-field="serial">Serial ID</th>
+           <th data-field="serial">Price</th>
+           <th data-field="model">User Name</th>
+           <th data-field="bounce">Create Timestamp</th>
+           <th data-field="bounce">Warrantable</th>
+           <th data-field="bounce">In Inventory</th>
+       </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>Mech</td>
+       <td>ASY-112837-003</td>
+       <td>Bottom Cover ASY 8300 Black</td>
+       <td>1</td>
+       <td></td>
+       <td>$0.00</td>
+       <td>Mark Riley</td>
+       <td>12/11/2014 3:08 PM</td>
+       <td>True</td>
+       <td>False</td>
+    </tr>
+    <tr>
+       <td>Mech</td>
+       <td>ASY-14360-004</td>
+       <td>Assy, Bottom Housing, Comet Wifi 8120</td>
+       <td>1</td>
+       <td></td>
+       <td></td>
+       <td>Mark Riley</td>
+       <td>12/11/2014 3:08 PM</td>
+       <td>False</td>
+       <td>True</td>
+     </tr>
+   </table>
+
+
+  <div id="expand-status-info-table" class="panel panel-default">
+    <div class="panel-heading">
+      <i class="fa fa-minus-circle"></i>
+      <a href="#">Attachments</a>
+      <a href="#">Complaints</a>
+      <a href="#">Status History</a>
+      <a href="#">Service Bulletins</a>
+
+  </div>
+  </div>
+
+  <table id="status-info-table" class="table">
+    <thead>
+       <tr>
+           <th data-field="id">Update Time Local</th>
+           <th data-field="name">Status</th>
+           <th data-field="price">User Name</th>
+       </tr>
+   </thead>
+   <tbody>
+     <tr>
+       <td>12/11/2014 3:09 PM</td>
+       <td>Finish Repair</td>
+       <td>Mark Riley</td>
+     </tr>
+     <tr>
+       <td>12/11/2014 3:09 PM</td>
+       <td>Parts Delivered</td>
+       <td>Mark Riley</td>
+     </tr>
+     <tr>
+       <td>12/11/2014 1:22 PM</td>
+       <td>Add Parts</td>
+       <td>Mark Riley</td>
+     </tr>
+     <tr>
+       <td>12/10/2014 4:47 PM</td>
+       <td>Receive Unit</td>
+       <td>Mark Riley</td>
+     </tr>
+   </tbody>
+   </table>
+
+
     </div><!--end of update work order container-->
 
        </div><!--end of update work order-->

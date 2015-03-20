@@ -11,3 +11,14 @@ $(".sidebar-nav-links a").click(function(e) {
          .parent().siblings().find('.sidebar-active-tab').removeClass('sidebar-active-tab');
 
 });
+
+$("#expand-parts-table").click(function() {
+    $("#parts-table").toggle();
+    $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+});
+
+
+$("#expand-status-info-table").click(function() {
+    $("#status-info-table").toggle();
+    $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+});

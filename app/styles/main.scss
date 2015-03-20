@@ -2,10 +2,19 @@
 @import '../../bower_components/bourbon/dist/bourbon';
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
+//color pallette
+
+
+$darkblue: #1f487c;
+$superlightblue: #ebf1f8;
+$lightblue: #337ab7;
+
+
+
 // Custom Styles
 body {
 //background: #fafafa;
-background: #ebf1f8;
+background: $superlightblue;
 //background:  #ebf1f8;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
@@ -17,13 +26,14 @@ background: #ebf1f8;
     padding-top: 40px;
     transition: all .4s ease 0s;
     height: 100%;
-    background: #1f487c;
+    background: $darkblue;
+    min-width: 1000px;
 }
 
 header {
   width:100%;
-  background: #1f487c;
-  min-width: 800px;
+  background: $darkblue;
+  min-width: 1000px;
   height: 50px;
   position:absolute;
   top:0;
@@ -58,7 +68,7 @@ padding-top: 10px;
 }
 
 .user-dashboard a:hover{
-color:#337ab7;
+color:$lightblue;
 text-decoration: underline;
 }
 .user-dashboard li{
@@ -122,7 +132,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 
 
 //    background: #4f81bd;
-    border-right: 2px solid  #1f487c;
+    border-right: 2px solid  $darkblue;
     border-radius: 2px;
 
 }
@@ -186,7 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 
 
 .sidebar-nav-links li:hover{
-  background: #1f487c;
+  background: $darkblue;
   border-top: 1px solid #373737;
      border-bottom: 1px solid #1A1A1A;
  opacity: .6;
@@ -197,7 +207,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 }
 
 .sidebar-nav-links .sidebar-active-tab{
-  background: #1f487c;
+  background: $darkblue;
    border-top: 1px solid #373737;
       border-bottom: 1px solid #1A1A1A;
  opacity: 1;
@@ -222,8 +232,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
   height: auto;
   padding-left:0;
 
-  background: #ebf1f8;
-min-width: 700px;
+  background: $superlightblue;
+//min-width: 960px;
+
   margin-top: 10px;
 
 
@@ -246,7 +257,7 @@ min-width: 700px;
   min-width: 760px;
   padding-left: 10px;
   margin-bottom: 8px;
-  background-color: #1f487c;
+  background-color: $darkblue;
 
 
 }
@@ -262,15 +273,16 @@ min-width: 700px;
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
   color: #2a74ba;
-  background: #ebf1f8;
+  background: $superlightblue;
 }
 
 .nav-tabs>li>a:hover{
   color:#a3b3bf;
   background: none;
+  border: 1px solid transparent;
 }
 .tab-content{
-  background: #ebf1f8;
+  background: $superlightblue;
   margin-top: 0;
 }
 
@@ -353,12 +365,12 @@ select{
 .table-footer{
   overflow: auto;
   width: 100%;
-  background: #ebf1f8;
+  background: $superlightblue;
 }
 
 .table-footer p{
   float: left;
-  color: #337ab7;
+  color: $lightblue;
   font-weight: bold;
   padding-top: 25px;
 }
@@ -391,11 +403,75 @@ button i{
 #work-order-info-grid{
   border: 2px solid #ddd;
   width: 100%;
-  overflow: auto;
+
+  height: 250px;
   margin:0;
+  overflow: auto;
+ padding: 20px;
 
 }
+
+.alignleft {
+	float: left;
+  width: 50%;
+  text-align: right;
+  border: 1px dashed red;
+}
+.alignright {
+	float: left;
+  text-align: left;
+  width: 50%;
+  padding-left: 10px;
+  border: 1px dashed green;
+}
+
 .tri-column{
+  border: 2px dashed red;
+  width: 33.33333%;
   float: left;
-  width: 33.3333%;
+  height: 100%;
+}
+
+
+.panel-heading a{
+  padding-right: 20px;
+
+}
+
+.btn-danger{
+  background-color: #da2b2b;
+}
+.work-order-button-container{
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  display: block;
+  width: 780px;
+  margin-top: 20px;
+  height: 80px;
+
+}
+.work-order-button-container button{
+  display: inline;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 150px;
+}
+
+
+.fa-minus-circle{
+  padding-right: 15px;
+  font-size: 14px;
+}
+.fa-plus-circle{
+  font-size: 14px;
+  padding-right: 15px;
+}
+
+.update-work-order-container table{
+  margin-top: -20px;
+}
+
+#expand-status-info-table{
+//  margin-top: -10px;
 }
