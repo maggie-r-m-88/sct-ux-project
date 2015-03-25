@@ -38,8 +38,8 @@
           <ul class="sidebar-nav-links">
 
             <a href="index.html"><li >Dashboard</li></a>
-            <a href="work_orders.html">  <li class="sidebar-active-tab">Work Orders</li></a>
-            <a href="#">  <li>Shipping</li></a>
+            <a href="work_orders.html">  <li>Work Orders</li></a>
+            <a href="#">  <li class="sidebar-active-tab">Shipping</li></a>
             <a href="#">  <li>Inventory</li></a>
             <a href="#">  <li>Reporting</li></a>
 
@@ -50,9 +50,9 @@
   <div id="page-content-wrapper">
     <div class="tab-container">
     <ul class="nav nav-tabs">
-           <li class="active"><a data-toggle="tab" href="#work-order-list"><i class="fa fa-list-alt"></i>Work Order List</a></a></li>
-           <li><a data-toggle="tab" href="#search-form"><i class="fa fa-search"></i>Find Customer</a></li>
-           <li><a data-toggle="tab" href="#"><i class="fa fa-file-o"></i>Create Work Order</a></li>
+      <li class="active"><a data-toggle="tab" href="#"><i class="fa fa-file-o"></i>Receive Single</a></a></li>
+           <li><a data-toggle="tab" href="#receive-manifest"><i class="fa fa-files-o"></i>Receive Manifest</a></li>
+           <li><a data-toggle="tab" href="#"><i class="fa fa-cube"></i>Shipping Manifest</a></li>
 
 
 
@@ -60,18 +60,134 @@
     </div><!--end of tab container-->
 
        <div class="tab-content">
-           <div id="work-order-list" class="tab-pane fade in active">
-
-           </div><!--end of work order list-->
-
-
-           <div id="search-form" class="tab-pane fade">
-
-       </div><!--end of tab content-->
+           <div id="receive-single" class="tab-pane fade in active">
+             <div class="receive-manifest-container">
+             </div>
+           </div><!--end of receive single section-->
 
 
+           <div id="receive-manifest" class="tab-pane fade">
+               <div class="receive-manifest-container">
 
-    </div>  <!--end of tab content--> <!-- Keep all page content within the page-content inset div!-->
+               <div class="panel panel-default">
+                 <div id="work-order-list-heading" class="panel-heading"><h4>Receiving Manifest
+                 <a href="#">Last 12 Months (42) <i class="fa fa-angle-down"></i></a>
+              <button type="button" class="btn btn-default"><i class="fa fa-plus"></i>New Receive Manifest</button>
+
+                 </h4>
+
+
+                 </div>
+
+               </div><!---end of panel-->
+
+               <div class="receive-manifest-console">
+             <p><b>View:</b>
+             <select  id="work-order-views"class="form-control">
+              <option value="one">--Default--</option>
+
+           </select>  <button type="submit" class="btn btn-primary">Select</button>
+
+
+            </p>
+
+
+          </div><!---end work work order list console-->
+
+
+          <table id="receive-manifest-table" class="table">
+            <thead>
+               <tr>
+                   <th data-field=""><input id="manifest-select-all"type="checkbox"></th>
+                   <th data-field="code">Code</th>
+                   <th data-field="status-code">Status Code</th>
+                   <th data-field="cust-name">Customer Name</th>
+                   <th data-field="location">Location</th>
+                   <th data-field="batch-units">Batch Units</th>
+                   <th data-field="processed-units">Processed Units</th>
+                   <th data-field="created-time">Create Timestamp</th>
+                   <th data-field="last-updated-time">Update Timestamp<i class="fa fa-angle-down"></i></th>
+               </tr>
+           </thead>
+           <tbody>
+          <tr>
+            <td><a href="#"><input type="checkbox"></a></td>
+            <td>00016428</td>
+            <td>NEW</td>
+            <td>.ABC Cellular</td>
+            <td>Customer Main Site</td>
+            <td>509</td>
+            <td>0</td>
+            <td>2/17/2015 9:14 AM</td>
+            <td>2/17/2015 9:14 AM</td>
+          </tr>
+
+          <tr>
+            <td><a href="#"><input type="checkbox"></a></td>
+            <td>00016427</td>
+            <td>RECEIVING</td>
+            <td>.ABC Cellular</td>
+            <td>Customer Main Site</td>
+            <td>50</td>
+            <td>1</td>
+            <td>2/16/2015 1:59 PM</td>
+            <td>2/18/2015 2:05 AM</td>
+          </tr>
+
+          <tr>
+            <td><a href="#"><input type="checkbox"></a></td>
+            <td>00016425</td>
+            <td>RECEIVED</td>
+            <td>.AAA Cellular</td>
+            <td>Retail 145 - Atlanta</td>
+            <td>4</td>
+            <td>4</td>
+            <td>1/13/2015 8:13 PM</td>
+            <td>1/19/2015 11:05 AM</td>
+          </tr>
+
+          <tr>
+            <td><a href="#"><input type="checkbox"></a></td>
+            <td>00016424</td>
+            <td>RECEIVING</td>
+            <td>Riley, Harry</td>
+            <td>Retail 101 - Chicago</td>
+            <td>10</td>
+            <td>3</td>
+            <td>1/08/2015 4:03 PM</td>
+            <td>1/16/2015 10:21 PM</td>
+          </tr>
+
+       </tbody>
+
+
+         </table>
+         <div class="table-footer">
+    <p>Displaying 1-4 of 4 manifests</p>
+    <ul class="pagination">
+
+    <li><a href="#">&laquo;</a></li>
+    <li class="active"><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">&raquo;</a></li>
+    </ul>
+
+    </div>
+    <button type="button" class="btn btn-danger"><i class="fa fa-trash-o"></i>Delete</button>
+             </div><!--end of receive mainifest container-->
+           </div><!--end of receive manifest-->
+
+
+         <div id="shipping-manifest" class="tab-pane fade">
+
+        </div><!---end of shipping manifest-->
+
+
+
+    </div>  <!--end of tab content--> <!-- Keep all page content within the page-content inset div! -->
   </div>   <!--end of wrapper-->
 
 

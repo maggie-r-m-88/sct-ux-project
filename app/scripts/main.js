@@ -22,3 +22,8 @@ $("#expand-status-info-table").click(function() {
     $("#status-info-table").toggle();
     $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
 });
+
+
+$( '#manifest-select-all' ).click( function () {
+   $( '#receive-manifest-table input[type="checkbox"]' ).prop('checked', this.checked)
+ })

@@ -313,7 +313,10 @@ select{
   margin-top: 10px;
 
 }
-
+.receive-manifest-container{
+  padding: 20px;
+  margin-top: 10px;
+}
 .search-form-container{
   padding: 20px;
   margin-top: 10px;
@@ -335,6 +338,15 @@ select{
   font-size: 14px;
 }
 
+.receive-manifest-console{
+  margin: 10px;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.receive-manifest-console button{
+  margin-left: 10px;
+}
 
 .work-order-list-console{
   margin: 10px;
@@ -498,7 +510,7 @@ button i{
 }
 ////progress bar styling goes here////
 #work-order-progress-bar{
-  border: 2px solid red;
+
   width: 100%;
   text-align: center;
 
