@@ -20,6 +20,46 @@ background: $superlightblue;
   color: #333;
 
 }
+///login page
+
+.login-body-container{
+
+  background-image: url("../images/homepagebanner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+
+
+}
+
+#login-console-container{
+  background: hsla(360, 100%, 100%, 0.78);
+  margin: 200px 600px;
+  height: 200px;
+  box-shadow:0px 0px 60px #000;
+  width: 700px;
+  overflow: auto;
+
+}
+
+#login-console-container img{
+  height: 100%;
+  display: inline-block;
+
+
+
+}
+
+#login-console{
+  border: 2px solid red;
+  color: red;
+  height: 200px;
+  width: 360px;
+  position: absolute;
+  display: inline-block;
+
+}
 
 #wrapper {
     padding-left: 40px;
