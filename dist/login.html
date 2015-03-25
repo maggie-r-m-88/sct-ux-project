@@ -20,9 +20,9 @@
       <div id="login-console">
         <form class="form-horizontal">
   <div class="form-group">
-    <label for="inputEmail3" class="col-xs-2 control-label">Email:</label>
+    <label for="inputEmail3" class="col-xs-2 control-label">User ID:</label>
     <div class="col-xs-10">
-      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="User ID">
     </div>
   </div>
   <div class="form-group">
@@ -33,7 +33,7 @@
   </div>
   <div class="form-group">
     <div class="col-xs-offset-2 col-xs-10">
-      <div class="checkbox">
+      <div class="checkbox" id="remember-login-details">
         <label>
           <input type="checkbox"> Remember me
         </label>
@@ -45,6 +45,8 @@
   <div class="form-group">
     <div class="col-xs-offset-2 col-xs-10">
       <button type="submit" class="btn btn-primary">Sign in</button>
+    <a id="login-help" href="#">Can't access your account?</a>
+
 
     </div>
   </div>
@@ -57,7 +59,14 @@
 
       </div><!---end of login console-->
     </div><!---end of login console container-->
+    <div class="login-footer">
+      <div class="footer-left">
+      &#169; Service Central Technologies, Inc.
+      </div>
 
+      <div class="footer-right">
+      <a href="#">Privacy</a>|<a href="#">Support</a>|<a href="#">Register</a>
+      </div>
     <script src="scripts/vendor.js"></script>
 
         <script src="scripts/main.js"></script>
