@@ -401,12 +401,16 @@ button i{
 
 
 #work-order-info-grid{
-
-margin-top: -20px;
+    //
+    // border-top: 2px solid #ddd;
+    // border-bottom: 2px solid #ddd;
+    // border-left: 1px solid #ddd;
+    // border-right: 1px solid #ddd;
+//  margin-bottom: 20px;
   width: 100%;
   height: auto;
   overflow: auto;
- padding: 20px;
+ padding: 5px;
 
 }
 .tri-column-row{
@@ -419,35 +423,35 @@ margin-top: -20px;
 	float: left;
   width: 50%;
   height: 35px;
-  padding-top: 10px;
-  padding-left: 10px;
+ padding-top: 10px;
+  //padding-left: 10px;
   overflow: scroll;
   text-align: right;
 
 }
 .alignright {
-  padding-top: 10px;
+ padding-top: 10px;
 	float: left;
-  padding-left: 5px;
   padding-right: 10px;
   text-align: left;
   width: 50%;
   height: 35px;
-
+  font-weight: bold;
   padding-left: 10px;
 
 }
-
+.alignright span{
+  color: #337ab7;
+}
 .tri-column{
-  padding-top: 20px;
-  background: white;
+//  padding-top: 20px;
+//  background: white;
   padding-bottom: 10px;
-  
+
   width: 33.33333%;
   float: left;
   font-size: 13px;
-  border-top: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
+
   //margin-left: -20px;
   overflow: scroll;
   height: 100%;
@@ -492,7 +496,10 @@ margin-top: -20px;
 .update-work-order-container table{
   margin-top: -20px;
 }
+////progress bar styling goes here////
+#work-order-progress-bar{
+  border: 2px solid red;
+  width: 100%;
+  text-align: center;
 
-#expand-status-info-table{
-//  margin-top: -10px;
 }
