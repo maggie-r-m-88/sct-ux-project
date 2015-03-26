@@ -62,18 +62,22 @@
         <!-- Page content -->
 <div id="page-content-wrapper">
   <div class="dashboard-wrapper">
+
+
     <div class="row">
      <div id="dash-col" class="col-xs-6 col-xs-4">
        <div class="line-graph">
          <div class="panel panel-default">
            <div class="panel-heading">
              <h3 class="panel-title small"><i class="fa fa-minus-circle"></i>Motorola Dashboard Est. Repair Dates</h3>
-
          </div>
-       </div><!---end of panel-->
-       <svg id="visualisation" class="line-graph-container">
 
-       </svg>
+       </div><!---end of panel-->
+
+       <div class="line-graph-container">
+         <a class="refresher" href="#"><i class="fa fa-refresh"></i>Refresh</a>
+         <img src="/images/bigline.png">
+       </div>
 
 
        </div>
@@ -81,11 +85,21 @@
        <div class="inbox-size">
          <div class="panel panel-default">
            <div class="panel-heading">
-             <h3 class="panel-title small"><i class="fa fa-minus-circle"></i>Your Messages (6)</h3>
+             <h3 class="panel-title small"><i class="fa fa-minus-circle"></i>Detailed Pie</h3>
 
          </div>
        </div><!---end of panel-->
+       <div class="inbox-size-container">
+        <a class="refresher" href="#"><i class="fa fa-refresh"></i>Refresh</a>
 
+        <div class="pie-graph">
+          <div class="pie-lg" data-size="120" data-value="62">
+
+          </div>
+
+        </div>
+
+      </div>
        </div>
      </div>
      <div id="dash-col" class="col-xs-6 col-xs-4">
@@ -96,6 +110,28 @@
 
          </div>
        </div><!---end of panel-->
+       <div class="inbox-size-container">
+        <a href="#"><i class="fa fa-refresh"></i>Refresh</a>
+
+        <div class="pie-graph-small">
+          <div class="pie-sm" data-size="75" data-value="20">
+
+          </div>
+
+        </div>
+        <div class="pie-graph-small">
+          <div class="pie-sm" data-size="75" data-value="40">
+
+          </div>
+
+        </div>
+        <div class="pie-graph-small">
+          <div class="pie-sm" data-size="75" data-value="90">
+
+          </div>
+
+        </div>
+      </div>
 
        </div><!---end of inbox size-->
        <div class="line-graph">
@@ -105,22 +141,73 @@
 
          </div>
        </div><!---end of panel-->
+
          <div class="line-graph-container">
-         <img src="/images/line-graph.png" width="100%" height="100%">
+           <a  class="refresher" href="#"><i class="fa fa-refresh"></i>Refresh</a>
+         <img src="/images/line-graph.png">
          </div>
        </div>
 
      </div>
      <div id="dash-col" class="col-xs-6 col-xs-4">
-       <div class="med-pie">
+       <div class="line-graph">
          <div class="panel panel-default">
            <div class="panel-heading">
-             <h3 class="panel-title small"><i class="fa fa-minus-circle"></i>Detailed Pie</h3>
+             <h3 class="panel-title small"><i class="fa fa-minus-circle"></i>Your Messages (6)</h3>
 
          </div>
        </div><!---end of panel-->
 
+         <div class="line-graph-container">
+           <a class="refresher" href="#"><i class="fa fa-refresh"></i>Refresh</a>
+
+
+           <div class="messages-container">
+
+             <table id="user-inbox" class="table small">
+               <thead>
+                  <tr>
+                    <th data-field=""><input id="messages-select-all"type="checkbox"></th>
+                      <th>Sender</th>
+                      <th>Sent</th>
+                      <th>Subject</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a class="msg-link" href="#">ServiceCentral Admin</a></td>
+                  <td>1/22/2015 8:34 AM</td>
+                  <td>New Accounts</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a class="msg-link" href="#">Pozzo, Rodrigo</a></td>
+                  <td>1/03/2015 11:12 AM</td>
+                  <td>Orders</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a class="msg-link" href="#">ServiceCentral Admin</a></td>
+                  <td>12/11/2014 3:09 PM</td>
+                  <td>Permissions</td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"></td>
+                  <td><a class="msg-link" href="#">Martin, Maggie</a></td>
+                  <td>12/03/2014 8:34 AM</td>
+                  <td>New Accounts</td>
+                </tr>
+
+              </tbody>
+            </table>
+
+
+
+           </div>
+         </div>
        </div>
+
        <div class="inbox-size">
          <div class="panel panel-default">
            <div class="panel-heading">
@@ -128,6 +215,9 @@
 
          </div>
        </div><!---end of panel-->
+       <div class="inbox-size-container">
+        <a class="refresher" href="#"><i class="fa fa-refresh"></i>Refresh</a>
+      </div>
 
        </div>
 
@@ -148,7 +238,7 @@
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->

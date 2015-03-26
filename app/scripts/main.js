@@ -33,94 +33,67 @@ $( '#manifest-select-all' ).click( function () {
 
 });
 
+$( '#messages-select-all' ).click( function () {
+   $( '#user-inbox input[type="checkbox"]' ).prop('checked', this.checked)
+ });
+///pie chart svg
 
+(function ($, document) {
+  $.fn.easyaspie = function () {
+    var	size	= parseInt(this.data('size')),
+    radius	= size / 2,
+    value	= parseInt(this.data('value'));
 
-/*charts js*/
+    // pie all the things!
+    if (this.length > 1){
+      this.each( function() {
+        $(this).easyaspie();
+      });
+      return this;
+    }
+    //only numbers here
+    if (isNaN(value)) {
+      return this;
+    }
 
-InitChart();
+    // set the size of this
+    this.css({
+      height: size,
+      width: size
+    }).addClass('pie-sliced');
 
-function InitChart() {
+    // make value behave
+    value = Math.min(Math.max(value, 0), 100);
+    // make some svg
+    this.pie = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    if (value >= 100) {
+      this.pie.slice = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+      this.pie.slice.setAttribute('r', radius);
+      this.pie.slice.setAttribute('cx', radius);
+      this.pie.slice.setAttribute('cy', radius);
 
-  var lineData = [{
-    'x': 1,
-    'y': 5
-  }, {
-    'x': 20,
-    'y': 20
-  }, {
-    'x': 40,
-    'y': 10
-  }, {
-    'x': 60,
-    'y': 40
-  }, {
-    'x': 80,
-    'y': 5
-  }, {
-    'x': 100,
-    'y': 60
-  }];
+    } else {
+      this.pie.slice = document.createElementNS("http://www.w3.org/2000/svg", "path");
 
-  var vis = d3.select("#visualisation"),
-    WIDTH = 320,
-    HEIGHT = 260,
-    MARGINS = {
-      top: 20,
-      right: 20,
-      bottom: 20,
-      left: 50
-    },
-    xRange = d3.scale.linear().range([MARGINS.left, WIDTH - MARGINS.right]).domain([d3.min(lineData, function (d) {
-        return d.x;
-      }),
-      d3.max(lineData, function (d) {
-        return d.x;
-      })
-    ]),
+      //calculate x,y coordinates of the point on the circle to draw the arc to.
+      var x = Math.cos((2 * Math.PI)/(100/value));
+      var y = Math.sin((2 * Math.PI)/(100/value));
 
-    yRange = d3.scale.linear().range([HEIGHT - MARGINS.top, MARGINS.bottom]).domain([d3.min(lineData, function (d) {
-        return d.y;
-      }),
-      d3.max(lineData, function (d) {
-        return d.y;
-      })
-    ]),
+      //should the arc go the long way round?
+      var longArc = (value <= 50) ? 0 : 1;
 
-    xAxis = d3.svg.axis()
-      .scale(xRange)
-      .tickSize(5)
-      .tickSubdivide(true),
+      var d = "M" + radius + "," + radius + " L" + radius + "," + 0 + ", A" + radius + "," + radius + " 0 " + longArc + ",1 " + (radius + y*radius) + "," + (radius - x*radius) + " z";
+      this.pie.slice.setAttribute('d', d);
+    }
+    //add the slice to the pie.
+    $(this.pie.slice).appendTo(this.pie);
 
-    yAxis = d3.svg.axis()
-      .scale(yRange)
-      .tickSize(5)
-      .orient("left")
-      .tickSubdivide(true);
+    // add the pie to this
+    $(this.pie).appendTo(this);
 
+    return this;
+  };
 
-  vis.append("svg:g")
-    .attr("class", "x axis")
-    .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
-    .call(xAxis);
-
-  vis.append("svg:g")
-    .attr("class", "y axis")
-    .attr("transform", "translate(" + (MARGINS.left) + ",0)")
-    .call(yAxis);
-
-  var lineFunc = d3.svg.line()
-  .x(function (d) {
-    return xRange(d.x);
-  })
-  .y(function (d) {
-    return yRange(d.y);
-  })
-  .interpolate('basis');
-
-vis.append("svg:path")
-  .attr("d", lineFunc(lineData))
-  .attr("stroke", "blue")
-  .attr("stroke-width", 2)
-  .attr("fill", "none");
-
-}
+  $('.pie-sm').easyaspie();
+  $('.pie-lg').easyaspie();
+})(jQuery, document);
