@@ -26,4 +26,9 @@ $("#expand-status-info-table").click(function() {
 
 $( '#manifest-select-all' ).click( function () {
    $( '#receive-manifest-table input[type="checkbox"]' ).prop('checked', this.checked)
- })
+ });
+
+ $('#app-login-button').click(function(e) {
+   e.preventDefault();
+
+});
