@@ -670,3 +670,36 @@ button i{
 .btn-danger:hover{
   background: #d31e17;
 }
+
+
+//dashboard styles
+.dashboard-wrapper{
+  padding: 20px;
+  width: 100%;
+
+}
+#dash-col{
+  
+  height: auto;
+
+}
+.line-graph{
+  width: 100%;
+  height: 310px;
+  background: yellow;
+}
+.inbox-size{
+  width: 100%;
+  height: 220px;
+  background: green;
+
+}
+.med-pie{
+  width: 100%;
+  height: 270px;
+  background: red;
+}
+
+ .small{
+  font-size: 11px;
+}
