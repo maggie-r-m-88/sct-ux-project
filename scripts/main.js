@@ -96,4 +96,5 @@ $( '#messages-select-all' ).click( function () {
 
   $('.pie-sm').easyaspie();
   $('.pie-lg').easyaspie();
+  $('.pie-md').easyaspie();
 })(jQuery, document);
