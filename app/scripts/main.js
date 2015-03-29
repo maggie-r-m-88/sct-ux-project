@@ -98,3 +98,9 @@ $( '#messages-select-all' ).click( function () {
   $('.pie-lg').easyaspie();
   $('.pie-md').easyaspie();
 })(jQuery, document);
+
+$('.archive_month ul').hide();
+
+$('.months').click(function() {
+    $(this).find('ul').slideToggle();
+});
