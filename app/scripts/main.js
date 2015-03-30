@@ -1,3 +1,21 @@
+function prepareList() {
+  $('#expList').find('li:has(ul)')
+  	.click( function(event) {
+  		if (this == event.target) {
+  			$(this).toggleClass('expanded');
+  			$(this).children('ul').toggle('medium');
+  		}
+  		return false;
+  	})
+  	.addClass('collapsed')
+  	.children('ul').hide();
+  };
+
+  $(document).ready( function() {
+
+      prepareList();
+  });
+
 $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
@@ -101,6 +119,6 @@ $( '#messages-select-all' ).click( function () {
 
 $('.archive_month ul').hide();
 
-$('.months').click(function() {
-    $(this).find('ul').slideToggle();
-});
+// $('.months').click(function() {
+//     $(this).find('ul').slideToggle();
+// });

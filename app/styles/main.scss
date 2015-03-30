@@ -854,43 +854,56 @@ button i{
 
 
 #reports-list{
-  //background: yellow;
+//  border-right: 1px solid gray;
+background: #f5f5f5;
   width: 25%;
-  height: 500px;
+  height: auto;
   float: left;
 }
 #reports-search{
-  background: white;
+
   width: 75%;
   float: right;
+
   height: 500px;
   padding: 20px;
 
 }
-#years, #months, #posts{
-    cursor:pointer;
+#expList{
+  margin-left: -20px;
 }
-.archive_year {
-margin-left: 1em;
-font-size: large;
-font-weight: bold;
-cursor: pointer;
+#expList ul, li {
+    list-style: none;
+    margin:0;
+    padding:0;
+  
+    padding-right: 10px;
+    cursor: pointer;
+}
+#expList p {
+    margin:0;
+    display:block;
+}
+#expList p:hover {
+    background-color:#121212;
+}
+#expList li {
+    line-height:140%;
+    text-indent:0px;
+    background-position: 1px 8px;
+    padding-left: 20px;
+    padding-top: 5px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+}
+
+/* Collapsed state for list element */
+#expList .collapsed {
+    background-image: url("../images/plus-circle.png");
 
 }
-
-.archive_month {
-margin-left: 1em;
-margin-top: 0;
-margin-bottom: 1em;
-list-style-type: circle;
-font-size: medium;
-cursor: pointer;
-}
-.archive_posts {
-margin-left: 1em;
-margin-top: 0;
-margin-bottom: 1em;
-list-style: square url('http://www.webbossuk.com/admin/images/reply-arrow.png');
-font-weight: normal;
-cursor: pointer;
+/* Expanded state for list element
+/* NOTE: This class must be located UNDER the collapsed one */
+#expList .expanded {
+    background-image: url("../images/minus-circle.png");
 }
