@@ -62,7 +62,7 @@
     <div class="tab-container">
     <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#receive-single"><i class="fa fa-list-alt"></i>Standard Reports</a></a></li>
-           <li><a data-toggle="tab" href="#receive-manifest"><i class="fa fa-search"></i>Ad Hoc Reports</a></li>
+           <li><a data-toggle="tab" href="#receive-manifest"><i class="fa fa-archive"></i>Ad Hoc Reports</a></li>
 
 
 
@@ -113,36 +113,69 @@
   </div>
 
   <div id="reports-search">
+    <div id="reports-nav-breadcrumbs">
+<a href="#">Current Reports</a> <i class="fa fa-angle-right angle-form"></i> <span> Completed Work Orders</span>
+</div>
     <form class="form-horizontal">
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Mobile Phone #:</label>
+ <label for="mobilephone" class="control-label col-xs-2">Customer Account:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Name:</label>
+ <label for="mobilephone" class="control-label col-xs-2">Manufacturer:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
-   <span class="help-block">To search last name, write "Smith".</span>
+   <span class="help-block">i.e. "Samsung"</span>
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Serial #:</label>
+ <label for="inputPassword" class="control-label col-xs-2">Completed From:</label>
  <div class="col-xs-10">
-   <input type="text" class="form-control" id="inputPassword" placeholder="">
-
+   <select class="form-control" id="search-program">
+     <option>3/9/2015 11:24 AM</option>
+</select>
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Work Order #:</label>
+ <label for="inputPassword" class="control-label col-xs-2">Completed Until:</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>3/16/2015 12:01 AM</option>
+</select>
+ </div>
+</div>
+<div class="form-group">
+ <label for="mobilephone" class="control-label col-xs-2">Work Order Type:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
  </div>
 </div>
+
+
+<div class="form-group">
+ <label for="inputPassword" class="control-label col-xs-2">Group Report by (1st level):</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>-- Select --</option>
+
+</select>
+ </div>
+</div>
+
+<div class="form-group">
+ <label for="inputPassword" class="control-label col-xs-2">Group Report by (2nd level):</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>-- Select --</option>
+</select>
+ </div>
+</div>
+
 <div class="form-group">
  <label for="inputPassword" class="control-label col-xs-2">Program:</label>
  <div class="col-xs-10">
@@ -156,7 +189,8 @@
 
 <div class="form-group">
  <div class="col-xs-offset-2 col-xs-10">
-     <button type="submit" class="btn btn-primary">Search</button>
+     <button type="submit" class="btn btn-primary">Show</button>
+     <button type="submit" class="btn btn-default">Default</button>
  </div>
 </div>
 </form>
