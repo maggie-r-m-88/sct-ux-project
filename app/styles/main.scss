@@ -459,6 +459,7 @@ select{
 
 #search-program {
   width: 250px;
+  padding: 5px;
   margin-top:3px;
 }
 .work-order-list-container{
@@ -846,6 +847,7 @@ button i{
 .standard-reports-container{
   padding: 20px;
   margin-top: 10px;
+
   overflow: hidden;
   width: 100%;
   height: auto;
@@ -853,17 +855,25 @@ button i{
 
 
 #reports-list{
-//  border-right: 1px solid gray;
+ border-left: 1px solid #ddd;
+ border-bottom: 2px solid #ddd;
+ border-right: 1px solid #ddd;
 background: #f5f5f5;
   width: 25%;
-  height: auto;
+  height:600px;
+  margin-top: -20px;
   float: left;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+
 }
 #reports-search{
 
   width: 75%;
   float: right;
-
+margin-top: -20px;
+border-top: 2px solid #ddd;
 padding: 20px;
 
 }
@@ -907,17 +917,24 @@ padding: 20px;
     background-image: url("../images/minus-circle.png");
 }
 #reports-nav-breadcrumbs{
-  letter-spacing: 0.04em;
-  font-size: 16px;
-  margin-left: 35px;
-  margin-top: -10px;
-  margin-bottom: 15px;
-}
-.angle-form{
-  font-size: 16px;
-  color: black;
-  padding-left: 10px;
+  //letter-spacing: 0.04em;
+  font-size: 14px;
+  margin-left: -20px;
+  margin-top: -20px;
+  padding: 20px;
+  padding-left: 35px;
+  font-weight: bold;
+  width: 100%;
 }
 #reports-nav-breadcrumbs span{
   margin-left: 10px;
+
+}
+.angle-form{
+  font-size: 12px;
+  color: black;
+  padding-left: 10px;
+}
+.no-border{
+  border-bottom: none;
 }
