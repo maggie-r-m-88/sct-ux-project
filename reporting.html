@@ -54,7 +54,7 @@
     <div class="tab-container">
     <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#receive-single"><i class="fa fa-list-alt"></i>Standard Reports</a></a></li>
-           <li><a data-toggle="tab" href="#receive-manifest"><i class="fa fa-search"></i>Ad Hoc Reports</a></li>
+           <li><a data-toggle="tab" href="#"><i class="fa fa-archive"></i>Ad Hoc Reports</a></li>
 
 
 
@@ -64,8 +64,8 @@
        <div class="tab-content">
            <div id="receive-single" class="tab-pane fade in active">
 <div class="standard-reports-container">
-  <div class="panel panel-default">
-    <div id="work-order-list-heading" class="panel-heading">
+  <div class="panel panel-default no-border">
+    <div id="work-order-list-heading" class="panel-heading no-border">
 <h4>Standard Reports
 <a href="#">Last 12 Months <i class="fa fa-angle-down"></i></a>
 </h4>
@@ -74,79 +74,104 @@
 
   <div id="reports-list">
 
-<ul class="archive_year">
-<li class="years">2012
-    <ul class="archive_month">
-        <li class="months">September
-            <ul class="archive_posts">
-                <li class="posts">Article 1</li>
-                <li class="posts">Article 2</li>
-                <li class="posts">Article 3</li>
-                <li class="posts">Article 4</li>
-            </ul>
-        </li>
-        <li class="months">August
-            <ul class="archive_posts">
-                <li class="posts">Article 1</li>
-            </ul>
-        </li>
+
+    <ul id="expList">
+      <li>Archived Reports
+        <ul>
+          <li><a href="#">January 2015</a>  </li>
+          <li><a href="#">February 2015</a></li>
+          <li><a hreg="#">March 2015</a></li>
+        </ul>
+      </li>
+      <li>Current Reports
+        <ul>
+          <li><a href="#">Completed Work Orders</a></li>
+          <li><a href="#">Customer Activity Report</a></li>
+          <li><a href="#">Customer Charge Report</a></li>
+          <li><a href="#">Customer List</a></li>
+          <li><a href="#">Customer Portfolio Report</a></li>
+          <li><a href="#">Group Charge Report</a></li>
+          <li><a href="#">Labor Charge Report</a></li>
+          <li><a href="#">Manifest Charge Report</a></li>
+          <li><a href="#">Manifest Ship-Rcv Report</a></li>
+          <li><a href="#">Manufacturer Activity Report</a></li>
+          <li><a href="#">Models Adjustment</a></li>
+          <li><a href="#">Models on Hand</a></li>
+          <li><a href="#">Out of Warranty Repairs Report</a></li>
+        </ul>
+      </li>
     </ul>
-</li>
-<li class="years">2011</li>
-    <ul class="archive_month">
-        <li class="months">July
-            <ul class="archive_posts">
-                <li class="posts">Article 1</li>
-            </ul>
-        </li>
-    </ul>
-</li>
-<li class="years">2009</li>
-    <ul class="archive_month">
-        <li class="months">January
-            <ul class="archive_posts">
-                <li class="posts">Article 1</li>
-            </ul>
-        </li>
-    </ul>
-</ul>
+
   </div>
 
   <div id="reports-search">
-    <form class="form-horizontal">
+    <div id="reports-nav-breadcrumbs">
+<a href="#">Current Reports</a> <i class="fa fa-angle-right angle-form"></i> <span> Completed Work Orders</span>
+</div>
+    <form class="form-horizontal" style="margin-left: 50px;">
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Mobile Phone #:</label>
+ <label for="mobilephone" class="control-label col-xs-2">Customer Account:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Name:</label>
+ <label for="mobilephone" class="control-label col-xs-2">Manufacturer:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
-   <span class="help-block">To search last name, write "Smith".</span>
+   <span class="help-block">i.e. "Samsung"</span>
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Serial #:</label>
+ <label for="inputPassword" class="control-label col-xs-2">Completed From:</label>
  <div class="col-xs-10">
-   <input type="text" class="form-control" id="inputPassword" placeholder="">
-
+   <select class="form-control" id="search-program">
+     <option>3/9/2015 11:24 AM</option>
+</select>
  </div>
 </div>
 
 <div class="form-group">
- <label for="mobilephone" class="control-label col-xs-2">Work Order #:</label>
+ <label for="inputPassword" class="control-label col-xs-2">Completed Until:</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>3/16/2015 12:01 AM</option>
+</select>
+ </div>
+</div>
+<div class="form-group">
+ <label for="mobilephone" class="control-label col-xs-2">Work Order Type:</label>
  <div class="col-xs-10">
    <input type="text" class="form-control" id="inputPassword" placeholder="">
  </div>
 </div>
+
+
+<div class="form-group">
+ <label for="inputPassword" class="control-label col-xs-2">Group Report by (1st level):</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>-- Select --</option>
+
+</select>
+ </div>
+</div>
+
+<div class="form-group">
+ <label for="inputPassword" class="control-label col-xs-2">Group Report by (2nd level):</label>
+ <div class="col-xs-10">
+   <select class="form-control" id="search-program">
+     <option>-- Select --</option>
+</select>
+ </div>
+</div>
+
 <div class="form-group">
  <label for="inputPassword" class="control-label col-xs-2">Program:</label>
  <div class="col-xs-10">
-   <select class="form-control" id="search-program">
+   <select multiple class="form-control" id="search-program">
      <option>Motorola Program</option>
      <option>Samsung Program</option>
      <option>Lenovo</option>
@@ -156,7 +181,8 @@
 
 <div class="form-group">
  <div class="col-xs-offset-2 col-xs-10">
-     <button type="submit" class="btn btn-primary">Search</button>
+     <button type="submit" class="btn btn-primary">Show</button>
+     <button type="submit" class="btn btn-default">Default</button>
  </div>
 </div>
 </form>
@@ -166,7 +192,7 @@
 
 
            <div id="receive-manifest" class="tab-pane fade">
-             b
+
          </div><!--end of search form container-->
 
 
