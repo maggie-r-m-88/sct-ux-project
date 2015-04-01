@@ -1,3 +1,21 @@
+function prepareList() {
+  $('#expList').find('li:has(ul)')
+  	.click( function(event) {
+  		if (this == event.target) {
+  			$(this).toggleClass('expanded');
+  			$(this).children('ul').toggle('medium');
+  		}
+  		return false;
+  	})
+  	.addClass('collapsed')
+  	.children('ul').hide();
+  };
+
+  $(document).ready( function() {
+
+      prepareList();
+  });
+
 $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
@@ -11,6 +29,19 @@ $(".sidebar-nav-links a").click(function(e) {
          .parent().siblings().find('.sidebar-active-tab').removeClass('sidebar-active-tab');
 
 });
+$(".line-graph .panel-heading i").click(function(){
+
+$(this).parents(".line-graph").find(".line-graph-container").toggle();
+$(this).toggleClass('fa-minus-circle fa-plus-circle');
+});
+
+
+$(".inbox-size .panel-heading i").click(function(){
+
+$(this).parents(".inbox-size").find(".inbox-size-container").toggle();
+$(this).toggleClass('fa-minus-circle fa-plus-circle');
+});
+
 
 $("#expand-parts-table").click(function() {
     $("#parts-table").toggle();
@@ -22,6 +53,7 @@ $("#expand-status-info-table").click(function() {
     $("#status-info-table").toggle();
     $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
 });
+
 
 
 $( '#manifest-select-all' ).click( function () {
@@ -101,6 +133,7 @@ $( '#messages-select-all' ).click( function () {
 
 $('.archive_month ul').hide();
 
-$('.months').click(function() {
-    $(this).find('ul').slideToggle();
-});
+$(function() {
+   $( ".line-graph" ).draggable();
+   $(".inbox-size").draggable();
+ });
