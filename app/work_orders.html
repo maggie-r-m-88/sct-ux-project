@@ -80,24 +80,47 @@
            <div id="work-order-list" class="tab-pane fade in active">
              <div class="work-order-list-container">
 
-
-           <a href="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a>
-
+          <!-- <b><a class="dropdown-toggle" datahref="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a></b>-->
 
                <div class="work-order-list-console">
-             <p><b>View:</b>
+                 <div class="dropdown">
+         <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+         <span id="dropdown_title">Today</span>
+           <i class="fa fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last Month (2)</a></li>
+
+         </ul>
+       </div>
+             <div class="view-select"><p><b>View:</b>
              <select  id="work-order-views"class="form-control">
               <option value="one">Lenovo View</option>
               <option value="two">All Work Orders</option>
               <option value="three">Open Work Orders</option>
               <option value="four">Ready for Pickup</option>
               <option value="five">Ready for Repair</option>
-           </select>  <button type="submit" class="btn btn-primary">Select</button>
-            </p>
-          </div><!---end work work order list console-->
+           </select>
+
+         <button id="search-popout" type="submit" class="btn btn-primary">Search</button>
+       </p>
+             </div>
+            <div class="search-popout">
+              <button type="submit" class="btn btn-default">Clear</button>
+              <button type="submit" class="btn btn-default">Go</button>
+              <button id="lock-search" type="submit" class="btn btn-default"><i class="fa fa-lock" style="padding:2px;"></i></button>
+
+            </div>
+      </div><!---end work work order list console-->
 
       <table class="table">
         <thead>
+
+
+
            <tr>
                <th data-field="id">WO Code</th>
                <th data-field="name">Name</th>
@@ -108,8 +131,23 @@
                <th data-field="model">Model</th>
                <th data-field="bounce">Bounce</th>
            </tr>
+
        </thead>
        <tbody>
+         <tr id="search-table">
+
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+                      <td><input></td>
+
+
+         </tr>
+
       <tr>
         <td><a href="#">WOO5828</a></td>
         <td>Charles Barkley</td>

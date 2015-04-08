@@ -27,6 +27,22 @@ $("#menu-toggle").click(function(e) {
         $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
 
 });
+$("#lock-search").click(function(e){
+  e.preventDefault();
+  $(this).find('i').toggleClass('fa-lock fa-unlock-alt');
+
+});
+
+$("#search-popout").click(function(e){
+  e.preventDefault();
+  $(".search-popout").toggleClass("open-search-popout");
+  $("#search-table td").toggleClass("open-search-popout");
+  $(this).html($(this).text() == 'Close' ? 'Search' : 'Close');
+
+
+});
+
+
 
 $("#toggle-top button").click(function(e) {
         e.preventDefault();
@@ -151,3 +167,9 @@ $(function() {
    $( ".line-graph" ).draggable();
    $(".inbox-size").draggable();
  });
+
+
+///drop down menu
+$('.dropdown-menu li').on('click', function() {
+    $('#dropdown_title').html($(this).find('a').html());
+    });
