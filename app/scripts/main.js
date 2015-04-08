@@ -1,3 +1,5 @@
+
+
 function prepareList() {
   $('#expList').find('li:has(ul)')
   	.click( function(event) {
@@ -18,12 +20,22 @@ function prepareList() {
 $("#header-logo").click(function(){
   $("body").toggleClass("small");
 });
+
 $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
         $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
 
 });
+
+$("#toggle-top button").click(function(e) {
+        e.preventDefault();
+        $("header").toggleClass("toggle-top");
+
+        $("#wrapper").toggleClass("slide-up");
+
+});
+
 $(".sidebar-nav-links a").click(function(e) {
 
 

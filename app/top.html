@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
     <title>SCT</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
 
-    <!--<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />-->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
+
+
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
@@ -23,18 +24,26 @@
     <!-- endbuild -->
   </head>
   <body>
-<header>
-  <a href="index.html"><img src="../images/logo-smaller.png"/></a>
+
+ <header>
+  <div id="header-logo">
+<img src="../images/SCT_wordpresslogo.png"/>
+
+</div>
   <div class="user-dashboard">
-    <a href="#"><p>Jack Steel  (Service Central)<i class="fa fa-angle-down"></i></p></a>
+    <a href="login.html"><p>Jack Steel  (Service Central)<i class="fa fa-angle-down"></i></p></a>
     <a href="#"><li><i class="fa fa-cog"></i></li></a>
     <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
   </div>
 
   <div id="toggle-top">
-    <button>Full Screen</button>
+    <button>press</button>
   </div>
 </header>
+
+<!---end of header container-->
+
+
     <div id="wrapper" class="active">
 
         <!-- Sidebar -->
@@ -47,33 +56,35 @@
                </a>
              </li>
         </ul>
+
           <ul class="sidebar-nav-links">
-            <a href="dashboard.html">  <li class="sidebar-active-tab">Dashboard</li></a>
+
+            <a href="index.html"><li class="sidebar-active-tab">Dashboard</li></a>
             <a href="work_orders.html">  <li>Work Orders</li></a>
-            <a href="#">  <li>Shipping</li></a>
+            <a href="shipping.html">  <li>Shipping</li></a>
             <a href="#">  <li>Inventory</li></a>
-            <a href="#">  <li>Reporting</li></a>
+            <a href="reporting.html">  <li>Reporting</li></a>
 
           </ul>
         </div>
 
         <!-- Page content -->
-        <div id="page-content-wrapper">
-        Dashboard will go here
+<div id="page-content-wrapper">
 
+lfjlkdfjkldjflkj
         </div> <!-- Keep all page content within the page-content inset div! -->
 
       </div>   <!--end of wrapper-->
-
 
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
-
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
         <!-- build:js scripts/main.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->

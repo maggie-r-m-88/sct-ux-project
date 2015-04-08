@@ -32,6 +32,9 @@
     <a href="#"><li><i class="fa fa-cog"></i></li></a>
     <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
   </div>
+  <div id="toggle-top">
+    <button>Full Screen</button>
+  </div>
 </header>
     <div id="wrapper" class="active">
 
@@ -59,6 +62,7 @@
 
         <!-- Page content -->
   <div id="page-content-wrapper">
+
     <div class="tab-container">
     <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#work-order-list"><i class="fa fa-list-alt"></i>Work Order List</a></a></li>
@@ -72,16 +76,14 @@
     </div><!--end of tab container-->
 
        <div class="tab-content">
+
            <div id="work-order-list" class="tab-pane fade in active">
              <div class="work-order-list-container">
-               <div class="panel panel-default">
-                 <div id="work-order-list-heading" class="panel-heading">
-          <h4>Work Order List
-           <a href="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a>
-          </h4>
-          </div>
 
-               </div><!---end of panel-->
+
+           <a href="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a>
+
+
                <div class="work-order-list-console">
              <p><b>View:</b>
              <select  id="work-order-views"class="form-control">
@@ -255,7 +257,13 @@
       <h4>Update Work Order
         <span> WO Code:   <input id="search-input" type="search" class="form-control" placeholder="Search" /><button type="submit" id="small-search-button" class="btn btn-default"><i class="fa fa-search"></i></button>
        </span>
+       <button class="btn btn-primary printer"><i class="fa fa-print"></i>Print</button>
       </h4>
+
+
+
+
+
       </div>
     </div><!--end of panel-->
 
@@ -263,9 +271,44 @@
 
 
 
+      <div class="progressBar">
+        <div class="circle done">
+          <span class="label">1</span>
+          <span class="title">Triage</span>
+        </div>
+        <span class="bar done"></span>
+        <div class="circle done">
+          <span class="label">2</span>
+          <span class="title">Assessment</span>
+        </div>
+        <span class="bar half"></span>
+        <div class="circle active">
+          <span class="label">3</span>
+          <span class="title">Repair</span>
+        </div>
+        <span class="bar"></span>
+        <div class="circle">
+          <span class="label">4</span>
+          <span class="title">Quality</span>
+        </div>
+        <span class="bar"></span>
+        <div class="circle">
+          <span class="label">5</span>
+          <span class="title">Return</span>
+        </div>
+      </div>
+      <div class="update-buttons">
+
+          <button><i class="fa fa-check-square-o"></i>Repair Complete</button>
+          <button><i class="fa fa-file-text"></i>Return NTF</button>
+          <button class="danger"><i class="fa fa-ban"></i>Cancel</button>
+
+      </div><!---end of buttons-->
 
 
-    </div>
+    </div><!---end of work order progress bar-->
+
+
     <div id="static-work-order-info" class="work-order-info-grid">
 
       <div class="tri-column">
@@ -379,12 +422,12 @@
 </div>-->
 
   <div class="panel panel-default small">
-    <div id="expand-parts-table" class="panel-heading">
-      <h3 class="panel-title"><i class="fa fa-minus-circle"></i> Parts</h3>
+    <div id="expand-parts-table" class="panel-heading sma">
+      <h3 class="panel-title small"><i class="fa fa-minus-circle"></i> Parts</h3>
 
   </div>
   </div>
-  <table class="table table-bordered" id="parts-table">
+  <table class="table small" id="parts-table">
     <thead>
        <tr>
            <th data-field="id">Part Type</th>
@@ -427,7 +470,7 @@
    </table>
 
 
-  <div id="expand-status-info-table" class="panel panel-default">
+  <div id="expand-status-info-table" class="panel panel-default small">
     <div class="panel-heading">
       <i class="fa fa-minus-circle"></i>
       <a href="#">Attachments</a>
@@ -438,7 +481,7 @@
   </div>
   </div>
 
-  <table id="status-info-table" class="table">
+  <table id="status-info-table" class="table small">
     <thead>
        <tr>
            <th data-field="id">Update Time Local</th>
@@ -472,12 +515,7 @@
 
 
     </div><!--end of update work order container-->
-    <div class="work-order-button-container">
-      <button class="btn btn-primary"><i class="fa fa-check-square-o"></i>Repair Complete</button>
-      <button class="btn btn-primary"><i class="fa fa-file-text"></i>Return NTF</button>
-      <button class="btn btn-primary"><i class="fa fa-print"></i>Print</button>
-      <button class="btn btn-danger"><i class="fa fa-ban"></i>Cancel</button>
-    </div>
+
        </div><!--end of update work order-->
 
 

@@ -15,7 +15,9 @@ function prepareList() {
 
       prepareList();
   });
-
+$("#header-logo").click(function(){
+  $("body").toggleClass("small");
+});
 $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("active");
