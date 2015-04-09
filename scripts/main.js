@@ -1,3 +1,41 @@
+$("#lock-search").click(function(e){
+  e.preventDefault();
+  $(this).find('i').toggleClass('fa-unlock-alt fa-lock');
+
+});
+
+$("#search-popout").click(function(e){
+  e.preventDefault();
+  $(".search-popout").toggleClass("open-search-popout");
+  $("#search-table td").toggleClass("open-search-popout");
+  $(this).html($(this).text() == 'Close' ? '<span><i class="fa fa-search"></i></span>' : 'Close');
+
+
+});
+
+$("#clear-search").click(function(e){
+  e.preventDefault();
+  $(".cat1 input").val("");
+
+});
+
+$(document).ready(function(){
+    $(".toggler").click(function(e){
+        e.preventDefault();
+        $('.cat'+$(this).attr('data-prod-cat')).toggle();
+    });
+});
+
+$(document).ready(function(){
+$(".page-view").click(function(){
+
+  $("#how-many").html($("#how-many").text() == 'Displaying 1-10 of 10 work orders' ? 'Displaying 1-5 of 10 work orders' : 'Displaying 1-10 of 10 work orders');
+  $('.cat'+$(this).attr('data-prod-cat')).toggle();
+
+
+});
+});
+
 
 function prepareList() {
   $('#expList').find('li:has(ul)')
@@ -26,36 +64,7 @@ $("#menu-toggle").click(function(e) {
         $(this).find('i').toggleClass('fa-angle-left fa-angle-right');
 
 });
-$("#lock-search").click(function(e){
-  e.preventDefault();
-  $(this).find('i').toggleClass('fa-unlock-alt fa-lock');
 
-});
-
-$("#search-popout").click(function(e){
-  e.preventDefault();
-  $(".search-popout").toggleClass("open-search-popout");
-  $("#search-table td").toggleClass("open-search-popout");
-  $(this).html($(this).text() == 'Close' ? '<span><i class="fa fa-search"></i></span>' : 'Close');
-
-
-});
-
-
-
-
-$("#clear-search").click(function(e){
-  e.preventDefault();
-  $(".cat1 input").val("");
-
-});
-
-$(document).ready(function(){
-    $(".toggler").click(function(e){
-        e.preventDefault();
-        $('.cat'+$(this).attr('data-prod-cat')).toggle();
-    });
-});
 
 $("#toggle-top button").click(function(e) {
         e.preventDefault();
@@ -74,6 +83,27 @@ $(".sidebar-nav-links a").click(function(e) {
          .parent().siblings().find('.sidebar-active-tab').removeClass('sidebar-active-tab');
 
 });
+
+
+
+$( '#manifest-select-all' ).click( function () {
+   $( '#receive-manifest-table input[type="checkbox"]' ).prop('checked', this.checked)
+ });
+
+ $('#app-login-button').click(function(e) {
+   e.preventDefault();
+
+});
+
+$('.archive_month ul').hide();
+
+
+
+///drop down menu
+$('.dropdown-menu li').on('click', function() {
+    $('#dropdown_title').html($(this).find('a').html());
+    });
+
 $(".line-graph .panel-heading i").click(function(){
 
 $(this).parents(".line-graph").find(".line-graph-container").toggle();
@@ -97,17 +127,6 @@ $("#expand-parts-table").click(function() {
 $("#expand-status-info-table").click(function() {
     $("#status-info-table").toggle();
     $(this).find('i').toggleClass('fa-minus-circle fa-plus-circle');
-});
-
-
-
-$( '#manifest-select-all' ).click( function () {
-   $( '#receive-manifest-table input[type="checkbox"]' ).prop('checked', this.checked)
- });
-
- $('#app-login-button').click(function(e) {
-   e.preventDefault();
-
 });
 
 $( '#messages-select-all' ).click( function () {
@@ -176,15 +195,7 @@ $( '#messages-select-all' ).click( function () {
   $('.pie-md').easyaspie();
 })(jQuery, document);
 
-$('.archive_month ul').hide();
-
 $(function() {
    $( ".line-graph" ).draggable();
    $(".inbox-size").draggable();
  });
-
-
-///drop down menu
-$('.dropdown-menu li').on('click', function() {
-    $('#dropdown_title').html($(this).find('a').html());
-    });
