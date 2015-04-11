@@ -30,10 +30,23 @@
 
 </div>
   <div class="user-dashboard">
-    <a href="login.html"><p>Jack Steel  (Service Central)<i class="fa fa-angle-down"></i></p></a>
-    <a href="#"><li><i class="fa fa-cog"></i></li></a>
+    <div style="float:left" class="dropdown">
+<a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+<span>Maggie Martin</span>
+<i class="fa fa-angle-down"></i>
+</a>
+<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Select Group</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">User Settings</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Preferences</a></li>
+<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+
+</ul>
+</div>
     <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
+    <a href="#"><li><i class="fa fa-sign-out"></i></li></a>
   </div>
+
   <div id="toggle-top">
     <button>Full Screen</button>
   </div>
@@ -137,14 +150,14 @@
 
 
            <tr>
-               <th data-field="id">WO Code</th>
-               <th data-field="name">Name</th>
-               <th data-field="price">Create Timestamp Local</th>
-               <th data-field="status">Status</th>
-               <th data-field="serial">Serial #</th>
-               <th data-field="serial">Program</th>
-               <th data-field="model">Model</th>
-               <th data-field="bounce">Bounce</th>
+               <th data-field="id">WO Code <i class="fa fa-sort"></i></th>
+               <th data-field="name">Name <i class="fa fa-sort"></i></th>
+               <th data-field="price">Create Timestamp Local<i class="fa fa-sort"></i></th>
+               <th data-field="status">Status<i class="fa fa-sort"></i></th>
+               <th data-field="serial">Serial #<i class="fa fa-sort"></i></th>
+               <th data-field="serial">Program<i class="fa fa-sort"></i></th>
+               <th data-field="model">Model<i class="fa fa-sort"></i></th>
+               <th data-field="bounce">Bounce<i class="fa fa-sort"></i></th>
            </tr>
 
        </thead>
@@ -438,7 +451,7 @@
     <!---end of work order progress bar-- </div>-->
 
 
-    <div id="static-work-order-info" class="work-order-info-grid">
+ <div id="static-work-order-info" class="work-order-info-grid">
 
       <div class="tri-column">
         <div id="tri-column-row">
@@ -453,7 +466,7 @@
          <p class="alignleft">Program:</p>
          <p class="alignright">Repair Process</p>
       </div>
-      </div><!--end of tricolumn1-->
+    </div><!--end of tricolumn1-->
 
       <div class="tri-column">
         <div id="tri-column-row">
@@ -471,7 +484,7 @@
 
 </div><!--end of tri-column 2-->
 
-      <!--<div class="tri-column">
+      <div class="tri-column">
         <div id="tri-column-row">
           <p class="alignleft">Warranty Status:</p>
           <p class="alignright"><span>In Warranty</span></p>

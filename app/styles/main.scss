@@ -223,9 +223,10 @@ header img{
 
 .user-dashboard{
   float: right;
-  width: 300px;
+width: 200px;
 padding-top: 20px;
   height: 100%;
+
 }
 
 .user-dashboard p{
@@ -252,6 +253,11 @@ text-decoration: underline;
   margin-left: 20px;
 }
 
+
+.user-dashboard .dropdown-menu li{
+  display: block;
+  margin-left: 0;
+}
 #sidebar-wrapper {
     margin-left: -140px;
     left: 40px;
@@ -746,12 +752,13 @@ border-top-right-radius: 3px;
 #static-work-order-info{
   background: #f6f6f6;
   //margin-bottom: 10px;
-  border-bottom: none;
+
 }
 #change-work-order-info{
   margin-bottom: 10px;
-  border-top: none;
+
   padding-top: 10px;
+  margin-top: 10px;
 }
 #parts-table{
   //margin-bottom: 10px;
@@ -760,25 +767,26 @@ border-top-right-radius: 3px;
 .alignleft {
 	float: left;
   font-size: 12px;
-  width: 50%;
-  height: 35px;
- padding-top: 10px;
-  padding-left: 20px;
+  width: 40%;
+
+  height: 20px;
+margin: 0;
   overflow: scroll;
-  text-align: right;
+  text-align: left;
 
 
 }
 .alignright {
- padding-top: 10px;
-	float: left;
-  padding-right: 10px;
+  margin: 0;
+	float: right;
+
+//  padding-right: 10px;
   text-align: left;
-  width: 50%;
-  height: 35px;
+  width: 60%;
+  height: 20px;
   font-weight: bold;
 font-size: 12px;
-  padding-left: 10px;
+//  padding-left: 10px;
 
 }
 .alignright span{
@@ -789,7 +797,7 @@ font-size: 12px;
 
   //padding-bottom: 10px;
 //margin: 1.1111%;
-  width: 33.3333%;
+  width: 33.33%;
   float: left;
   font-size: 13px;
 
@@ -1264,4 +1272,9 @@ footer{
 }
 .btn-sm {
     padding-top: 1.5px;
+}
+
+
+table .fa-sort{
+  padding-left: 5px;
 }
