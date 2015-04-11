@@ -378,34 +378,22 @@
 
        <div id="update-work-order" class="tab-pane fade">
          <div class="update-work-order-container">
+           <div class="work-order-list-console">
 
-<!--
+            <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span></p>
 
-            <b>Update Work Order:<span id="work-order-title">WO058358</span>
+             <p style="float:right;margin-top:-15px;">
+               Find:</b>
+               <select class="form-control update-view">
+                <option value="one">WO Code</option>
+                <option value="two">Serial</option>
+                <option value="three">Serial #</option>
 
-<div>
-            <span>Find:</b></span>
-             <select class="form-control update-view">
-              <option value="one">Lenovo View</option>
-              <option value="two">All Work Orders</option>
-              <option value="three">Open Work Orders</option>
-              <option value="four">Ready for Pickup</option>
-              <option value="five">Ready for Repair</option>
-           </select>
-            <input id="search-input"  type="search" class="form-control" placeholder="Search" />
-
-
-            <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
-
-
-
-</div>
-
-
-
-
-      </div>-->
-
+             </select>
+             <input id="search-input"  type="search" class="form-control" placeholder="Search" />
+             <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+             </p>
+           </div>
 <!--
 
     <div id="work-order-progress-bar">
@@ -483,7 +471,7 @@
 
 </div><!--end of tri-column 2-->
 
-      <div class="tri-column">
+      <!--<div class="tri-column">
         <div id="tri-column-row">
           <p class="alignleft">Warranty Status:</p>
           <p class="alignright"><span>In Warranty</span></p>
