@@ -499,6 +499,8 @@ box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
 padding-left:20px;
 
 }
+
+
 .cat1 td > input[type='date']{
 width: 100%;
 display: block;
@@ -721,10 +723,10 @@ button i{
 
 .work-order-info-grid{
     //background: #fff;
-     border-top: 2px solid #ddd;
-     border-bottom: 2px solid #ddd;
-     border-left: 1px solid #ddd;
-     border-right: 1px solid #ddd;
+      border-top: 2px solid #ddd;
+    //  border-bottom: 2px solid #ddd;
+    //  border-left: 1px solid #ddd;
+    //  border-right: 1px solid #ddd;
 border-top-left-radius: 3px;
 border-top-right-radius: 3px;
   width: 100%;
@@ -736,15 +738,32 @@ border-top-right-radius: 3px;
 }
 
 .work-order-info-grid input{
-  padding: 6px 12px;
+ padding-left: 10px;
   border-radius: 4px;
-  margin-top: -8px;
-  width: 100%;
-  line-height: 1.42857143;
+float:left;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  //line-height: 1.42857143;
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   border: 1px solid #ccc;
   transition: border-color ease-in-out .3s,box-shadow ease-in-out .3s;
 }
+
+#change-work-order-info .alignleft{
+ width: 40%;
+  height: 25px;
+}
+
+#change-work-order-info .alignright{
+width: 60%;
+  height: 25px;
+  font-weight: normal;
+
+}
+
+.work-order-info-grid
 .tri-column-row{
   clear: both;
 
@@ -755,13 +774,30 @@ border-top-right-radius: 3px;
 
 }
 #change-work-order-info{
-  margin-bottom: 10px;
+
 
   padding-top: 10px;
-  margin-top: 10px;
+
 }
-#parts-table{
-  //margin-bottom: 10px;
+
+input[readonly]
+{
+    background-color:#ededed;
+}
+
+.grid-panel{
+margin-top: 8px;
+margin-bottom: 3px;
+
+
+}
+.shortinput{
+  height: 25px;
+  margin-bottom: 5px;
+}
+.grid-panel i{
+  padding-left: 5px;
+
 }
 
 .alignleft {
@@ -811,6 +847,12 @@ font-size: 12px;
   padding-right: 20px;
 
 }
+.panel-small{
+  background-color: none;
+  text-align: left;
+  padding: 5px;
+  border: none;
+}
 
 .btn-danger{
   background-color: #da2b2b;
@@ -844,7 +886,7 @@ font-size: 12px;
 }
 
 .update-work-order-container table{
-  margin-top: -20px;
+  //margin-top: -20px;
 }
 ////progress bar styling goes here////
 
@@ -1277,4 +1319,9 @@ footer{
 
 table .fa-sort{
   padding-left: 5px;
+}
+
+
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+  padding: 5px;
 }

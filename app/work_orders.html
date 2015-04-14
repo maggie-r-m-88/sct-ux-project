@@ -393,7 +393,9 @@
          <div class="update-work-order-container">
            <div class="work-order-list-console">
 
-            <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span></p>
+            <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
+
+            </p>
 
              <p style="float:right;margin-top:-15px;">
                Find:</b>
@@ -405,6 +407,8 @@
              </select>
              <input id="search-input"  type="search" class="form-control" placeholder="Search" />
              <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+             <button style="margin-left: 10px; font-size:16px;" class="btn btn-default"><i style="padding-left: 5px;" class="fa fa-print"></i></button>
+             <button style="font-size:16px;" class="btn btn-danger"><i class="fa fa-ban" style="padding-left: 5px;"></i></button>
              </p>
            </div>
 <!--
@@ -450,7 +454,7 @@
 
     <!---end of work order progress bar-- </div>-->
 
-
+    <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3>
  <div id="static-work-order-info" class="work-order-info-grid">
 
       <div class="tri-column">
@@ -502,13 +506,16 @@
     </div><!---end of work order info grid-->
 
 
+        <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Work Order   </h3>
+
+
     <div id="change-work-order-info"class="work-order-info-grid" >
 
       <div class="tri-column">
         <div id="tri-column-row">
 
            <p class="alignleft">Trouble Code:</p>
-           <p class="alignright"><input></p>
+           <p class="alignright"><input type="text" value="3298938" readonly="readonly" ></p>
         </div>
       <div id="tri-column-row">
          <p class="alignleft">Airtime Minutes:</p>
@@ -527,7 +534,7 @@
        </div>
        <div id="tri-column-row">
          <p class="alignleft">Software Ver In:</p>
-         <p class="alignright"><input></p>
+         <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"></p>
       </div>
       <div id="tri-column-row">
         <p class="alignleft">Software Ver Out:</p>
@@ -556,21 +563,23 @@
 
 
 
-<!--  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Work Order   <i class="fa fa-minus-circle"></i></h3>
+    <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Parts
 
-  </div>
-</div>-->
+      <select style="font-size:12px;" id="work-order-views"class="form-control shortinput">
+       <option value="one">--Default--</option>
+       <option value="two">All Work Orders</option>
+       <option value="three">Open Work Orders</option>
+       <option value="four">Ready for Pickup</option>
+       <option value="five">Ready for Repair</option>
+    </select>
 
-  <div class="panel panel-default small">
-    <div id="expand-parts-table" class="panel-heading sma">
-      <h3 class="panel-title small"><i class="fa fa-minus-circle"></i> Parts</h3>
+    </h3>
 
-  </div>
-  </div>
+
+  <!--<div class="panel panel-default small">-->
+
   <table class="table small" id="parts-table">
-    <thead>
+ <thead>
        <tr>
            <th data-field="id">Part Type</th>
            <th data-field="name">Part Number</th>
@@ -612,7 +621,7 @@
    </table>
 
 
-  <div id="expand-status-info-table" class="panel panel-default small">
+<!--  <div id="expand-status-info-table" class="panel panel-default small">
     <div class="panel-heading">
       <i class="fa fa-minus-circle"></i>
       <a href="#">Attachments</a>
@@ -653,7 +662,7 @@
        <td>Mark Riley</td>
      </tr>
    </tbody>
-   </table>
+ </table>-->
 
 
     </div><!--end of update work order container-->
