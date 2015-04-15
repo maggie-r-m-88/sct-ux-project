@@ -27,6 +27,8 @@ $(document).ready(function(){
 });
 
 $(document).ready(function(){
+
+  $('#product-table a:first').tab('show');
 $(".page-view").click(function(){
 
   $("#how-many").html($("#how-many").text() == 'Displaying 1-10 of 10 work orders' ? 'Displaying 1-5 of 10 work orders' : 'Displaying 1-10 of 10 work orders');

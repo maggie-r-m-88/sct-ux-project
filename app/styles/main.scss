@@ -24,6 +24,11 @@ $sidebarlink: white;
 
 
 $forestgreen: #2b8624;
+.forestgreen{
+
+  background: $forestgreen;
+  color: white;
+}
 /*green styles*/
 //dark: #1e5152;
 //superlight:  #f1f8f7;
@@ -461,6 +466,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 
 }
 
+.product-table>li>a{
+  color:  $tablinkhover;
+
+}
+
+.product-table>li.active>a, .product-table>li.active>a:focus, .product-table>li.active>a:hover{
+  border: none;
+}
+
+
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
   color: $tabactivelink;
   background: $superlightblue;
@@ -736,6 +751,23 @@ border-top-right-radius: 3px;
  padding: 5px;
 
 }
+.action-button-container{
+  border-top: 2px solid #ddd;
+  padding: 5px;
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
+}
+
+#action-buttons{
+  width: 50%;
+  overflow: auto;
+
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .work-order-info-grid input{
  padding-left: 10px;
@@ -838,11 +870,18 @@ font-size: 12px;
   font-size: 13px;
 
   //margin-left: -20px;
-  overflow: scroll;
+  //overflow: scroll;
   height: 100%;
 }
 
+.double-column{
 
+  width:50%;
+  float: left;
+  font-size: 13px;
+  height: 100%;
+
+}
 .panel-heading a{
   padding-right: 20px;
 
@@ -1324,4 +1363,12 @@ table .fa-sort{
 
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
   padding: 5px;
+}
+
+
+
+///modal styles
+
+.modal-dialog{
+  margin-top: 100px;
 }
