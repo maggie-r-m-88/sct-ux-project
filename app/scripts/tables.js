@@ -4,6 +4,13 @@ $("#lock-search").click(function(e){
 
 });
 
+$(".toggler").click(function(e){
+  e.preventDefault();
+  $(this).find('i').toggleClass('fa-unlock-alt fa-lock');
+
+});
+
+
 $("#search-popout").click(function(e){
   e.preventDefault();
   $(".search-popout").toggleClass("open-search-popout");
@@ -28,7 +35,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
 
-  $('#product-table a:first').tab('show');
+  //$('#product-table a:first').tab('show');
 $(".page-view").click(function(){
 
   $("#how-many").html($("#how-many").text() == 'Displaying 1-10 of 10 work orders' ? 'Displaying 1-5 of 10 work orders' : 'Displaying 1-10 of 10 work orders');
