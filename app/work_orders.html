@@ -114,15 +114,53 @@
            <div id="work-order-list" class="tab-pane fade in active">
              <div class="work-order-list-container">
 
-          <!-- <b><a class="dropdown-toggle" datahref="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a></b>-->
 
-               <div class="work-order-list-console">
-                 <div class="dropdown">
-         <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-         <span id="dropdown_title">Today</span>
-           <i class="fa fa-angle-down"></i>
-         </a>
-         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+               <div class="work-order-list-console small">
+
+                <div class="console-col-1">
+
+
+                  <div class="dropdown">
+                    <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                     <span id="dropdown_title">Today</span><i class="fa fa-angle-down"></i>
+                    </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last Month (2)</a></li>
+
+           </ul>
+         </div>
+               <div class="view-select"><p><b>View:</b>
+               <select  id="work-order-views"class="form-control small">
+                <option value="one">Lenovo View</option>
+                <option value="two">All Work Orders</option>
+                <option value="three">Open Work Orders</option>
+                <option value="four">Ready for Pickup</option>
+                <option value="five">Ready for Repair</option>
+             </select>
+
+           <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+         </p>
+
+               </div>
+               <div class="search-popout">
+                 <div class="btn-group btn-group-sm" role="group">
+                   <button type="submit" class="btn btn-default">Go</button>
+                 <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
+
+                 <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
+               </div>
+             </div>
+              </div>
+
+                <!-- <div class="dropdown">
+                  <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                   <span id="dropdown_title">Today</span><i class="fa fa-angle-down"></i>
+                  </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
@@ -159,7 +197,13 @@
             <li>  <a  href="#">Ready for Pickup</a></li>
 </ul>-->
       </div><!---end work work order list console-->
-
+      <div class="console-col-2 small">
+        <a href="#">Lenovo View</a>
+        <a href="#">All Work Orders</a>
+        <a href="#">Open Work Orders</a>
+        <a href="#">Ready for Pickup</a>
+        <a href="#">Ready for Repair</a>
+      </div>
       <table class="table table-condensed">
         <thead>
           <tr class="cat1" style="display:none">
@@ -415,7 +459,7 @@
            <div class="work-order-list-console">
 
             <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
-              <span id="work-order-title">.Shipped to Customer</span>
+              <span id="work-order-title">.Shipped to Customer</b></span>
 
 
             </p>
@@ -431,7 +475,7 @@
 <div style="float:right;">
                <div class="dropdown">
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-           <span>Find</span>
+           <span id="find-wo">Find</span>
            <i class="fa fa-angle-down"></i>
            </a>
            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -455,16 +499,7 @@
              <!--</p>-->
            </div>
 </div>
-        <!--<ol class="breadcrumb">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Library</a></li>
-  <li class="active">Data</li>-->
-<!--
-<div class="btn-group" role="group" aria-label="...">
-  <button type="button" class="btn btn-default">Repair</button>
-  <button type="button" class="btn btn-default">QA</button>
-  <button type="button" class="btn btn-default">Right</button>
-</div>-->
+
 
 
 <!--  <div id="work-order-progress-bar">
@@ -573,7 +608,7 @@
         </div>
       <div id="tri-column-row">
          <p class="alignleft">Airtime Minutes:</p>
-         <p class="alignright"><input></p>
+         <p class="alignright"><input><span class="asterisk_input">  </span>     </p>
       </div>
       <div id="tri-column-row">
          <p class="alignleft">Device Condition:</p>
@@ -588,11 +623,11 @@
        </div>
        <div id="tri-column-row">
          <p class="alignleft">Software Ver In:</p>
-         <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"></p>
+         <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"><span class="asterisk_input">  </span> </p>
       </div>
       <div id="tri-column-row">
         <p class="alignleft">Software Ver Out:</p>
-        <p class="alignright"><input></p>
+        <p class="alignright"><input><span class="asterisk_input">  </span> </p>
      </div>
 
 </div><!--end of tri-column 2-->

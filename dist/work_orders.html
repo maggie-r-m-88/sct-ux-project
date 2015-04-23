@@ -18,7 +18,7 @@
   <body>
 <header>
   <div id="header-logo">
-<img src="../images/SCT_wordpresslogo.png"/>
+<img src="../images/SCTwhite.png"/>
 
 </div>
   <div class="user-dashboard">
@@ -106,15 +106,53 @@
            <div id="work-order-list" class="tab-pane fade in active">
              <div class="work-order-list-container">
 
-          <!-- <b><a class="dropdown-toggle" datahref="#">Last 6 Months (8) <i class="fa fa-angle-down"></i></a></b>-->
 
-               <div class="work-order-list-console">
-                 <div class="dropdown">
-         <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-         <span id="dropdown_title">Today</span>
-           <i class="fa fa-angle-down"></i>
-         </a>
-         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+
+               <div class="work-order-list-console small">
+
+                <div class="console-col-1">
+
+
+                  <div class="dropdown">
+                    <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                     <span id="dropdown_title">Today</span><i class="fa fa-angle-down"></i>
+                    </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last Month (2)</a></li>
+
+           </ul>
+         </div>
+               <div class="view-select"><p><b>View:</b>
+               <select  id="work-order-views"class="form-control small">
+                <option value="one">Lenovo View</option>
+                <option value="two">All Work Orders</option>
+                <option value="three">Open Work Orders</option>
+                <option value="four">Ready for Pickup</option>
+                <option value="five">Ready for Repair</option>
+             </select>
+
+           <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+         </p>
+
+               </div>
+               <div class="search-popout">
+                 <div class="btn-group btn-group-sm" role="group">
+                   <button type="submit" class="btn btn-default">Go</button>
+                 <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
+
+                 <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
+               </div>
+             </div>
+              </div>
+
+                <!-- <div class="dropdown">
+                  <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                   <span id="dropdown_title">Today</span><i class="fa fa-angle-down"></i>
+                  </a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
@@ -141,9 +179,23 @@
 
               <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
             </div>
-            </div>
-      </div><!---end work work order list console-->
+          </div>
 
+<!--<ul class="bookmarks">
+            <li>  <a href="#">Lenovo</a></li>
+            <li>  <a  href="#">Open Orders</a></li>
+            <li>  <a href="#">Suspensions</a></li>
+            <li>  <a href="#">Motorola Returns</a></li>
+            <li>  <a  href="#">Ready for Pickup</a></li>
+</ul>-->
+      </div><!---end work work order list console-->
+      <div class="console-col-2 small">
+        <a href="#">Lenovo View</a>
+        <a href="#">All Work Orders</a>
+        <a href="#">Open Work Orders</a>
+        <a href="#">Ready for Pickup</a>
+        <a href="#">Ready for Repair</a>
+      </div>
       <table class="table table-condensed">
         <thead>
           <tr class="cat1" style="display:none">
@@ -300,12 +352,12 @@
 
 
 </p>
-<p class="page-view" data-prod-cat="2">Rows per page:
+<!--<p class="page-view" data-prod-cat="2">Rows per page:
 <a href="#">10</a>
 <a href="#">15</a>
 <a href="#">20</a>
 <a href="#">30</a>
-</p>
+</p>-->
 
 <ul class="pagination">
 
@@ -399,58 +451,80 @@
            <div class="work-order-list-console">
 
             <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
-              <span id="work-order-title">.Shipped to Customer</span>
+              <span id="work-order-title">.Shipped to Customer</b></span>
 
 
             </p>
 
-             <p style="float:right;margin-top:-15px;">
-               Find:</b>
-               <select class="form-control update-view">
-                <option value="one">WO Code</option>
-                <option value="two">Serial</option>
-                <option value="three">Serial #</option>
+            <!-- <p style="float:right;margin-top:-15px;" >-->
+            <!-- Find:</b>
+             <select class="form-control update-view">
+              <option value="one">WO Code</option>
+              <option value="two">Serial</option>
+              <option value="three">Serial #</option>
 
-             </select>
-             <input id="search-input"  type="search" class="form-control" placeholder="Search" />
-             <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+           </select>-->
+<div style="float:right;">
+               <div class="dropdown">
+           <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+           <span id="find-wo">Find</span>
+           <i class="fa fa-angle-down"></i>
+           </a>
+           <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">W.O. Code</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial #</a></li>
+
+
+           </ul>
+           </div>
+
+
+
+
+
+
+             <span class="console-search"><i class="fa fa-search"></i></span> <input id="search-input"  type="search" class="form-control"  />
+             <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-unlock-alt" ></i></span></button>
              <!--<button style="margin-left: 10px; font-size:16px;" class="btn btn-default"><i style="padding-left: 5px;" class="fa fa-print"></i></button>
              <button style="font-size:16px;" class="btn btn-danger"><i class="fa fa-ban" style="padding-left: 5px;"></i></button>-->
-             </p>
+             <!--</p>-->
            </div>
-<!--
+</div>
 
-    <div id="work-order-progress-bar">
+
+
+<!--  <div id="work-order-progress-bar">
 
 
 
       <div class="progressBar">
         <div class="circle done">
-          <span class="label">1</span>
+          <span class="label"></span>
           <span class="title">Triage</span>
         </div>
         <span class="bar done"></span>
         <div class="circle done">
-          <span class="label">2</span>
+          <span class="label"></span>
           <span class="title">Assessment</span>
         </div>
         <span class="bar half"></span>
         <div class="circle active">
-          <span class="label">3</span>
+          <span class="label"></span>
           <span class="title">Repair</span>
         </div>
-        <span class="bar"></span>
+     <span class="bar"></span>
         <div class="circle">
-          <span class="label">4</span>
+          <span class="label"></span>
           <span class="title">Quality</span>
-        </div>
+        </div><!--
         <span class="bar"></span>
         <div class="circle">
           <span class="label">5</span>
           <span class="title">Return</span>
-        </div>
-      </div>
-      <div class="update-buttons">
+        </div>-->
+
+    <!--  <div class="update-buttons">
 
           <button><i class="fa fa-check-square-o"></i>Repair Complete</button>
           <button><i class="fa fa-file-text"></i>Return NTF</button>
@@ -459,7 +533,7 @@
       </div><!---end of buttons-->
 
 
-    <!---end of work order progress bar-- </div>-->
+
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3>
  <div id="static-work-order-info" class="work-order-info-grid">
@@ -526,7 +600,7 @@
         </div>
       <div id="tri-column-row">
          <p class="alignleft">Airtime Minutes:</p>
-         <p class="alignright"><input></p>
+         <p class="alignright"><input><span class="asterisk_input">  </span>     </p>
       </div>
       <div id="tri-column-row">
          <p class="alignleft">Device Condition:</p>
@@ -541,11 +615,11 @@
        </div>
        <div id="tri-column-row">
          <p class="alignleft">Software Ver In:</p>
-         <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"></p>
+         <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"><span class="asterisk_input">  </span> </p>
       </div>
       <div id="tri-column-row">
         <p class="alignleft">Software Ver Out:</p>
-        <p class="alignright"><input></p>
+        <p class="alignright"><input><span class="asterisk_input">  </span> </p>
      </div>
 
 </div><!--end of tri-column 2-->
@@ -627,18 +701,18 @@
      </tr>
    </table>
 
-   <!---<h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Actions
+   <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Actions
     <div class="action-button-container">
        <div id="action-buttons">
-         <button type="button" class="btn btn-default forestgreen" style="float:left; margin-right:10px">Finish Repair</button>
-         <button type="button" class="btn btn-default" style="float:left;">Expedite</button>
-         <button  class="btn btn-default" style="float:right; margin-left:10px;"><i style="padding-left: 5px;" class="fa fa-print"></i></button>
-         <button  class="btn btn-danger" style="float:right; margin-left:10px;"><i class="fa fa-ban" style="padding-left: 5px;"></i></button>
+         <button type="button" class="btn btn-primary" style=" margin-right:10px">Finish Repair</button>
+         <button type="button" class="btn btn-default" style="">Expedite</button>
+         <button  class="btn btn-default" style="margin-left:10px;"><i style="padding-left: 5px;" class="fa fa-print"></i></button>
+         <button  class="btn btn-danger" style=" margin-left:10px;"><i class="fa fa-ban" style="padding-left: 5px;"></i></button>
        </div>
     </div>
 
 
-  </h3>-->
+  </h3>
 
 
 <ul class="nav nav-tabs small product-table" id="product-table">
@@ -704,12 +778,13 @@
 
 
 </p>
+<!--
 <p class="page-view" data-prod-cat="2">Rows per page:
 <a href="#">10</a>
 <a href="#">15</a>
 <a href="#">20</a>
 <a href="#">30</a>
-</p>
+</p>-->
 
 <ul class="pagination">
 

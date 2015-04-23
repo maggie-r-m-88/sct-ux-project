@@ -65,3 +65,7 @@ $('.archive_month ul').hide();
 $('.dropdown-menu li').on('click', function() {
     $('#dropdown_title').html($(this).find('a').html());
     });
+
+  $('.dropdown-menu li').on('click', function() {
+        $('#find-wo').html($(this).find('a').html());
+        });
