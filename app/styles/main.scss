@@ -459,6 +459,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 .nav-tabs i{
   padding-right: 5px;
 }
+
+
 .nav-tabs>li>a{
   color: $tabinactivecolor;
 
@@ -501,7 +503,7 @@ display: none;
 .cat1{
 background: #eee;
 border: 1px solid #ccc;
-border-top: none;
+
 
 
 }
@@ -566,12 +568,7 @@ select{
 
   font-size: 16px;
 }
-#ten-rows{
-  display:none;
-}
-.ten-rows-show{
-  display: block;
-}
+
 #search-program {
   width: 250px;
   padding: 5px;
@@ -639,12 +636,14 @@ width: 100%;
   height:25px;
   padding-top: 5px;
   border:1px solid #ccc;
- border-bottom: none;
+
+border-bottom: none;
 
 }
 
 .console-col-2 a{
-  padding: 0px 5px;
+  padding:0px 10px 0px 5px;
+
 
 
 }
@@ -951,33 +950,16 @@ font-size: 12px;
 .update-work-order-container table{
   //margin-top: -20px;
 }
-////progress bar styling goes here////
 
 
-#work-order-progress-bar{
 
-overflow: auto;
-  text-align: center;
 
-//margin-bottom: 20px;
-
-}
 
 .printer{
   float: right;
 }
 
-/* Form Progress */
-.progressBar {
-  height: auto;
 
-  width: 100%;
-  //float: left;
-margin-left: auto;
-margin-right: auto;;
-
-  text-align: center;
-}
 
 .update-buttons{
 float: right;
@@ -1002,69 +984,7 @@ border: none;
 .update-buttons .danger{
   background: #c12e2a;
 }
-.progressBar .circle,
-.progressBar .bar {
-  display: inline-block;
-  background: #fff;
-  width: 30px; height: 30px;
-  border-radius: 30px;
-  border: 1px solid #d5d5da;
-}
-.progressBar .bar {
-  position: relative;
-  width: 80px;
-  height: 6px;
-  top: -33px;
-  margin-left: -5px;
-  margin-right: -5px;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
-}
-.progressBar .circle .label {
-  display: inline-block;
-  width: 22px;
-  height: 22px;
-  line-height: 22px;
-  border-radius: 22px;
-  margin-top: 3px;
-  color: #b5b5ba;
-  font-size: 14px;
-}
-.progressBar .circle .title {
-  color: #b5b5ba;
-  font-size: 13px;
-  line-height: 30px;
-  margin-left: -5px;
-}
 
-/* Done / Active */
-.progressBar .bar.done,
-.progressBar .circle.done {
-  background: #eee;
-}
-.progressBar .bar.active {
-  background: linear-gradient(to right, #EEE 40%, #FFF 60%);
-}
-.progressBar .circle.done .label {
-  color: #FFF;
-  background: #8bc435;
-  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
-}
-.progressBar .circle.done .title {
-  color: #444;
-}
-.progressBar .circle.active .label {
-  color: #FFF;
-  background: #0c95be;
-  box-shadow: inset 0 0 2px rgba(0,0,0,.2);
-}
-.progressBar .circle.active .title {
-  color: #0c95be;
-}
-
-
-////end progress bar stylin'
 
 .btn-danger{
   background: #c12e2a;
@@ -1385,7 +1305,9 @@ table .fa-sort{
   padding-left: 5px;
 }
 
-
+.table{
+  border: 1px solid #ccc;
+}
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
   padding: 5px;
 }
@@ -1414,7 +1336,23 @@ border: 2px solid red;
 .asterisk_input:after {
 content:" *";
 color: #c12e2a;
+
 position: absolute;
-margin: -5px 0px 0px -15px;
-font-size: xx-large;
+margin: 0px 0px 0px -10px;
+font-size: large;
 padding: 0 5px 0 0; }
+
+.progress-tabs{
+  margin-bottom: 5px;
+
+}
+.progress-tabs>li>a{
+  padding: 8px;
+  border-radius: 0;
+
+}
+
+.progress-tabs>li.active>a, .progress-tabs>li.active>a:focus, .progress-tabs>li.active>a:hover{
+border-radius: 0;
+  background: $darkblue;
+}
