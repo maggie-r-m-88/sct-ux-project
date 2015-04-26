@@ -496,10 +496,10 @@
              <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-unlock-alt" ></i></span></button>
 
            </div>
-</div>
+         </div>
 
 
-<ul class="nav nav-pills small progress-tabs" >
+<ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active"><a href="#">Triage</a></li>
   <li role="presentation "><a href="#">Assessment</a></li>
   <li role="presentation"><a href="#">Repair</a></li>
@@ -618,7 +618,10 @@
       </div>
       <div id="tri-column-row">
          <p class="alignleft">Device Condition:</p>
-         <p class="alignright"><input></p>
+         <p class="alignright">
+
+
+         </p>
       </div>
       </div><!--end of tricolumn1-->
 
@@ -659,8 +662,7 @@
 
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
-
-      <select style="font-size:12px;" id="work-order-views"class="form-control shortinput">
+      <select style="font-size:12px; margin-left:10px;" id="work-order-views"class="form-control shortinput">
        <option value="one">--Default--</option>
        <option value="two">All Work Orders</option>
        <option value="three">Open Work Orders</option>
@@ -719,10 +721,14 @@
 
     <div class="action-button-container">
        <div id="action-buttons">
-         <button type="button" class="btn btn-primary" style=" margin-right:10px">Finish Repair</button>
-         <button type="button" class="btn btn-default" style="">Expedite</button>
-         <button  class="btn btn-default" style="margin-left:10px;"><i style="padding-left: 5px;" class="fa fa-print"></i></button>
-         <button  class="btn btn-danger" style=" margin-left:10px;"><i class="fa fa-ban" style="padding-left: 5px;"></i></button>
+         <div style="float:left;">
+           <button type="button" class="btn btn-primary small" style=" margin-right:10px">Finish Repair</button>
+           <button type="button" class="btn btn-default small" style="">Expedite</button>
+         </div>
+         <div style="float:right;">
+         <button  class="btn btn-default small" style="margin-left:10px;"><i style="padding-left: 5px;" class="fa fa-print"></i>Print</button>
+         <button  class="btn btn-danger small" style=" margin-left:10px;"><i class="fa fa-ban" style="padding-left: 5px;"></i>Cancel</button>
+       </div>
        </div>
     </div>
 
@@ -731,7 +737,7 @@
 
 
 <ul class="nav nav-tabs small product-table" id="product-table">
-  <li><a href="#1" data-toggle="tab"><i style="color:#2b8624;" class="fa fa-check"></i>Status History</a>
+  <li><a href="#1" data-toggle="tab"><i style="color:#5d7a54;" class="fa fa-check"></i>Status History</a>
 
   </li>
   <li><a href="#2" data-toggle="tab">Attachments</a>
@@ -740,7 +746,7 @@
   <li><a href="#2" data-toggle="tab">Notes</a>
 
   </li>
-  <li><a href="#4" data-toggle="tab"> <i style="color:#2b8624;" class="fa fa-check"></i>Service Bulletins</a>
+  <li><a href="#4" data-toggle="tab"> <i style="color:#5d7a54;" class="fa fa-check"></i>Service Bulletins</a>
 
   </li>
 
