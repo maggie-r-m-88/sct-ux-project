@@ -456,23 +456,16 @@
 
        <div id="update-work-order" class="tab-pane fade">
          <div class="update-work-order-container">
-           <div class="work-order-list-console">
+           <div class="work-order-list-console updatescreen panel panel-default">
 
-            <p style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
+
+            <div style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
               <span id="work-order-title">.Shipped to Customer</b></span>
 
 
-            </p>
+            </div>
 
-            <!-- <p style="float:right;margin-top:-15px;" >-->
-            <!-- Find:</b>
-             <select class="form-control update-view">
-              <option value="one">WO Code</option>
-              <option value="two">Serial</option>
-              <option value="three">Serial #</option>
-
-           </select>-->
-<div style="float:right; margin-top:-3px;">
+          <div style="float:right; margin-top:-3px;">
                <div class="dropdown" style="margin-top:5px;">
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
            <span id="find-wo">Find</span>
@@ -487,18 +480,13 @@
            </ul>
            </div>
 
-
-
-
-
-
              <span class="console-search"><i class="fa fa-search"></i></span> <input id="search-input"  type="search" class="form-control"  />
              <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-unlock-alt" ></i></span></button>
 
            </div>
-         </div>
 
 
+<div style="clear:both;overflow:auto;">
 <ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active"><a href="#">Triage</a></li>
   <li role="presentation "><a href="#">Assessment</a></li>
@@ -506,8 +494,9 @@
   <li role="presentation"><a href="#">Quality</a></li>
   <li role="presentation"><a href="#">Return</a></li>
 </ul>
-
-
+<div class="queue-input">jsjhjdh</div>
+</div>
+</div>
 <!--  <div id="work-order-progress-bar">
 
 
@@ -547,7 +536,7 @@
       </div><!---end of buttons-->
 
 
-
+<div class="update-work-order-body">
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3>
  <div id="static-work-order-info" class="work-order-info-grid">
@@ -938,7 +927,7 @@
   </div>
 </div>
 
-
+</div><!---end of work order body-->
     </div><!--end of update work order container-->
 
        </div><!--end of update work order-->

@@ -592,7 +592,7 @@ select{
 }
 
 .update-work-order-container{
-  padding: 20px;
+  padding: 10px 20px;
   //margin-top: 10px;
 }
 #work-order-title{
@@ -627,11 +627,16 @@ height: 35px;
 width: 100%;
 }
 
-.update-work-order-container .work-order-list-console{
-
-
+.update-work-order-container .work-order-list-console {
+  background: #f5f5f5;
+  padding:8px;
+  height: auto;
+margin: 0;
 }
-
+.update-work-order-body{
+clear: both;
+ border: 2px solid transparent;
+}
 .console-col-1{
 
   width:100%;
@@ -1355,9 +1360,13 @@ font-size: large;
 padding: 0 5px 0 0; }
 
 .progress-tabs{
-  margin-bottom: 5px;
-border-bottom: 2px solid #ccc;
+float: left;
 
+
+}
+
+.queue-input{
+float:right;
 }
 .progress-tabs>li>a{
   padding: 6px;
