@@ -662,7 +662,7 @@ border-bottom: none;
 }
 .view-select{
   float: left;
-  padding-left: 20px;
+  padding-left: 40px;
   margin-top: -11px;
 }
 
@@ -678,7 +678,7 @@ border-bottom: none;
   border-top-right-radius: 4px;
 
 margin-top: -5px;
-margin-left: 20px;
+margin-left: 40px;
 
 float: left;
 border: 1px solid #ccc;
@@ -857,14 +857,14 @@ input[readonly]
 .grid-panel{
 margin-top: 5px;
 padding-bottom:5px;
-
+text-transform: uppercase;
 
 //border-bottom: 1px solid #ddd;
 
 }
 .shortinput{
   height: 25px;
-  margin-bottom: 5px;
+  //margin-bottom: 5px;
 }
 .grid-panel i{
   padding-left: 5px;
@@ -1281,8 +1281,10 @@ footer{
 }
 
 
-#dropdown_title{
+#dropdown_title, #find-wo{
   font-weight: bold;
+  font-size:14px;
+  text-transform: uppercase;
 }
 
 
@@ -1360,7 +1362,7 @@ padding: 0 5px 0 0; }
 
 .progress-tabs{
 float: left;
-
+font-size: 12px;
 
 }
 

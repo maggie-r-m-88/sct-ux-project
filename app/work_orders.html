@@ -467,8 +467,9 @@
 
           <div style="float:right; margin-top:-3px;">
                <div class="dropdown" style="margin-top:5px;">
+                 <b>Find:</b>
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-           <span id="find-wo">Find</span>
+           <span id="find-wo">W.O Code</span>
            <i class="fa fa-angle-down"></i>
            </a>
            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -494,7 +495,32 @@
   <li role="presentation"><a href="#">Quality</a></li>
   <li role="presentation"><a href="#">Return</a></li>
 </ul>
-<div class="queue-input">jsjhjdh</div>
+<div class="queue-input">
+
+  <div class="dropdown" style="margin-top:5px;">
+    <b>Queue:</b>
+      <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      <span style="padding-left:10px;" id="find-wo">This Week</span>
+      <i class="fa fa-angle-down"></i>
+       </a>
+         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">Today</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 7 Days</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 2 Weeks</a></li>
+ </ul>
+ </div>
+ <select id="work-order-views"class="form-control">
+  <option value="one">--Default--</option>
+  <option value="two">All Work Orders</option>
+  <option value="three">Open Work Orders</option>
+  <option value="four">Ready for Pickup</option>
+  <option value="five">Ready for Repair</option>
+</select>
+<button type="submit" class="btn btn-primary">Find Next</button>
+
+</div><!---end of queue input-->
 </div>
 </div>
 <!--  <div id="work-order-progress-bar">
