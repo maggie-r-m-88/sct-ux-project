@@ -761,7 +761,7 @@ button i{
 
 .work-order-info-grid{
     //background: #fff;
-      border-top: 2px solid #ddd;
+    //  border-top: 2px solid #ddd;
     //  border-bottom: 2px solid #ddd;
     //  border-left: 1px solid #ddd;
     //  border-right: 1px solid #ddd;
@@ -775,7 +775,7 @@ border-top-right-radius: 3px;
 
 }
 .action-button-container{
-  border-top: 2px solid #ddd;
+  //border-top: 2px solid #ddd;
   padding: 5px;
   width: 100%;
   height: auto;
@@ -841,9 +841,10 @@ input[readonly]
 }
 
 .grid-panel{
-margin-top: 8px;
+margin-top: 10px;
 margin-bottom: 3px;
-
+padding-bottom: 3px;
+border-bottom: 2px solid #ddd;
 
 }
 .shortinput{
@@ -938,7 +939,7 @@ font-size: 12px;
 }
 
 
-.fa-minus-circle{
+.fa-minus-circle, .fa-wrench, .fa-bullseye{
   padding-right: 15px;
   font-size: 14px;
 }
@@ -1347,12 +1348,16 @@ padding: 0 5px 0 0; }
 
 }
 .progress-tabs>li>a{
-  padding: 8px;
+  padding: 6px;
   border-radius: 0;
 
 }
 
 .progress-tabs>li.active>a, .progress-tabs>li.active>a:focus, .progress-tabs>li.active>a:hover{
 border-radius: 0;
-  background: $darkblue;
+  background:#337ab7;
+}
+.progress-tabs>li>a:hover{
+  background:#337ab7;
+  color: white;
 }
