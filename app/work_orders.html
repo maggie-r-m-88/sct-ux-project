@@ -523,7 +523,7 @@
 </select>
 <button type="submit" class="btn btn-primary small">Get Next</button>
 
-</div><!---end of queue input-->
+</div><!--end of queue input-->
 </div>
 </div>
 
@@ -651,7 +651,7 @@
 
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
-      <select style="font-size:12px; margin-left:10px;" id="work-order-views"class="form-control shortinput">
+      <select style="font-size:12px; margin: 0 20px;" id="work-order-views"class="form-control shortinput">
        <option value="one">--Default--</option>
        <option value="two">All Work Orders</option>
        <option value="three">Open Work Orders</option>
@@ -707,12 +707,12 @@
    </table>
 
    <h3 class="panel-title small grid-panel"><i class="fa fa-bullseye"></i>Actions</h3>
-
+<div style="background:white;  border:2px solid #ddd; border-top:none;">
     <div class="action-button-container">
        <div id="action-buttons">
          <div style="float:left;">
-           <button type="button" class="btn btn-primary small" style=" margin-right:10px">Finish Repair</button>
-           <button type="button" class="btn btn-default small" style="">Expedite</button>
+           <button id="Finish-Repair-Button"type="button" class="btn btn-primary small" style=" margin-right:10px">Finish Repair</button>
+           <button id="Expedite-Button" type="button" class="btn btn-default small" style="">Expedite</button>
          </div>
          <div style="float:right;">
          <button  class="btn btn-default small" style="margin-left:10px;"><i style="padding-left: 5px;" class="fa fa-print"></i>Print</button>
@@ -720,9 +720,10 @@
        </div>
        </div>
     </div>
-
+  </div><!---end of div whitey-->
 
   </h3>
+
 
 
 <ul class="nav nav-tabs small product-table" id="product-table">
@@ -751,7 +752,7 @@
 </ul>
 <div class="tab-content">
   <div class="tab-pane" id="1">
-    <table class="table table-condensed table-striped volumes small">
+    <table class="table table-condensed volumes small">
       <thead>
         <tr>
           <th>Update Time Local</th>
@@ -812,7 +813,7 @@
 
   </div>
   <div class="tab-pane" id="2">
-    <table class="table table-condensed small table-striped volumes">
+    <table class="table table-condensed small volumes">
       <thead>
         <tr>
           <th>Filename</th>
@@ -901,7 +902,9 @@
           <td>Shipped to Customer</td>
           <td>909898787676765</td>
           <td>000001928A44EE</td>
+          <td>XXP101000082717</td>
           <td>12/19/2014 5:27 PM</td>
+
           <td>Mark Riley</td>
 
         </tr>
@@ -912,6 +915,7 @@
           <td>Shipped to Customer</td>
           <td>909898700176765</td>
           <td>000009928A44EE</td>
+          <td>XXP101000082717</td>
           <td>5/23/2014 8:14 AM</td>
           <td>Mark Riley</td>
 
@@ -923,10 +927,10 @@
 
 
 
-
   </div>
 </div>
-
+<div class="table-footer">
+</div>
 </div><!---end of work order body-->
     </div><!--end of update work order container-->
 

@@ -69,3 +69,10 @@ $('.dropdown-menu li').on('click', function() {
   $('.dropdown-menu li').on('click', function() {
         $('#find-wo').html($(this).find('a').html());
         });
+
+
+        $("#Finish-Repair-Button").click(function(e) {
+          e.preventDefault();
+       $(this).addClass("action-disabled");
+       $(this).removeClass("btn-primary");
+        });
