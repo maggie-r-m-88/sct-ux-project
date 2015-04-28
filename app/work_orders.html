@@ -123,7 +123,7 @@
 
                   <div class="dropdown">
                     <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                     <span id="dropdown_title">Today</span><i class="fa fa-angle-down"></i>
+                     <span id="dropdown_title" style="padding:3px;">Today</span><i class="fa fa-angle-down"></i>
                     </a>
             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
@@ -456,7 +456,7 @@
 
        <div id="update-work-order" class="tab-pane fade">
          <div class="update-work-order-container">
-           <div class="work-order-list-console updatescreen panel panel-default">
+           <div class="work-order-list-console updatescreen panel panel-default" style="background:none; border:none;">
 
 
             <div style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
@@ -465,9 +465,11 @@
 
             </div>
 
-          <div style="float:right; margin-top:-3px;">
-               <div class="dropdown" style="margin-top:5px;">
-                 <b>Find:</b>
+          <div style="float:right;">
+
+
+               <div class="dropdown" style="padding-top:5px;" >
+
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
            <span id="find-wo">W.O Code</span>
            <i class="fa fa-angle-down"></i>
@@ -481,9 +483,9 @@
            </ul>
            </div>
 
-             <span class="console-search"><i class="fa fa-search"></i></span> <input id="search-input"  type="search" class="form-control"  />
-             <button id="search-popout" type="submit" class="btn btn-primary toggler" data-prod-cat="1"><span><i class="fa fa-unlock-alt" ></i></span></button>
-
+             <span class="console-search"><i class="fa fa-search"></i></span> <input id="search-input"  style="width:150px;" type="search" class="form-control"  />
+             <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-unlock-alt small" ></i></span></button>
+             <button type="submit" class="btn btn-default small" >Clear</button>
            </div>
 
 
@@ -495,9 +497,10 @@
   <li role="presentation"><a href="#">Quality</a></li>
   <li role="presentation"><a href="#">Return</a></li>
 </ul>
+
 <div class="queue-input">
 
-  <div class="dropdown" style="margin-top:5px;">
+  <div class="dropdown" style="padding-top:12px;" >
     <b>Queue:</b>
       <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
       <span style="padding-left:10px;" id="find-wo">This Week</span>
@@ -518,40 +521,11 @@
   <option value="four">Ready for Pickup</option>
   <option value="five">Ready for Repair</option>
 </select>
-<button type="submit" class="btn btn-primary">Find Next</button>
+<button type="submit" class="btn btn-primary small">Get Next</button>
 
 </div><!---end of queue input-->
 </div>
 </div>
-<!--  <div id="work-order-progress-bar">
-
-
-
-      <div class="progressBar">
-        <div class="circle done">
-          <span class="label"></span>
-          <span class="title">Triage</span>
-        </div>
-        <span class="bar done"></span>
-        <div class="circle done">
-          <span class="label"></span>
-          <span class="title">Assessment</span>
-        </div>
-        <span class="bar half"></span>
-        <div class="circle active">
-          <span class="label"></span>
-          <span class="title">Repair</span>
-        </div>
-     <span class="bar"></span>
-        <div class="circle">
-          <span class="label"></span>
-          <span class="title">Quality</span>
-        </div><!--
-        <span class="bar"></span>
-        <div class="circle">
-          <span class="label">5</span>
-          <span class="title">Return</span>
-        </div>-->
 
     <!--  <div class="update-buttons">
 
