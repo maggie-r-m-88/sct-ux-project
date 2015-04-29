@@ -914,18 +914,37 @@ border: 2px solid #ddd;
   color: #337ab7;
 }
 .grid-panel-button{
-  text-transform: none;
+  text-transform: uppercase;
   margin-top: -2px;
   color: $forestgreen;
  margin: 0 20px;
-
+ background: rgba(237,237,237,1);
+ background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
+ background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(77%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
+ background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
+ background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
+ background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
+ background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
+border: 1px solid #bbb;
   padding:3px;
+
 }
 #parts-list-console{
   background: #fff;
   border-left: 2px solid #ccc;
   border-right: 2px solid #ccc;
+overflow: auto;
   width: 100%;
+  padding-left: 40px;
+  font-size: 12px;
+  padding-bottom: 6px;
+
+
+}
+
+.parts-select{
+  margin-top: 5px;
 
 }
 .shortinput{
@@ -1403,10 +1422,12 @@ table .fa-sort{
 
 
 
+
 ///modal styles
 
-.modal-dialog{
+.large-dialog{
   margin-top: 100px;
+  width: 900px;
 }
 
 .bookmarks{

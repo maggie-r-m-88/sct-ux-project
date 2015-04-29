@@ -34,6 +34,9 @@
 <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
 
 </ul>
+
+
+
 </div>
     <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
     <a href="#"><li><i class="fa fa-sign-out"></i></li></a>
@@ -63,6 +66,10 @@
                   </div>
               </div>
           </div>
+
+
+
+
       <!--modal-->
         <!-- Sidebar -->
               <!-- Sidebar -->
@@ -468,7 +475,7 @@
            <i class="fa fa-angle-down"></i>
            </a>
            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">W.O. Code</a></li>
+           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >W.O. Code</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial #</a></li>
 
@@ -501,7 +508,7 @@
       <i class="fa fa-angle-down"></i>
        </a>
          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">Today</a></li>
+           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >Today</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 7 Days</a></li>
@@ -532,7 +539,7 @@
 
 <div class="update-work-order-body" style="padding-top:5px;">
 <section>
-   <dt><h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3></dt>
+   <dt><h3 style="border-top:3px solid #ddd;" class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3></dt>
    <dd>
  <div id="static-work-order-info" class="work-order-info-grid">
 
@@ -654,8 +661,8 @@
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
 
-    <a class="grid-panel-link current-link" href="#">Parts List</a>
-    <a class="grid-panel-link" href="#">Selected Parts</a>
+      <a data-toggle="modal" href="#partsModal"> <button class="grid-panel-button" href="#"><i class="fa fa-list"></i>Parts List</button></a>
+    <button class="grid-panel-button" href="#"><i class="fa fa-file"></i>New Part</button>
     <button class="grid-panel-button" href="#"><i class="fa fa-plus"></i>Add Part</button>
     </h3>
 
@@ -665,8 +672,10 @@
 <dd>
   <div class="parts-list-all">
     <div id="parts-list-console">
-      
-   <select style="font-size:12px;" id="work-order-views"class="form-control shortinput">
+
+<div style="float:left;">
+<b>View:</b>
+   <select id="work-order-views"class="form-control small shortinput parts-select">
 
 
        <option value="one">--Default--</option>
@@ -675,10 +684,101 @@
        <option value="four">Ready for Pickup</option>
        <option value="five">Ready for Repair</option>
     </select>
+</div>
+<div style="float:right;margin-right: 40px;">
+  <b>Quick Add:</b>
+    <input id="work-order-views" id="work-order-views" class="form-control shortinput parts-select">
+
   </div>
+</div>
+<!--- Parts Modals go here-->
+<div id="partsModal" class="modal fade">
+        <div class="modal-dialog large-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Parts List</h4>
+                </div>
+                <div class="modal-body">
+                    <p></p>
+                    <p class="text-warning"><small>The entire parts list available for the product is listed below. Search parts and select parts as needed. </small></p>
+
+                    <div class="parts-list-modal-console" style="margin-bottom:7px;">
+
+                    <b>View:</b>
+                       <select id="work-order-views"class="form-control small shortinput parts-select">
+
+
+                           <option value="one">--Default--</option>
+                           <option value="two">All Work Orders</option>
+                           <option value="three">Open Work Orders</option>
+                           <option value="four">Ready for Pickup</option>
+                           <option value="five">Ready for Repair</option>
+                        </select>
+
+                    </div>
+                    <table class="table small" id="parts-table">
+                   <thead>
+                         <tr>
+                             <th class="checkbox-sm-table" data-field="checkbox">
+                    <input type="checkbox" c></th>
+                             <th data-field="id">Part Type</th>
+                             <th data-field="name">Part Number</th>
+                             <th data-field="price">Description</th>
+                             <th data-field="bounce">Warrantable</th>
+                             <th data-field="price">Price</th>
+                             <th data-field="bounce">Default Problem</th>
+                         </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td><input type="checkbox"></td>
+                         <td>Repair Code</td>
+                         <td>Labor Rate 1</td>
+                         <td>Labor Rate 1</td>
+                         <td>False</td>
+                         <td>$25.00</td>
+                         <td></td>
+
+                      </tr>
+                      <tr>
+                        <td><input type="checkbox"></td>
+
+                        <td>Repair Code</td>
+                        <td>.SW Upgrade</td>
+                        <td>SW Upgrade</td>
+                        <td>True</td>
+                        <td></td>
+                        <td>Device Level (NFF)-No Fault Found</td>
+                       </tr>
+
+                       <tr>
+                         <td><input type="checkbox"></td>
+
+                         <td>Repair Code</td>
+                         <td>Labor Rate 2</td>
+                         <td>Labor Rate 2</td>
+                         <td>False</td>
+                         <td>$50.00</td>
+                         <td></td>
+                        </tr>
+                     </table>
+                   </div><!--end of full parts list div-->
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                       <button type="button" class="btn btn-primary">Save changes</button>
+                   </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
   <table class="table small" id="parts-table">
  <thead>
        <tr>
+           <th class="checkbox-sm-table" data-field="checkbox">
+  <input type="checkbox" c></th>
            <th data-field="id">Part Type</th>
            <th data-field="name">Part Number</th>
            <th data-field="price">Description</th>
@@ -693,6 +793,7 @@
    </thead>
    <tbody>
      <tr>
+       <td><input type="checkbox"></td>
        <td>Mech</td>
        <td>ASY-112837-003</td>
        <td>Bottom Cover ASY 8300 Black</td>
@@ -705,6 +806,7 @@
        <td>False</td>
     </tr>
     <tr>
+      <td><input type="checkbox"></td>
        <td>Mech</td>
        <td>ASY-14360-004</td>
        <td>Assy, Bottom Housing, Comet Wifi 8120</td>
