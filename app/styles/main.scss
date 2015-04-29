@@ -684,7 +684,7 @@ border-bottom: none;
 .work-order-list-console .dropdown{
   float: left;
 }
-.search-popout {
+.search-popout, .parts-search-popout {
   display: none;
   background: #eee;
   height:41px;
@@ -700,7 +700,15 @@ border: 1px solid #ccc;
 border-bottom: none;
 
 }
-.search-popout .btn-group{
+
+.parts-search-popout{
+  display: block;
+  float: none;
+  display: inline-block;
+  margin-top: 0;
+
+}
+.search-popout .btn-group, .parts-search-popout .btn-group{
   margin-left: 10px;
   margin-top: 7px;
 }

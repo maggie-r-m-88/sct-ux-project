@@ -77,6 +77,7 @@ $('.dropdown-menu li').on('click', function() {
        $(this).removeClass("btn-primary");
         });
 
+
 ///////accordion
 
 

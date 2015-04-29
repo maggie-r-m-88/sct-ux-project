@@ -165,7 +165,7 @@
 
       </div><!---end work work order list console-->
       <div class="console-col-2 small">
-        <a href="#" style="text-decoration:underline;">Lenovo View</a>
+        <a href="#" >Lenovo View</a>
         <a href="#">All Work Orders</a>
         <a href="#">Open Work Orders</a>
         <a href="#">Ready for Pickup</a>
@@ -675,7 +675,7 @@
 
                     <b>View:</b>
                        <select id="work-order-views"class="form-control small shortinput parts-select">
-                         <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+
 
                            <option value="one">--Default--</option>
                            <option value="two">All Work Orders</option>
@@ -683,10 +683,35 @@
                            <option value="four">Ready for Pickup</option>
                            <option value="five">Ready for Repair</option>
                         </select>
+                        <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="3"><span><i class="fa fa-search"></i></span></button>
+
+                        <div class="parts-search-popout">
+                          <div class="btn-group btn-group-sm" role="group">
+                            <button type="submit" class="btn btn-default">Go</button>
+                          <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
+
+                          <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
+                        </div>
+                      </div>
 
                     </div>
-                    <table class="table small" id="parts-table">
+                    <table class="table small" id="parts-table" >
                    <thead>
+
+                     <tr class="cat3" style="display:none">
+                     <td></td>
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                     <!--<td><span></i></span><input type="date"></td>-->
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+
+
+                     </tr>
+
+
                          <tr>
                              <th class="checkbox-sm-table" data-field="checkbox">
                     <input type="checkbox" c></th>
