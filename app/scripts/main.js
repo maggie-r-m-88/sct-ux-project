@@ -27,7 +27,7 @@ $("#menu-toggle").click(function(e) {
 
 });
 
-
+////see more /full screen toggle
 $("#toggle-top button").click(function(e) {
         e.preventDefault();
         $("header").toggleClass("toggle-top");
@@ -70,9 +70,27 @@ $('.dropdown-menu li').on('click', function() {
         $('#find-wo').html($(this).find('a').html());
         });
 
-
+////action buttons go default///
         $("#Finish-Repair-Button").click(function(e) {
           e.preventDefault();
        $(this).addClass("action-disabled");
        $(this).removeClass("btn-primary");
         });
+
+///////accordion
+
+
+(function($) {
+
+        var allPanels = $('.update-work-order-body > section > dd')
+
+      //  var allTiles = $('.update-work-order-body > section > dt > a > .tiles').fadeIn();
+
+        $('.update-work-order-body> section > dt > h3 > i').click(function() {
+  $(this).parent().parent().next().toggle();
+   $(this).toggleClass('fa-minus-circle fa-plus-circle');
+
+          return false;
+
+        });
+      })(jQuery);

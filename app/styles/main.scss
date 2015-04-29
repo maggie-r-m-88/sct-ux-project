@@ -819,6 +819,7 @@ border-top-right-radius: 3px;
 }
 
 
+
 #action-buttons{
   width: 100%;
   overflow: auto;
@@ -889,6 +890,42 @@ background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1)
 background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
 border: 2px solid #ddd;
+
+}
+
+.action-panel{
+  background:none;
+  border:none;
+  border-top:2px solid #ddd;
+  padding-top: 15px;
+}
+
+.grid-panel-link{
+  text-transform: none;
+  color: #337ab7;
+
+  padding:0 25px;
+}
+.current-link{
+  text-decoration:underline;
+
+}
+.panel-title>a{
+  color: #337ab7;
+}
+.grid-panel-button{
+  text-transform: none;
+  margin-top: -2px;
+  color: $forestgreen;
+ margin: 0 20px;
+
+  padding:3px;
+}
+#parts-list-console{
+  background: #fff;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+  width: 100%;
 
 }
 .shortinput{
@@ -997,7 +1034,9 @@ font-size: 12px;
 }
 #parts-table{
   margin-bottom:0;
-  border-top: none;
+  border: 2px solid #ccc;
+  border-top: 1px solid #ccc;
+
 }
 
 

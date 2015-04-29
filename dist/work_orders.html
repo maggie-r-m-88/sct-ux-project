@@ -190,7 +190,7 @@
 </ul>-->
       </div><!---end work work order list console-->
       <div class="console-col-2 small">
-        <a href="#">Lenovo View</a>
+        <a href="#" style="text-decoration:underline;">Lenovo View</a>
         <a href="#">All Work Orders</a>
         <a href="#">Open Work Orders</a>
         <a href="#">Ready for Pickup</a>
@@ -448,10 +448,11 @@
 
        <div id="update-work-order" class="tab-pane fade">
          <div class="update-work-order-container">
-           <div class="work-order-list-console updatescreen panel panel-default" style="background:none; border:none;">
+           <div class="work-order-list-console updatescreen " style="background:none;border:none;">
 
 
-            <div style="float:left;"> <b>Update Work Order:<span id="work-order-title">WO058358</span>
+            <div style="float:left;font-size:17px;">
+             <b>Update Work Order:<span id="work-order-title">WO058358</span>
               <span id="work-order-title">.Shipped to Customer</b></span>
 
 
@@ -481,24 +482,25 @@
            </div>
 
 
-<div style="clear:both;overflow:auto;">
+<div style="clear:both;">
 <ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active"><a href="#">Triage</a></li>
   <li role="presentation "><a href="#">Assessment</a></li>
   <li role="presentation"><a href="#">Repair</a></li>
   <li role="presentation"><a href="#">Quality</a></li>
   <li role="presentation"><a href="#">Return</a></li>
+
 </ul>
 
 <div class="queue-input">
 
   <div class="dropdown" style="padding-top:12px;" >
     <b>Queue:</b>
-      <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+      <a class=" dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
       <span style="padding-left:10px;" id="find-wo">This Week</span>
       <i class="fa fa-angle-down"></i>
        </a>
-         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
            <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">Today</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
@@ -528,9 +530,10 @@
       </div><!---end of buttons-->
 
 
-<div class="update-work-order-body">
-
-    <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3>
+<div class="update-work-order-body" style="padding-top:5px;">
+<section>
+   <dt><h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3></dt>
+   <dd>
  <div id="static-work-order-info" class="work-order-info-grid">
 
       <div class="tri-column">
@@ -580,11 +583,15 @@
 
 </div><!--end of tri column-->
     </div><!---end of work order info grid-->
-
-
+</dd>
+</dt>
+</section>
+<section>
+    <dt>
         <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Work Order   </h3>
+    </dt>
 
-
+    <dd>
     <div id="change-work-order-info"class="work-order-info-grid" >
 
       <div class="tri-column">
@@ -636,26 +643,39 @@
         <p class="alignright"><input></p>
      </div>
 
-</div><!--end of tri column-->
+    </div><!--end of tri column-->
 
-    </div><!---end of work order info grid-->
-
-
+  </div><!---end of work order info grid-->
+</dd>
+</dt>
+</section>
+<section>
+  <dt>
 
     <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
-      <select style="font-size:12px; margin: 0 20px;" id="work-order-views"class="form-control shortinput">
+
+    <a class="grid-panel-link current-link" href="#">Parts List</a>
+    <a class="grid-panel-link" href="#">Selected Parts</a>
+    <button class="grid-panel-button" href="#"><i class="fa fa-plus"></i>Add Part</button>
+    </h3>
+
+  </dt>
+
+  <!--<div class="panel panel-default small">-->
+<dd>
+  <div class="parts-list-all">
+    <div id="parts-list-console">
+      
+   <select style="font-size:12px;" id="work-order-views"class="form-control shortinput">
+
+
        <option value="one">--Default--</option>
        <option value="two">All Work Orders</option>
        <option value="three">Open Work Orders</option>
        <option value="four">Ready for Pickup</option>
        <option value="five">Ready for Repair</option>
     </select>
-
-    </h3>
-
-
-  <!--<div class="panel panel-default small">-->
-
+  </div>
   <table class="table small" id="parts-table">
  <thead>
        <tr>
@@ -697,9 +717,17 @@
        <td>True</td>
      </tr>
    </table>
+ </div><!--end of full parts list div-->
 
-   <h3 class="panel-title small grid-panel"><i class="fa fa-bullseye"></i>Actions</h3>
-<div style="background:white;  border:2px solid #ddd; border-top:none;">
+
+</dd>
+</section>
+<section>
+  <dt>
+   <h3 class="panel-title small grid-panel action-panel"><i class="fa fa-bullseye"></i>Actions</h3>
+ </dt>
+ <dd>
+<div style="border-top:none;">
     <div class="action-button-container">
        <div id="action-buttons">
          <div style="float:left;">
@@ -874,7 +902,7 @@
 
 
   <div class="tab-pane" id="4">
-    <table class="table table-condensed table-striped volumes small">
+    <table class="table table-condensed volumes small">
       <thead>
         <tr>
           <th>Work Order Code</th>
@@ -923,6 +951,9 @@
 </div>
 <div class="table-footer">
 </div>
+
+</dd>
+</section>
 </div><!---end of work order body-->
     </div><!--end of update work order container-->
 
@@ -931,7 +962,6 @@
 
     </div>  <!--end of tab content--> <!-- Keep all page content within the page-content inset div! -->
   </div>   <!--end of wrapper-->
-
 
 
     <script src="scripts/vendor.js"></script>
