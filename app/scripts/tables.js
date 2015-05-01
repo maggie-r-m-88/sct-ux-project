@@ -20,6 +20,15 @@ $("#search-popout").click(function(e){
 
 });
 
+$("#parts-search-popout").click(function(e){
+  e.preventDefault();
+  $(".parts-search-popout").toggleClass("open-search-popout");
+  $("#search-table td").toggleClass("open-search-popout");
+  $(this).html($(this).text() == 'Close' ? '<span><i class="fa fa-search"></i></span>' : 'Close');
+
+
+});
+
 $("#clear-search").click(function(e){
   e.preventDefault();
   $(".cat1 input").val("");

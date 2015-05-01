@@ -35,7 +35,7 @@ $("#toggle-top button").click(function(e) {
         $("#wrapper").toggleClass("slide-up");
 
         $(this).html($(this).text() == 'Full Screen' ? 'See More' : 'Full Screen');
-
+        $("#sidebar-wrapper").toggleClass("slide-up");
 });
 
 $(".sidebar-nav-links a").click(function(e) {

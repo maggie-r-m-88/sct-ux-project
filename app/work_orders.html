@@ -165,7 +165,7 @@
 
       </div><!---end work work order list console-->
       <div class="console-col-2 small">
-        <a href="#" >Lenovo View</a>
+        <a href="#">Lenovo View</a>
         <a href="#">All Work Orders</a>
         <a href="#">Open Work Orders</a>
         <a href="#">Ready for Pickup</a>
@@ -630,7 +630,7 @@
     <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
 
       <a data-toggle="modal" href="#partsModal"> <button class="grid-panel-button" href="#"><i class="fa fa-list"></i>Parts List</button></a>
-    <button class="grid-panel-button" href="#"><i class="fa fa-file"></i>New Part</button>
+    <button data-toggle="modal" class="grid-panel-button" href="#newPartModal"><i class="fa fa-file"></i>New Part</button>
     <button class="grid-panel-button" href="#"><i class="fa fa-plus"></i>Add Part</button>
     </h3>
 
@@ -671,7 +671,7 @@
                     <p></p>
                     <p class="text-warning"><small>The entire parts list available for the product is listed below. Search parts and select parts as needed. </small></p>
 
-                    <div class="parts-list-modal-console" style="margin-bottom:7px;">
+                    <div class="parts-list-modal-console" >
 
                     <b>View:</b>
                        <select id="work-order-views"class="form-control small shortinput parts-select">
@@ -683,7 +683,7 @@
                            <option value="four">Ready for Pickup</option>
                            <option value="five">Ready for Repair</option>
                         </select>
-                        <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="3"><span><i class="fa fa-search"></i></span></button>
+                        <button id="parts-search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="3"><span><i class="fa fa-search"></i></span></button>
 
                         <div class="parts-search-popout">
                           <div class="btn-group btn-group-sm" role="group">
@@ -714,13 +714,13 @@
 
                          <tr>
                              <th class="checkbox-sm-table" data-field="checkbox">
-                    <input type="checkbox" c></th>
-                             <th data-field="id">Part Type</th>
-                             <th data-field="name">Part Number</th>
-                             <th data-field="price">Description</th>
-                             <th data-field="bounce">Warrantable</th>
-                             <th data-field="price">Price</th>
-                             <th data-field="bounce">Default Problem</th>
+                    <input type="checkbox"></th>
+                             <th data-field="id">Part Type  <i class="fa fa-sort"></i></th>
+                             <th data-field="name">Part Number <i class="fa fa-sort"></i></th>
+                             <th data-field="price">Description <i class="fa fa-sort"></i></th>
+                             <th data-field="bounce">Warrantable <i class="fa fa-sort"></i></th>
+                             <th data-field="price">Price <i class="fa fa-sort"></i></th>
+                             <th data-field="bounce">Default Problem <i class="fa fa-sort"></i></th>
                          </tr>
                      </thead>
                      <tbody>
@@ -759,19 +759,64 @@
                    </div><!--end of full parts list div-->
                    <div class="modal-footer">
                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       <button type="button" class="btn btn-primary">Save changes</button>
+                       <button type="button" class="btn btn-primary">Apply</button>
+                       <button type="button" class="btn btn-primary">Save</button>
                    </div>
 
                 </div>
 
             </div>
         </div>
-    </div>
+    </div><!---end of parts-modal-->
+    <!---beginning of new part modal-->
+    <div id="newPartModal" class="modal fade">
+            <div class="modal-dialog large-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">New Part</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                        <p class="text-warning"><small> </small></p>
+                        <div class="work-order-info-grid">
+                          <div class="double-column">
+                            <div id="tri-column-row">
+                              <p class="alignleft">Part Number</p>
+                              <p class="alignright"><input></p>
+                            </div>
+                            <div id="tri-column-row">
+                              <p class="alignleft">Description</p>
+                              <p class="alignright"><input></p>
+                            </div>
+                            <div id="tri-column-row">
+                              <p class="alignleft">Part Type Code</p>
+                              <p class="alignright"><input></p>
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                       <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Save</button>
+                       </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    <!---end of new part modal-->
+
+
   <table class="table small" id="parts-table">
  <thead>
        <tr>
            <th class="checkbox-sm-table" data-field="checkbox">
-  <input type="checkbox" c></th>
+  <input type="checkbox" ></th>
            <th data-field="id">Part Type</th>
            <th data-field="name">Part Number</th>
            <th data-field="price">Description</th>

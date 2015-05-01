@@ -507,14 +507,14 @@ table{
 display: none;
 
 }
-.cat1{
+.cat1, .cat3{
 background: #eee;
 border: 1px solid #ccc;
 
 
 
 }
-.cat1 td > input[type='text']{
+.cat1 td > input[type='text'], .cat3 td > input[type='text']{
 width: 100%;
 display: block;
 border-radius: 4px;
@@ -536,7 +536,7 @@ height: 25px;
 }
 
 
-.cat1 i{
+.cat1 i, .cat3 i{
   position: absolute;
   padding: 5px;
 
@@ -701,10 +701,11 @@ border-bottom: none;
 
 }
 
+
 .parts-search-popout{
-  display: block;
+display:none;
   float: none;
-  display: inline-block;
+
   margin-top: 0;
 
 }
@@ -712,13 +713,13 @@ border-bottom: none;
   margin-left: 10px;
   margin-top: 7px;
 }
-#search-popout i{
+#search-popout i, #parts-search-popout i{
   padding:0;
   font-size: 14px;
 
 }
 .open-search-popout{
-  display: block;
+  display: inline-block;
 }
 #work-order-views{
   width: 150px;
@@ -1064,6 +1065,10 @@ font-size: 12px;
   border: 2px solid #ccc;
   border-top: 1px solid #ccc;
 
+
+}
+.parts-list-modal-console{
+  height: 40px;
 }
 
 
@@ -1387,6 +1392,7 @@ text-transform: uppercase;
 
 
 ///buttons///
+button:focus {outline:0;}
 .btn {
     border: 0;
     border-bottom: 0;
@@ -1437,7 +1443,9 @@ table .fa-sort{
   margin-top: 100px;
   width: 900px;
 }
-
+.modal-content{
+  background: $superlightblue;
+}
 .bookmarks{
 float: left;
 font-size: 12px;
@@ -1489,7 +1497,9 @@ background: rgba(51,122,183,1);
 // background: linear-gradient(to right, rgba(51,122,183,1) 0%, rgba(73,155,234,1) 100%);
 // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#337ab7', endColorstr='#499bea', GradientType=1 );
 }
-.progress-tabs>li>a:hover{
-  background:darkgray;
-  color: white;
+
+.progress-tabs>li>a:hover, .progress-tabs>li>a:focus{
+  background:none;
+  text-decoration: underline;
+  color: $darkblue;
 }
