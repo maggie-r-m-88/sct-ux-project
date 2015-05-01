@@ -141,7 +141,7 @@
            </ul>
          </div>
                <div class="view-select"><p><b>View:</b>
-               <select  id="work-order-views"class="form-control small">
+               <select class="form-control work-order-views small">
                 <option value="one">Lenovo View</option>
                 <option value="two">All Work Orders</option>
                 <option value="three">Open Work Orders</option>
@@ -459,11 +459,11 @@
 
 <div style="clear:both;">
 <ul class="nav nav-pills progress-tabs" >
-  <li role="presentation" class="active"><a href="#">Triage</a></li>
-  <li role="presentation "><a href="#">Assessment</a></li>
-  <li role="presentation"><a href="#">Repair</a></li>
-  <li role="presentation"><a href="#">Quality</a></li>
-  <li role="presentation"><a href="#">Return</a></li>
+  <li role="presentation" ><a id="triage" href="#">Triage</a></li>
+  <li role="presentation "><a id="progress-1" href="#">Assessment</a></li>
+  <li role="presentation"><a id="progress-2" href="#">Repair</a></li>
+  <li role="presentation"><a id="progress-3" href="#">Quality</a></li>
+  <li role="presentation"><a id="progress-4" href="#">Return</a></li>
 
 </ul>
 
@@ -483,7 +483,7 @@
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 2 Weeks</a></li>
  </ul>
  </div>
- <select id="work-order-views"class="form-control">
+ <select class="work-order-views form-control">
   <option value="one">--Default--</option>
   <option value="two">All Work Orders</option>
   <option value="three">Open Work Orders</option>
@@ -643,7 +643,7 @@
 
 <div style="float:left;">
 <b>View:</b>
-   <select id="work-order-views"class="form-control small shortinput parts-select">
+   <select class="form-control work-order-views small shortinput parts-select">
 
 
        <option value="one">--Default--</option>
@@ -655,7 +655,7 @@
 </div>
 <div style="float:right;margin-right: 40px;">
   <b>Quick Add:</b>
-    <input id="work-order-views" id="work-order-views" class="form-control shortinput parts-select">
+    <input  class="form-control work-order-views shortinput parts-select">
 
   </div>
 </div>
@@ -674,7 +674,7 @@
                     <div class="parts-list-modal-console" >
 
                     <b>View:</b>
-                       <select id="work-order-views"class="form-control small shortinput parts-select">
+                       <select class="form-control small shortinput work-order-views parts-select">
 
 
                            <option value="one">--Default--</option>
@@ -790,7 +790,7 @@
                               <p class="alignright"><input></p>
                             </div>
                             <div id="tri-column-row">
-                              <p class="alignleft">Part Type Code</p>
+                              <p class="alignleft">Part Number</p>
                               <p class="alignright"><input></p>
                             </div>
                           </div>
@@ -817,16 +817,16 @@
        <tr>
            <th class="checkbox-sm-table" data-field="checkbox">
   <input type="checkbox" ></th>
-           <th data-field="id">Part Type</th>
-           <th data-field="name">Part Number</th>
-           <th data-field="price">Description</th>
-           <th data-field="status">Quantity</th>
-           <th data-field="serial">Serial ID</th>
-           <th data-field="serial">Price</th>
-           <th data-field="model">User Name</th>
-           <th data-field="bounce">Create Timestamp</th>
-           <th data-field="bounce">Warrantable</th>
-           <th data-field="bounce">In Inventory</th>
+           <th data-field="id">Part Type<i class="fa fa-sort"></i></th>
+           <th data-field="name">Part Number<i class="fa fa-sort"></i></th>
+           <th data-field="price">Description<i class="fa fa-sort"></i></th>
+           <th data-field="status">Quantity<i class="fa fa-sort"></i></th>
+           <th data-field="serial">Serial ID<i class="fa fa-sort"></i></th>
+           <th data-field="serial">Price<i class="fa fa-sort"></i></th>
+           <th data-field="model">User Name<i class="fa fa-sort"></i></th>
+           <th data-field="bounce">Create Timestamp<i class="fa fa-sort"></i></th>
+           <th data-field="bounce">Warrantable<i class="fa fa-sort"></i></th>
+           <th data-field="bounce">In Inventory<i class="fa fa-sort"></i></th>
        </tr>
    </thead>
    <tbody>
@@ -886,7 +886,7 @@
 
 
 
-<ul class="nav nav-tabs small product-table" id="product-table">
+<ul class="nav nav-tabs product-table" id="product-table">
   <li><a href="#1" data-toggle="tab"><i style="color:#5d7a54;" class="fa fa-check"></i>Status History</a>
 
   </li>
