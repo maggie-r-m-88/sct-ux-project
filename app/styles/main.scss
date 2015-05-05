@@ -443,10 +443,21 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 }
 .product-table{
   margin-left: 0;
+
 }
-.nav-tabs li{
 
+.product-table-console{
+  padding: 10px 15px;
+  width: 100%;
+background: #fff;
+  font-size: 12px;
+  //border: 2px solid red;
+}
 
+.attachment-table button{
+  text-transform: uppercase;
+  color: $forestgreen;
+  font-weight:bold;
 
 }
 .tab-container{
@@ -990,6 +1001,14 @@ margin: 0;
     margin: 6px 0 0;
   }
 }
+
+.alignright{
+  .radio-inline{margin-top:2px;}
+  input[type="radio"]{
+    margin-top:0;
+
+  }
+}
 .dbl-input{
   width: 190px;
   margin:0;
@@ -997,7 +1016,7 @@ margin: 0;
 }
 
 .alignleft-dbl, .alignright-dbl{
-  //margin-top: 4px;
+  margin-top: 4px;
   font-weight: normal;
 }
 .alignright, .alignright-dbl{
@@ -1007,7 +1026,7 @@ margin: 0;
   text-align: left;
   width: 60%;
   height: 20px;
-  font-weight: bold;
+
 font-size: 12px;
 //  padding-left: 10px;
 
@@ -1468,6 +1487,10 @@ table .fa-sort{
 .modal-content{
   background: $superlightblue;
 }
+
+.modal-footer{
+  text-align:center;
+}
 .bookmarks{
 float: left;
 font-size: 12px;
@@ -1475,6 +1498,7 @@ border: 2px solid red;
 
 
 }
+
 .bookmarks li{
   padding: 3px;
   display: inline;
