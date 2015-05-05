@@ -873,10 +873,11 @@ width: 60%;
 }
 
 .work-order-info-grid
-.tri-column-row{
+.tri-column-row, .double-column-row{
   clear: both;
 
 }
+
 #static-work-order-info{
   //background: #f6f6f6;
   //margin-bottom: 10px;
@@ -974,22 +975,34 @@ overflow: auto;
 
 }
 
-.alignleft {
+.alignleft, .alignleft-dbl {
 	float: left;
   font-size: 12px;
   width: 40%;
-
   height: 20px;
 margin: 0;
-  overflow: scroll;
   text-align: right;
 
 
 }
-.alignright {
+.alignright-dbl{
+  input[type="checkbox"]{
+    margin: 6px 0 0;
+  }
+}
+.dbl-input{
+  width: 190px;
+  margin:0;
+  height: 21px;
+}
+
+.alignleft-dbl, .alignright-dbl{
+  //margin-top: 4px;
+  font-weight: normal;
+}
+.alignright, .alignright-dbl{
   margin: 0;
 	float: right;
-
   padding-left: 20px;
   text-align: left;
   width: 60%;
@@ -1012,7 +1025,7 @@ font-size: 12px;
   font-size: 13px;
 
   //margin-left: -20px;
-  //overflow: scroll;
+
   height: 100%;
 }
 

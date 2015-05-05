@@ -623,7 +623,7 @@
 
       <a data-toggle="modal" href="#partsModal"> <button class="grid-panel-button" href="#"><i class="fa fa-list"></i>Parts List</button></a>
     <button data-toggle="modal" class="grid-panel-button" href="#newPartModal"><i class="fa fa-file"></i>New Part</button>
-    <button class="grid-panel-button" href="#"><i class="fa fa-plus"></i>Add Part</button>
+    <button class="grid-panel-button" data-toggle="modal"href="#addPartModal"><i class="fa fa-plus"></i>Add Part</button>
     </h3>
 
   </dt>
@@ -770,20 +770,51 @@
                     </div>
                     <div class="modal-body">
                         <p></p>
-                        <p class="text-warning"><small> </small></p>
+                        <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
                         <div class="work-order-info-grid">
                           <div class="double-column">
-                            <div id="tri-column-row">
-                              <p class="alignleft">Part Number</p>
-                              <p class="alignright"><input></p>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Part Number:</p>
+                              <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p>
                             </div>
-                            <div id="tri-column-row">
-                              <p class="alignleft">Description</p>
-                              <p class="alignright"><input></p>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Description:</p>
+                              <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p><!--select here-->
                             </div>
-                            <div id="tri-column-row">
-                              <p class="alignleft">Part Number</p>
-                              <p class="alignright"><input></p>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Part Type Code:</p>
+                              <p class="alignright-dbl">
+                                <select class="form-control small shortinput dbl-input">
+                                  <option value="one">Phone (Standard Phone)
+                                </select>
+                              </p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl"> Class Code:</p><!--select-->
+                              <p class="alignright-dbl">
+                                <select class="form-control small shortinput dbl-input">
+                                  <option value="one">Depot Service
+                                </select>
+
+                              </p>
+                            </div>
+                          </div>
+                          <div class="double-column">
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Warrantable:</p>
+                              <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Serialized:</p>
+                              <p class="alignright-dbl"><input type="checkbox"></p><!--check here-->
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Cost:</p>
+                              <p class="alignright-dbl"><input></p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Price:</p>
+                              <p class="alignright-dbl"><input></p>
                             </div>
                           </div>
 
@@ -802,6 +833,76 @@
         </div>
 
     <!---end of new part modal-->
+    <!---add part modal-->
+    <div id="addPartModal" class="modal fade">
+            <div class="modal-dialog large-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title">New Part</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p></p>
+                        <p class="text-warning"><small>Please enter the following information to add a new part to the Work Order parts list.</small></p>
+                        <div class="work-order-info-grid">
+                          <div class="double-column">
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Manufacturer</p>
+                              <p class="alignright-dbl">Blackberry</p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Model:</p>
+                              <p class="alignright-dbl">9800 </p><!--select here-->
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Part Number:</p>
+                              <p class="alignright-dbl">
+                              <input>
+                              </p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl"> Serial Number:</p><!--select-->
+                              <p class="alignright-dbl">
+                              <input>
+
+                              </p>
+                            </div>
+                          </div>
+                          <div class="double-column">
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Warrantable:</p>
+                              <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Problem:</p>
+                              <p class="alignright-dbl"><input></p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">Solution Code:</p>
+                              <p class="alignright-dbl"><input></p>
+                            </div>
+                            <div class="double-column-row">
+                              <p class="alignleft-dbl">RDC:</p>
+                              <p class="alignright-dbl"><input></p>
+                            </div>
+                          </div>
+
+
+                        </div>
+
+                       <div class="modal-footer">
+                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           <button type="button" class="btn btn-primary">Apply</button>
+                           <button type="button" class="btn btn-primary">Save</button>
+                           <button type="button" class="btn btn-primary">Save and New</button>
+                       </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    <!--end of add part modal-->
 
 
   <table class="table small" id="parts-table">
