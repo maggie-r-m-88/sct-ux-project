@@ -451,11 +451,11 @@
 
 <div style="clear:both; margin-left: -7px;">
 <ul class="nav nav-pills progress-tabs" >
-  <li role="presentation" ><a href="#">Triage</a></li>
-  <li role="presentation "><a href="#">Assessment</a></li>
-  <li role="presentation"><a href="#">Repair</a></li>
-  <li role="presentation"><a href="#">Quality</a></li>
-  <li class="active" role="presentation"><a  href="#">Return</a></li>
+  <li role="presentation" class="active" ><a href="#progress-pane1" data-toggle="tab">Triage</a></li>
+  <li role="presentation "><a href="#progress-pane1" data-toggle="tab">Assessment</a></li>
+  <li role="presentation"><a href="#progress-pane1" data-toggle="tab">Repair</a></li>
+  <li role="presentation"><a href="#progress-pane1" data-toggle="tab">Quality</a></li>
+  <li role="presentation" ><a href="#progress-pane2" data-toggle="tab">Return</a></li>
 
 </ul>
 
@@ -496,6 +496,8 @@
 
       </div><!---end of buttons-->
 
+<div class="tab-content"><!---progres tab content begins here-->
+<div id="progress-pane1" class="tab-pane fade-in active">
 
 <div class="update-work-order-body">
 <section>
@@ -625,7 +627,7 @@
 <section>
   <dt>
 
-    <h3 class="panel-title small grid-panel"><i class="fa fa-wrench"></i>Parts
+    <h3 class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Parts
 
       <a data-toggle="modal" href="#partsModal"> <button class="grid-panel-button" href="#"><i class="fa fa-list"></i>Parts List</button></a>
     <button data-toggle="modal" class="grid-panel-button" href="#newPartModal"><i class="fa fa-file"></i>New Part</button>
@@ -987,7 +989,7 @@
 
 
 <ul class="nav nav-tabs product-table small" id="product-table">
-  <li><a href="#1" data-toggle="tab"><i style="color:#5d7a54;" class="fa fa-check"></i>Status History</a>
+  <li><a href="#1" data-toggle="tab"><!--<i style="color:#5d7a54;" class="fa fa-check"></i>-->Status History <span class="badge">3</span></a>
 
   </li>
   <li><a href="#2" data-toggle="tab">Attachments</a>
@@ -1258,6 +1260,14 @@
 </dd>
 </section>
 </div><!---end of work order body-->
+
+
+</div><!---end of progress-pane1-->
+<div id="progress-pane2" class="tab-pane" >
+    <div class="work-order-list-container clearfix" >
+kkfj
+</div>
+
 
     </div><!--end of update work order container-->
 
