@@ -42,7 +42,7 @@
     <a href="#"><li><i class="fa fa-sign-out"></i></li></a>
   </div>
 
-  <div id="toggle-top">
+  <div id="toggle-top" class="clearfix">
     <button>Full Screen</button>
   </div>
 </header>
@@ -449,7 +449,7 @@
            </div>
 
 
-<div style="clear:both; margin-left: -7px;">
+<div class="clearfix" style=" margin-left: -7px;">
 <ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active" ><a href="#progress-pane1" data-toggle="tab">Triage</a></li>
   <li role="presentation "><a href="#progress-pane1" data-toggle="tab">Assessment</a></li>
@@ -457,7 +457,9 @@
   <li role="presentation"><a href="#progress-pane1" data-toggle="tab">Quality</a></li>
   <li role="presentation" ><a href="#progress-pane2" data-toggle="tab">Return</a></li>
 
+
 </ul>
+
 
 <div class="queue-input">
 
@@ -499,37 +501,37 @@
 <div class="tab-content"><!---progres tab content begins here-->
 <div id="progress-pane1" class="tab-pane fade-in active">
 
-<div class="update-work-order-body">
+<div class="update-work-order-body clearfix">
 <section>
    <dt><h3 style="border-top:3px solid #ddd;" class="panel-title small grid-panel"><i class="fa fa-minus-circle"></i>Summary   </h3></dt>
    <dd>
- <div id="static-work-order-info" class="work-order-info-grid">
+ <div id="static-work-order-info" class="work-order-info-grid clearfix">
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
            <p class="alignleft">WO Code:</p>
            <p class="alignright"><span>WO189039</span></p>
         </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
          <p class="alignleft">Status:</p>
          <p class="alignright"><span>In Repair</span></p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
          <p class="alignleft">Program:</p>
          <p class="alignright">Repair Process</p>
       </div>
     </div><!--end of tricolumn1-->
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
           <p class="alignleft">Serial #:</p>
           <p class="alignright">1839401XU93Z83029</p>
        </div>
-       <div id="tri-column-row">
+       <div id="clearfix">
          <p class="alignleft">Manufacturer:</p>
          <p class="alignright">Motorola</p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
         <p class="alignleft">Model:</p>
         <p class="alignright">Moto X 64</p>
      </div>
@@ -537,15 +539,15 @@
 </div><!--end of tri-column 2-->
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
           <p class="alignleft">Warranty Status:</p>
           <p class="alignright"><span>In Warranty</span></p>
        </div>
-       <div id="tri-column-row">
+       <div id="clearfix">
          <p class="alignleft">Warranty End Date:</p>
          <p class="alignright">12/19/2015</p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
         <p class="alignleft">Last Update:</p>
         <p class="alignright">02/27/2015</p>
      </div>
@@ -564,16 +566,16 @@
     <div id="change-work-order-info"class="work-order-info-grid" >
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
 
            <p class="alignleft">Trouble Code:</p>
            <p class="alignright"><input type="text" value="3298938" readonly="readonly" ></p>
         </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
          <p class="alignleft">Airtime Minutes:</p>
          <p class="alignright"><input><span class="asterisk_input">  </span>     </p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
          <p class="alignleft">Device Condition:</p>
          <p class="alignright">
            <label class="radio-inline">
@@ -589,15 +591,15 @@
       </div><!--end of tricolumn1-->
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
           <p class="alignleft">Condition Code:</p>
           <p class="alignright"><input></p>
        </div>
-       <div id="tri-column-row">
+       <div id="clearfix">
          <p class="alignleft">Software Ver In:</p>
          <p class="alignright"><input type="test" value="04/05/2015 9:24 AM" readonly="readonly"><span class="asterisk_input">  </span> </p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
         <p class="alignleft">Software Ver Out:</p>
         <p class="alignright"><input><span class="asterisk_input">  </span> </p>
      </div>
@@ -605,15 +607,15 @@
 </div><!--end of tri-column 2-->
 
       <div class="tri-column">
-        <div id="tri-column-row">
+        <div id="clearfix">
           <p class="alignleft">Drop Status:</p>
           <p class="alignright"><input type="checkbox"></p>
        </div>
-       <div id="tri-column-row">
+       <div id="clearfix">
          <p class="alignleft">Repair End Date:</p>
          <p class="alignright"><input></p>
       </div>
-      <div id="tri-column-row">
+      <div id="clearfix">
         <p class="alignleft">Warranty Code:</p>
         <p class="alignright"><input></p>
      </div>
@@ -781,15 +783,15 @@
                         <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
                         <div class="work-order-info-grid">
                           <div class="double-column">
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Part Number:</p>
                               <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Description:</p>
                               <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p><!--select here-->
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Part Type Code:</p>
                               <p class="alignright-dbl">
                                 <select class="form-control small shortinput dbl-input">
@@ -797,7 +799,7 @@
                                 </select>
                               </p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl"> Class Code:</p><!--select-->
                               <p class="alignright-dbl">
                                 <select class="form-control small shortinput dbl-input">
@@ -808,19 +810,19 @@
                             </div>
                           </div>
                           <div class="double-column">
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Warrantable:</p>
                               <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Serialized:</p>
                               <p class="alignright-dbl"><input type="checkbox"></p><!--check here-->
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Cost:</p>
                               <p class="alignright-dbl"><input></p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Price:</p>
                               <p class="alignright-dbl"><input></p>
                             </div>
@@ -854,21 +856,21 @@
                         <p class="text-warning"><small>Please enter the following information to add a new part to the Work Order parts list.</small></p>
                         <div class="work-order-info-grid">
                           <div class="double-column">
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Manufacturer</p>
                               <p class="alignright-dbl">Blackberry</p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Model:</p>
                               <p class="alignright-dbl">9800 </p><!--select here-->
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Part Number:</p>
                               <p class="alignright-dbl">
                               <input>
                               </p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl"> Serial Number:</p><!--select-->
                               <p class="alignright-dbl">
                               <input>
@@ -877,19 +879,19 @@
                             </div>
                           </div>
                           <div class="double-column">
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Warrantable:</p>
                               <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Problem:</p>
                               <p class="alignright-dbl"><input></p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">Solution Code:</p>
                               <p class="alignright-dbl"><input></p>
                             </div>
-                            <div class="double-column-row">
+                            <div class="clearfix">
                               <p class="alignleft-dbl">RDC:</p>
                               <p class="alignright-dbl"><input></p>
                             </div>
@@ -992,22 +994,22 @@
   <li><a href="#1" data-toggle="tab"><!--<i style="color:#5d7a54;" class="fa fa-check"></i>-->Status History <span class="badge">3</span></a>
 
   </li>
-  <li><a href="#2" data-toggle="tab">Attachments</a>
+  <li><a href="#2" data-toggle="tab">Attachments<span class="badge">1</span></a>
 
   </li>
-  <li><a href="#3" data-toggle="tab">Notes</a>
+  <li><a href="#3" data-toggle="tab">Notes<span class="badge">1</span></a>
 
 
   </li>
-  <li><a href="#4" data-toggle="tab"> <i style="color:#5d7a54;" class="fa fa-check"></i>Service Bulletins</a>
-
-  </li>
-
-  <li><a href="#5" data-toggle="tab">Product WO History</a>
+  <li><a href="#4" data-toggle="tab">Service Bulletins<span class="badge">2</span></a>
 
   </li>
 
-  <li><a href="#6" data-toggle="tab">Manifest History</a>
+  <li class="empty"><a href="#5" data-toggle="tab" >Product WO History</a>
+
+  </li>
+
+  <li class="empty"><a href="#6" data-toggle="tab">Manifest History</a>
 
   </li>
 
@@ -1047,7 +1049,7 @@
       </tbody>
     </table>
 
-    <div class="table-footer small" style="margin-top:-20px;">
+    <div class="table-footer small clearfix" style="margin-top:-20px;">
 <p id="how-many">Displaying 1-3 of 3 status updates
 
 
@@ -1111,11 +1113,11 @@
 
                         <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
 <div class="work-order-info-grid">
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">File Name:</p>
                           <p class="alignright-dbl"><input type="file"> </p>
                         </div>
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">Description:</p>
                           <p class="alignright-dbl"><input> </p>
                         </div>
@@ -1172,19 +1174,19 @@
 
                         <p class="text-warning"><small>Please enter the following information and click "save" to save the note.</small></p>
   <div class="work-order-info-grid" >
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">Type:</p>
                           <p class="alignright-dbl"><input></p>
                         </div>
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">Note User:</p>
                           <p class="alignright-dbl">Maggie Martin </p>
                         </div>
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">Customer Viewable:</p>
                           <p class="alignright-dbl"><input type="checkbox"> </p>
                         </div>
-                        <div class="double-column-row">
+                        <div class="clearfix">
                           <p class="alignleft-dbl">Note:</p>
                           <p class="alignright-dbl" style="height:auto;"><textarea rows="3"></textarea> </p>
                         </div>
