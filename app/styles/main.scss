@@ -583,9 +583,10 @@ select{
   padding: 0 20px;
   //margin-top: 10px;
 }
-#work-order-title{
+.work-order-title{
   color: $forestgreen;
-  padding-left: 20px;
+  font-weight:bold;
+  padding-right: 20px;
 }
 
 
@@ -615,6 +616,7 @@ width: 100%;
 .update-work-order-container .work-order-list-console {
   background: #f5f5f5;
   padding:8px;
+  padding-left: 0;
 //  height: auto;
 margin: 0;
 }
@@ -1325,7 +1327,7 @@ footer{
 #dropdown_title, #find-wo{
   font-weight: bold;
   font-size:14px;
-text-transform: uppercase;
+//text-transform: uppercase;
 }
 
 
@@ -1416,15 +1418,14 @@ float: left;
 }
 
 .queue-input{
-padding-top:5px;
-margin-right: 18px;
+
 float:right;
-display: none;
+//display: none;
 }
 
 
 .progress-tabs>li>a{
-padding: 8px 25px;
+padding: 8px 20px;
 
 /* top | right | bottom | left */
   border-radius: 0;
@@ -1461,10 +1462,18 @@ background: transparent!important;
 color: #000;
 font-weight:bold;
 position: relative;
-border-bottom: 7px solid $darkblue;
+border-bottom: 6px solid $darkblue;
 
 
 }
+// .update-work-order-body{
+//   border-top: 4px solid #ddd;
+//
+// border-radius: 8px;
+//
+//
+//   margin-top:-7px;
+// }
 .progress-tabs>li.active>a:after{
   content: '';
   display: block;
@@ -1499,3 +1508,33 @@ border-bottom: 7px solid $darkblue;
 //   color: #6232f1;
 //   font-weight: bold;
 // }
+.search-console-toggle{
+  float: left;
+
+line-height: 25px;
+  margin-right:5px;
+margin-top: 3px;
+  li{
+padding: 5px 5px 2px 5px;
+border-bottom: 1px solid transparent;
+    display:inline;
+    list-style-type:none;
+
+    a{
+      color: #bbb;
+      text-decoration: underline;
+    }
+  }
+
+  .current a{
+  //  border-bottom: 3px solid $lightblue;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+
+  }
+  .current a:after{
+    content: ':';
+  }
+
+}

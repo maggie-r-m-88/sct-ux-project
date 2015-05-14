@@ -421,16 +421,22 @@
 
 
             <div style="float:left;font-size:17px;">
-             <b>Update Work Order:<span id="work-order-title">WO058358</span>
-              <span id="work-order-title">.Shipped to Customer</b></span>
+            <span class="work-order-title">WO058358</span>
+            <span class="work-order-title">.Shipped to Customer</span>
 
 
-            </div>
+
+        </div>
 
           <div style="float:right;">
+            <div class="search-console-toggle">
+              <li><a href="#">Queue Input</a></li>
+              <li class="current"><a href="#">Find</a></li>
+            </div>
 
+<div style="float:right">
+               <div class="dropdown" style="padding-top:6px;" >
 
-               <div class="dropdown" style="padding-top:5px;" >
 
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
            <span id="find-wo">W.O Code</span>
@@ -440,18 +446,21 @@
            <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >W.O. Code</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial #</a></li>
-
-
            </ul>
-           </div>
+         </div><!---end of dropdown for find-->
 
              <span class="console-search"><i class="fa fa-search"></i></span> <input id="search-input"  style="width:150px;" type="search" class="form-control"  />
-             <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-unlock-alt small" ></i></span></button>
+             <div class="btn-group btn-group-sm" role="group">
+             <button id="search-popout" type="submit" class="btn btn-default toggler small" data-prod-cat="1"><span><i class="fa fa-unlock-alt small" ></i></span></button>
              <button type="submit" class="btn btn-default small" >Clear</button>
            </div>
+           </div>
+
+         </div>
 
 
-<div class="clearfix" style=" margin-left: -7px;">
+
+<div class="clearfix" >
 <ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active" ><a href="#progress-pane1" data-toggle="tab">Triage</a></li>
   <li role="presentation "><a href="#progress-pane1" data-toggle="tab">Assessment</a></li>
@@ -463,32 +472,7 @@
 </ul>
 
 
-<div class="queue-input">
 
-  <div class="dropdown" style="padding-top:12px;" >
-    <b>Queue:</b>
-      <a class=" dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
-      <span style="padding-left:10px;" id="find-wo">This Week</span>
-      <i class="fa fa-angle-down"></i>
-       </a>
-         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
-           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >Today</a></li>
-           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
-           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
-           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 7 Days</a></li>
-           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 2 Weeks</a></li>
- </ul>
- </div>
- <select class="work-order-views form-control">
-  <option value="one">--Default--</option>
-  <option value="two">All Work Orders</option>
-  <option value="three">Open Work Orders</option>
-  <option value="four">Ready for Pickup</option>
-  <option value="five">Ready for Repair</option>
-</select>
-<button type="submit" class="btn btn-primary small">Get Next</button>
-
-</div><!--end of queue input-->
 </div>
 </div>
 
