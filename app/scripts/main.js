@@ -95,3 +95,19 @@ $('.dropdown-menu li').on('click', function() {
 
         });
       })(jQuery);
+
+function updateToggle(){
+var input = "john";
+
+console.log(input);
+$(".search-console-toggle li").click(function(e) {
+        e.preventDefault();
+        $(this).addClass("current");
+        $(this).siblings().removeClass("current");
+});
+};
+
+$(document).ready( function() {
+
+  updateToggle();
+});

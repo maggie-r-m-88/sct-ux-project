@@ -434,7 +434,7 @@
               <li class="current"><a href="#">Find</a></li>
             </div>
 
-<div style="float:right">
+<div class="find-input">
                <div class="dropdown" style="padding-top:6px;" >
 
 
@@ -456,10 +456,30 @@
            </div>
            </div>
 
-         </div>
+        <!---end of find-->
 
 
+         <div class="queue-input">
+           <div class="dropdown" style="padding-top:7px;"  >
+             <a class=" dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true" >
+             <span id="find-wo">This Week</span>
+             <i class="fa fa-angle-down"></i>
+             </a>
+             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+             <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >Today</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
+             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last Week</a></li>
+             </ul>
+           </div><!---end of dropdown for qinput-->
 
+          <select class="work-order-views form-control" style="margin-top:0;">
+            <option value="one">--Default--</option>
+          </select>
+          <button type="submit" class="btn btn-primary small">Get Next</button>
+
+         </div><!---end of queue input-->
+       </div>
 <div class="clearfix" >
 <ul class="nav nav-pills progress-tabs" >
   <li role="presentation" class="active" ><a href="#progress-pane1" data-toggle="tab">Triage</a></li>

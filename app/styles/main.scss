@@ -1417,12 +1417,6 @@ padding: 0 5px 0 0; }
 float: left;
 }
 
-.queue-input{
-
-float:right;
-//display: none;
-}
-
 
 .progress-tabs>li>a{
 padding: 8px 20px;
@@ -1508,17 +1502,22 @@ border-bottom: 6px solid $darkblue;
 //   color: #6232f1;
 //   font-weight: bold;
 // }
+.queue-input, .find-input {
+float: left;
+
+}
+.queue-input{display:none;}
+
 .search-console-toggle{
   float: left;
-
-line-height: 25px;
+  line-height: 25px;
   margin-right:5px;
-margin-top: 3px;
+  margin-top: 3px;
   li{
-padding: 5px 5px 2px 5px;
-border-bottom: 1px solid transparent;
-    display:inline;
-    list-style-type:none;
+  padding: 5px 5px 2px 5px;
+  border-bottom: 1px solid transparent;
+  display:inline;
+  list-style-type:none;
 
     a{
       color: #bbb;
@@ -1531,7 +1530,6 @@ border-bottom: 1px solid transparent;
     color: #000;
     font-weight: bold;
     text-decoration: none;
-
   }
   .current a:after{
     content: ':';
