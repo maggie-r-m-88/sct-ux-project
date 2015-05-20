@@ -430,6 +430,8 @@ box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  margin-left: -10px;
 
 }
+
+
 .product-table{
  margin-left: 0;
  margin-top: 5px;
@@ -512,6 +514,24 @@ border-bottom: none;
  margin-top: 0;
 
 }
+
+.modal-header{
+  border-bottom:none;
+}
+.parts-tabs{
+
+  li>a{
+  font-size: 18px;
+  color: #5e686f;
+}
+
+
+
+}
+#parts-list-tab{
+  border: 2px solid red;
+}
+
 
 table{
  background: white;
@@ -902,7 +922,10 @@ background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
 border: 1px solid #bbb;
  padding:3px;
-
+ font-weight:bold;
+ i{
+   padding-right:5px;
+ }
 }
 #parts-list-console{
  background: #fff;
