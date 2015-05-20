@@ -152,16 +152,27 @@ $('.dropdown-menu li').on('click', function() {
         });
       })(jQuery);
 
-function updateToggle(){
-var input = "john";
+      function updateToggle(){
 
-console.log(input);
-$(".search-console-toggle li").click(function(e) {
-        e.preventDefault();
-        $(this).addClass("current");
-        $(this).siblings().removeClass("current");
-});
-};
+      $(".search-console-toggle li a").click(function(e) {
+              e.preventDefault();
+
+              sister = $(this).parent().siblings();  sisterElem = "#" + sister.attr("id");
+
+              $(this).parent().addClass("current");
+              sister.removeClass("current");
+              $(this).parent().before($(sisterElem));
+
+             if (sisterElem === "#queue-input"){
+              $(".queue-input").addClass("hide-input");
+              $(".find-input").removeClass("hide-input");
+             } else {  $(".find-input").addClass("hide-input");
+              $(".queue-input").removeClass("hide-input");   }
+
+
+      });
+      };
+
 
 $(document).ready( function() {
 
