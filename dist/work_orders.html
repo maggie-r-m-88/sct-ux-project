@@ -673,25 +673,131 @@
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                   <!--  <h4 class="modal-title">Parts List</h4>-->
-                  <ul class="nav nav-tabs parts-tabs">
-                    <li role="presentation" class="active"><a href="#parts-list-tab"><i class="fa fa-list"></i>Parts List</a></li>
-                    <li role="presentation"><a href="#test-tab"><i class="fa fa-file"></i>New Part</a></li>
-                    <li role="presentation"><a href="#"><i class="fa fa-plus"></i>Add Part</a></li>
-                  </ul>
+
+       <ul class="nav nav-tabs" role="tablist">
+         <li class="active">
+           <a href="#A" role="tab" data-toggle="tab">
+
+            <h4>Parts List</h4>
+           </a>
+           </li>
+        <li>
+            <a href="#B" role="tab" data-toggle="tab">
+              <h4> New Part</h4>
+            </a>
+        </li>
+        <li>
+            <a href="#C" role="tab" data-toggle="tab">  <h4> Add Part</h4></a>
+        </li>
+
+      </div><!---end of modal header-->
 
 
-                </div>
+
+                      <div class="tab-content modal-body">
+                        <div class="tab-pane fade active in" id="A">
+                          <p class="text-warning"><small>The entire parts list available for the product is listed below. Search parts and select parts as needed. </small></p>
+
+                          <div class="parts-list-modal-console" >
+
+                          <b>View:</b>
+                             <select class="form-control small shortinput work-order-views parts-select">
 
 
-                     <div class="modal-body" >
-                       <div class="tab-content">
-                         <div id="parts-list-tab" class="tab-pane fade in active">
-                           parts list tab
-                         </div>
-                         <div id="test-tab" class="tab-pane">
-                           test tab
-                         </div>
-                       </div><!---end of modal tab content-->
+                                 <option value="one">--Default--</option>
+                                 <option value="two">All Work Orders</option>
+                                 <option value="three">Open Work Orders</option>
+                                 <option value="four">Ready for Pickup</option>
+                                 <option value="five">Ready for Repair</option>
+                              </select>
+                              <button id="parts-search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="3"><span><i class="fa fa-search"></i></span></button>
+
+                              <div class="parts-search-popout">
+                                <div class="btn-group btn-group-sm" role="group">
+                                  <button type="submit" class="btn btn-default">Go</button>
+                                <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
+
+                                <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
+                              </div>
+                            </div>
+
+                          </div>
+                          <table class="table small" id="parts-table" >
+                          <thead>
+
+                           <tr class="cat3" style="display:none">
+                           <td></td>
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                           <!--<td><span></i></span><input type="date"></td>-->
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+                           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
+
+
+                           </tr>
+
+
+                               <tr>
+                                   <th class="checkbox-sm-table" data-field="checkbox">
+                          <input type="checkbox"></th>
+                                   <th data-field="id">Part Type  <i class="fa fa-sort"></i></th>
+                                   <th data-field="name">Part Number <i class="fa fa-sort"></i></th>
+                                   <th data-field="price">Description <i class="fa fa-sort"></i></th>
+                                   <th data-field="bounce">Warrantable <i class="fa fa-sort"></i></th>
+                                   <th data-field="price">Price <i class="fa fa-sort"></i></th>
+                                   <th data-field="bounce">Default Problem <i class="fa fa-sort"></i></th>
+                               </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td><input type="checkbox"></td>
+                               <td>Repair Code</td>
+                               <td>Labor Rate 1</td>
+                               <td>Labor Rate 1</td>
+                               <td>False</td>
+                               <td>$25.00</td>
+                               <td></td>
+
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox"></td>
+
+                              <td>Repair Code</td>
+                              <td>.SW Upgrade</td>
+                              <td>SW Upgrade</td>
+                              <td>True</td>
+                              <td></td>
+                              <td>Device Level (NFF)-No Fault Found</td>
+                             </tr>
+
+                             <tr>
+                               <td><input type="checkbox"></td>
+
+                               <td>Repair Code</td>
+                               <td>Labor Rate 2</td>
+                               <td>Labor Rate 2</td>
+                               <td>False</td>
+                               <td>$50.00</td>
+                               <td></td>
+                              </tr>
+                           </table>
+                           <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                           <!--   <button type="button" class="btn btn-primary">Apply</button>-->
+                              <button type="button" class="btn btn-primary">Save</button>
+                           </div>
+
+                        </div><!---end of A-->
+                        <div class="tab-pane fade" id="B">
+                          B Body
+                        </div>
+                        <div class="tab-pane fade" id="C">
+                          C Body
+                        </div>
+
+
 
 
 
