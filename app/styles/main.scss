@@ -1429,12 +1429,12 @@ border: 2px solid red;
 }
 
 
-.asterisk_input:after {
+.asterisk_input:before {
 content:" *";
 color: #c12e2a;
 
 position: absolute;
-margin: 0px 0px 0px -10px;
+margin: 0px 0px 0px 0px;
 font-size: large;
 padding: 0 5px 0 0; }
 
