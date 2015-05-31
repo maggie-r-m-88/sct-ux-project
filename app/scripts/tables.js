@@ -53,3 +53,11 @@ $(".page-view").click(function(){
 
 });
 });
+
+$("th").click(function(e){
+  e.preventDefault();
+  console.log("hey");
+   $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
+
+
+});
