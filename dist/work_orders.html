@@ -791,11 +791,116 @@
 
                         </div><!---end of A-->
                         <div class="tab-pane fade" id="B">
-                          B Body
-                        </div>
+                          <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
+                          <div class="work-order-info-grid">
+                            <div class="double-column">
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Part Number:</p>
+                                <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Description:</p>
+                                <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p><!--select here-->
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Part Type Code:</p>
+                                <p class="alignright-dbl">
+                                  <select class="form-control small shortinput dbl-input">
+                                    <option value="one">Phone (Standard Phone)
+                                  </select>
+                                </p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl"> Class Code:</p><!--select-->
+                                <p class="alignright-dbl">
+                                  <select class="form-control small shortinput dbl-input">
+                                    <option value="one">Depot Service
+                                  </select>
+
+                                </p>
+                              </div>
+                            </div><!--end of col 1-->
+                            <div class="double-column">
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Warrantable:</p>
+                                <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Serialized:</p>
+                                <p class="alignright-dbl"><input type="checkbox"></p><!--check here-->
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Cost:</p>
+                                <p class="alignright-dbl"><input></p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Price:</p>
+                                <p class="alignright-dbl"><input></p>
+                              </div>
+                            </div>
+
+                          </div><!---end of grid-->
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <button type="button" class="btn btn-primary">Save</button>
+                          </div>
+
+                        </div><!--end of B-->
                         <div class="tab-pane fade" id="C">
-                          C Body
-                        </div>
+                          <p class="text-warning"><small>Please enter the following information to add a new part to the Work Order parts list.</small></p>
+
+                          <div class="work-order-info-grid">
+                            <div class="double-column">
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Manufacturer</p>
+                                <p class="alignright-dbl">Blackberry</p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Model:</p>
+                                <p class="alignright-dbl">9800 </p><!--select here-->
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Part Number:</p>
+                                <p class="alignright-dbl">
+                                <input>
+                                </p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl"> Serial Number:</p><!--select-->
+                                <p class="alignright-dbl">
+                                <input>
+
+                                </p>
+                              </div>
+                            </div><!--end of col 1-->
+                            <div class="double-column">
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Warrantable:</p>
+                                <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Problem:</p>
+                                <p class="alignright-dbl"><input></p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">Solution Code:</p>
+                                <p class="alignright-dbl"><input></p>
+                              </div>
+                              <div class="clearfix">
+                                <p class="alignleft-dbl">RDC:</p>
+                                <p class="alignright-dbl"><input></p>
+                              </div>
+                            </div>
+
+                          </div><!--end of grid-->
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              <!--<button type="button" class="btn btn-primary">Apply</button>-->
+                              <button type="button" class="btn btn-primary">Save</button>
+                              <button type="button" class="btn btn-primary">Save and New</button>
+                          </div>
+
+                        </div><!---end of C-->
 
 
 
