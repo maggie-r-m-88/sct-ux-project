@@ -62,13 +62,19 @@ $('.archive_month ul').hide();
 
 
 ///drop down menu
-$('.dropdown-menu li').on('click', function() {
-    $('#dropdown_title').html($(this).find('a').html());
+$('#update-find-wo li').on('click', function() {
+  $('#find-wo').html($(this).find('a').html());
+  });
+
+  $('#findWO-search-menu li').on('click', function() {
+
+        $('#dropdown_title').html($(this).find('a').html());
+        });
+$('#queue-input-time li').on('click', function() {
+  
+    $('#queue-input-dropdown').html($(this).find('a').html());
     });
 
-  $('.dropdown-menu li').on('click', function() {
-        $('#find-wo').html($(this).find('a').html());
-        });
 
 ////action buttons go default///
         $("#Finish-Repair-Button").click(function(e) {

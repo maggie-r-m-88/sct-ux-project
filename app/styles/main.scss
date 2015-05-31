@@ -9,6 +9,7 @@ $darkblue: #1f487c;
 //$darkblue: #edf1ea;
 $superlightblue: #ebf1f8;
 //$superlightblue:#e9eaed;
+
 $lightblue: #337ab7;
 //$lightblue: #000;
 
@@ -437,7 +438,7 @@ box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  margin-top: 5px;
 .badge{
   margin-left: 5px;
-  background: $darkblue;
+  background: #aaaaaa;
 }
 
 }
@@ -498,7 +499,9 @@ border-bottom: none;
  border-bottom: none;
 }
 
-
+.modal-body{
+  border: 2px solid red;
+}
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
  color: $tabactivelink;
  background: $superlightblue;
@@ -1347,13 +1350,12 @@ footer{
 }
 
 
-#dropdown_title, #find-wo{
- font-weight: bold;
- font-size:14px;
-//text-transform: uppercase;
+
+
+.dropdown-toggle-item{
+  font-weight: bold;
+  font-size:14px;
 }
-
-
 ///buttons///
 button:focus {outline:0;}
 .btn {

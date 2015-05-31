@@ -32,7 +32,7 @@
   <div class="user-dashboard">
     <div style="float:left" class="dropdown">
 <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-<span>Maggie Martin</span>
+<span id="username">Maggie Martin</span>
 <i class="fa fa-angle-down"></i>
 </a>
 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -130,9 +130,9 @@
 
                   <div class="dropdown">
                     <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                     <span id="dropdown_title" style="padding:3px;">Today</span><i class="fa fa-angle-down"></i>
+                     <span id="dropdown_title" class="dropdown-toggle-item" style="padding:3px;">Today</span><i class="fa fa-angle-down"></i>
                     </a>
-            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <ul id="findWO-search-menu"class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Today (2)</a></li>
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday (2)</a></li>
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Months (4)</a></li>
@@ -439,10 +439,10 @@
 
 
            <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-           <span id="find-wo">W.O Code</span>
+           <span id="find-wo" class="dropdown-toggle-item">W.O Code</span>
            <i class="fa fa-angle-down"></i>
            </a>
-           <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+           <ul class="dropdown-menu" id="update-find-wo" role="menu" aria-labelledby="dropdownMenu1">
            <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >W.O. Code</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial</a></li>
            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Serial #</a></li>
@@ -461,11 +461,11 @@
 
          <div class="queue-input hide-input">
            <div class="dropdown" style="padding-top:5px;"  >
-             <a class=" dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true" >
-             <span id="find-wo">This Week</span>
+             <a class="dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true" >
+             <span id="queue-input-dropdown" class="dropdown-toggle-item">This Week</span>
              <i class="fa fa-angle-down"></i>
              </a>
-             <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+             <ul id="queue-input-time" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
              <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" >Today</a></li>
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Yesterday</a></li>
              <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Last 3 Days</a></li>
@@ -675,6 +675,7 @@
 </div>
 <!--- Parts Modals go here-->
 <div id="partsModal" class="modal fade">
+
         <div class="modal-dialog large-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -691,253 +692,26 @@
 
 
                      <div class="modal-body" >
-                    <p></p>
-                    <p class="text-warning"><small>The entire parts list available for the product is listed below. Search parts and select parts as needed. </small></p>
-
-                    <div class="parts-list-modal-console" >
-
-                    <b>View:</b>
-                       <select class="form-control small shortinput work-order-views parts-select">
-
-
-                           <option value="one">--Default--</option>
-                           <option value="two">All Work Orders</option>
-                           <option value="three">Open Work Orders</option>
-                           <option value="four">Ready for Pickup</option>
-                           <option value="five">Ready for Repair</option>
-                        </select>
-                        <button id="parts-search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="3"><span><i class="fa fa-search"></i></span></button>
-
-                        <div class="parts-search-popout">
-                          <div class="btn-group btn-group-sm" role="group">
-                            <button type="submit" class="btn btn-default">Go</button>
-                          <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
-
-                          <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
-                        </div>
-                      </div>
-
-                    </div>
-                    <table class="table small" id="parts-table" >
-                   <thead>
-
-                     <tr class="cat3" style="display:none">
-                     <td></td>
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-                     <!--<td><span></i></span><input type="date"></td>-->
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-                     <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-
-
-                     </tr>
-
-
-                         <tr>
-                             <th class="checkbox-sm-table" data-field="checkbox">
-                    <input type="checkbox"></th>
-                             <th data-field="id">Part Type  <i class="fa fa-sort"></i></th>
-                             <th data-field="name">Part Number <i class="fa fa-sort"></i></th>
-                             <th data-field="price">Description <i class="fa fa-sort"></i></th>
-                             <th data-field="bounce">Warrantable <i class="fa fa-sort"></i></th>
-                             <th data-field="price">Price <i class="fa fa-sort"></i></th>
-                             <th data-field="bounce">Default Problem <i class="fa fa-sort"></i></th>
-                         </tr>
-                     </thead>
-                     <tbody>
-                       <tr>
-                         <td><input type="checkbox"></td>
-                         <td>Repair Code</td>
-                         <td>Labor Rate 1</td>
-                         <td>Labor Rate 1</td>
-                         <td>False</td>
-                         <td>$25.00</td>
-                         <td></td>
-
-                      </tr>
-                      <tr>
-                        <td><input type="checkbox"></td>
-
-                        <td>Repair Code</td>
-                        <td>.SW Upgrade</td>
-                        <td>SW Upgrade</td>
-                        <td>True</td>
-                        <td></td>
-                        <td>Device Level (NFF)-No Fault Found</td>
-                       </tr>
-
-                       <tr>
-                         <td><input type="checkbox"></td>
-
-                         <td>Repair Code</td>
-                         <td>Labor Rate 2</td>
-                         <td>Labor Rate 2</td>
-                         <td>False</td>
-                         <td>$50.00</td>
-                         <td></td>
-                        </tr>
-                     </table>
-                   </div><!--end of full parts list div-->
-                   <div class="modal-footer">
-                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <!--   <button type="button" class="btn btn-primary">Apply</button>-->
-                       <button type="button" class="btn btn-primary">Save</button>
-                   </div>
-
-                </div><!---end of modal tab body-->
+                       <div class="tab-content">
+                         <div id="parts-list-tab" class="tab-pane fade in active">
+                           parts list tab
+                         </div>
+                         <div id="test-tab" class="tab-pane">
+                           test tab
+                         </div>
+                       </div><!---end of modal tab content-->
 
 
 
-            </div>
-        </div>
-    </div><!---end of parts-modal-->
-
-    <!---beginning of new part modal-->
-    <div id="newPartModal" class="modal fade">
-            <div class="modal-dialog large-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">New Part</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p></p>
-                        <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
-                        <div class="work-order-info-grid">
-                          <div class="double-column">
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Part Number:</p>
-                              <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Description:</p>
-                              <p class="alignright-dbl"><input><span class="asterisk_input">  </span> </p><!--select here-->
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Part Type Code:</p>
-                              <p class="alignright-dbl">
-                                <select class="form-control small shortinput dbl-input">
-                                  <option value="one">Phone (Standard Phone)
-                                </select>
-                              </p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl"> Class Code:</p><!--select-->
-                              <p class="alignright-dbl">
-                                <select class="form-control small shortinput dbl-input">
-                                  <option value="one">Depot Service
-                                </select>
-
-                              </p>
-                            </div>
-                          </div>
-                          <div class="double-column">
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Warrantable:</p>
-                              <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Serialized:</p>
-                              <p class="alignright-dbl"><input type="checkbox"></p><!--check here-->
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Cost:</p>
-                              <p class="alignright-dbl"><input></p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Price:</p>
-                              <p class="alignright-dbl"><input></p>
-                            </div>
-                          </div>
+                     </div><!---end of modal tab body-->
 
 
-                        </div>
 
-                       <div class="modal-footer">
-                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary">Save</button>
-                       </div>
-
-                    </div>
+            </div><!---end of modal content-->
+        </div><!---end of large dialog modal div-->
+    </div><!---end of giant parts modal-->
 
 
-                </div>
-            </div>
-        </div>
-
-    <!---end of new part modal-->
-    <!---add part modal-->
-    <div id="addPartModal" class="modal fade">
-            <div class="modal-dialog large-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                        <h4 class="modal-title">New Part</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p></p>
-                        <p class="text-warning"><small>Please enter the following information to add a new part to the Work Order parts list.</small></p>
-                        <div class="work-order-info-grid">
-                          <div class="double-column">
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Manufacturer</p>
-                              <p class="alignright-dbl">Blackberry</p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Model:</p>
-                              <p class="alignright-dbl">9800 </p><!--select here-->
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Part Number:</p>
-                              <p class="alignright-dbl">
-                              <input>
-                              </p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl"> Serial Number:</p><!--select-->
-                              <p class="alignright-dbl">
-                              <input>
-
-                              </p>
-                            </div>
-                          </div>
-                          <div class="double-column">
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Warrantable:</p>
-                              <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Problem:</p>
-                              <p class="alignright-dbl"><input></p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">Solution Code:</p>
-                              <p class="alignright-dbl"><input></p>
-                            </div>
-                            <div class="clearfix">
-                              <p class="alignleft-dbl">RDC:</p>
-                              <p class="alignright-dbl"><input></p>
-                            </div>
-                          </div>
-
-
-                        </div>
-
-                       <div class="modal-footer">
-                           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           <!--<button type="button" class="btn btn-primary">Apply</button>-->
-                           <button type="button" class="btn btn-primary">Save</button>
-                           <button type="button" class="btn btn-primary">Save and New</button>
-                       </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    <!--end of add part modal-->
 
 
   <table class="table small" id="parts-table">
