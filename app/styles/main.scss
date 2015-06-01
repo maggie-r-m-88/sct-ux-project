@@ -885,6 +885,7 @@ background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1)
 background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
 border: 2px solid #ddd;
+border-bottom: none;
 
 }
 
@@ -1484,11 +1485,22 @@ position: relative;
 border-bottom: 4px solid $darkblue;
 //text-shadow: 4px 4px 20px rgba(150, 150, 150, 1);
 
+// background: $darkblue;
+// color: #fff;
+// border-radius: 4px 4px 0 0;
+
+//background: #ddd;
+//color: $darkblue;
+//border-bottom: none;
+
 }
 .update-work-order-body{
 //border-top: 2px solid #7a7a7a;
-border-top: 1px solid #ddd;
+//border-top: 1px solid #ddd;
+border-top: 4px solid #1f487c;
 margin-top: -4px;
+
+border-top: 4px solid $darkblue;
 
 }
 .progress-tabs>li.active>a:after{
@@ -1523,19 +1535,16 @@ margin-top: -4px;
 // background:#f5e8a3;}
 // #progress-2:hover, #progress-4:hover{
 // background: #f2dede;
-// }
-// .row-bg-highlight{
+
 //   background-color: #b3dba3;
 //   background-color: #f5e8a3;
 //   background-color: #f3884f;
-// }
-//
-// .row-text-highlight{
+
 //   color:#66c294;
 //   color: #f13737;
 //   color: #f17837;
 //   color: #6232f1;
-//   font-weight: bold;
+
 // }
 .queue-input, .find-input {
 float: left;
