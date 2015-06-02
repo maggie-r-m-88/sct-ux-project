@@ -885,7 +885,8 @@ background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1)
 background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
 border: 2px solid #ddd;
-border-bottom: none;
+//border-bottom: none;
+border-top:none;
 
 }
 
@@ -910,7 +911,7 @@ border-bottom: none;
  color: #337ab7;
 }
 .grid-panel-button{
- text-transform: uppercase;
+ //text-transform: uppercase;
  margin-top: -2px;
  color: $forestgreen;
 margin: 0 20px;
@@ -944,7 +945,7 @@ overflow: auto;
 
 .parts-select{
  margin-top: 5px;
- width: 200px;
+ width: 150px;
 }
 .shortinput{
  height: 30px;
@@ -982,7 +983,7 @@ margin: 0;
 .dbl-input{
  width: 190px;
  margin:0;
- height: 21px;
+ height: 28px;
 }
 
 .alignleft-dbl, .alignright-dbl{
@@ -1043,9 +1044,13 @@ font-size: 12px;
 }
 
 
-.fa-minus-circle, .fa-wrench, .fa-bullseye, .fa-plus-circle{
+.fa-minus-circle, .fa-bullseye, .fa-plus-circle{
  padding-right: 15px;
  font-size: 14px;
+}
+.fa-wrench, .fa-trash-o{
+  padding-right: 8px;
+
 }
 
 #parts-table{

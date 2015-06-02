@@ -784,7 +784,7 @@
 
     <div style="float:left;">
        <b>View:</b>
-   <select class="form-control work-order-views small shortinput parts-select">
+   <select class="form-control work-order-views small shortinput parts-select" >
 
 
        <option value="one">--Default--</option>
@@ -793,10 +793,15 @@
        <option value="four">Ready for Pickup</option>
        <option value="five">Ready for Repair</option>
     </select>
-    <a data-toggle="modal" href="#partsModal">
-    <button class="grid-panel-button"><i class="fa fa-wrench"></i>Parts List</button>
 
-  </a>
+  <!--  <button class="grid-panel-button"><i class="fa fa-wrench"></i>Parts List</button>
+    <button class="grid-panel-button"><i class="fa fa-trash-o"></i>Delete</button> -->
+
+      <a data-toggle="modal" href="#partsModal">  <button type="button" class="btn btn-primary small"><i class="fa fa-wrench"></i>Parts List</button></a>
+    <button type="button" class="btn btn-default small" style="margin-left:10px;"><i class="fa fa-trash-o"></i>Delete</button>
+
+
+
 </div>
 <div style="float:right;margin-right: 40px;">
   <b>Quick Add:</b>
@@ -1076,7 +1081,7 @@
    <tbody>
      <tr>
        <td><input type="checkbox"></td>
-       <td contenteditable>Mech</td contenteditable>
+       <td>Mech</td>
        <td>ASY-112837-003</td>
        <td>Bottom Cover ASY 8300 Black</td>
        <td>1</td>
