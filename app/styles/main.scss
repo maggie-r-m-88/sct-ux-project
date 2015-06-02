@@ -837,6 +837,32 @@ float:left;
  border: 1px solid #ccc;
  transition: border-color ease-in-out .3s,box-shadow ease-in-out .3s;
 }
+
+.work-order-info-grid input[type='radio']{
+
+  padding: 0;
+  float: none;
+  width: auto;
+  display:inline;
+
+}
+
+.form-inline{
+  
+  position: absolute;
+
+  margin-top:40px;
+margin-left: 14%;
+  //line-height:14px;
+}
+.radio{
+  display:inline;
+}
+label{
+  font-weight: 300;
+  font-family: inherit;
+  font-size: 13px;
+}
 .work-order-info-grid textarea{
  width: 80%;
 
@@ -1584,4 +1610,14 @@ float: left;
    content: ':';
  }
 
+}
+
+.radio-label {
+   display: inline-block;
+    vertical-align: top;
+    margin-right: 3%;
+}
+.radio-input {
+   display: inline-block;
+    vertical-align: top;
 }
