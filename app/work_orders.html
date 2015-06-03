@@ -724,25 +724,12 @@
       <div id="clearfix">
          <p class="alignleft">Device Condition:</p>
          <p class="alignright">
-      <!--     <label class="radio-inline">
-       <input type="radio" id="inlineCheckbox1" value="option1"> Damaged
-   </label>
-   <label class="radio-inline">
-       <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Fair
-   </label>-->
-
-     <div class="form-inline">
-
-         <label class="radio">
-             <input type="radio" value="1"/>
-          Damaged
-         </label>
-         <label class="radio">
-             <input type="radio" value="2"/>
-          Fair
-          </label>
-     </div>
-
+           <label class="radio-inline">
+                  <input type="radio" id="inlineCheckbox1" value="option1"> Damaged
+              </label>
+              <label class="radio-inline">
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Fair
+              </label>
 
 
          </p>
@@ -818,7 +805,7 @@
   <!--  <button class="grid-panel-button"><i class="fa fa-wrench"></i>Parts List</button>
     <button class="grid-panel-button"><i class="fa fa-trash-o"></i>Delete</button> -->
 
-      <a data-toggle="modal" href="#partsModal">  <button type="button" class="btn btn-primary small"><i class="fa fa-wrench"></i>Parts List</button></a>
+      <a data-toggle="modal" href="#partsModal">  <button type="button" class="btn btn-default small"><i class="fa fa-wrench"></i>Parts List</button></a>
     <button type="button" class="btn btn-default small" style="margin-left:10px;"><i class="fa fa-trash-o"></i>Delete</button>
 
 
@@ -839,7 +826,7 @@
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                   <!--  <h4 class="modal-title">Parts List</h4>-->
 
-       <ul class="nav nav-tabs" role="tablist">
+       <ul class="nav nav-tabs modal-tabs" role="tablist">
          <li class="active">
            <a href="#A" role="tab" data-toggle="tab">
 
@@ -1101,12 +1088,12 @@
    </thead>
    <tbody>
      <tr>
-       <td><input type="checkbox"></td>
+       <td><input type="checkbox" class="checkbox"></td>
        <td>Mech</td>
        <td>ASY-112837-003</td>
        <td>Bottom Cover ASY 8300 Black</td>
-       <td>1</td>
-       <td></td>
+       <td id="partQuantity">1</td>
+       <td>02923920</td>
        <td>$0.00</td>
        <td>Mark Riley</td>
        <td>12/11/2014 3:08 PM</td>
@@ -1114,13 +1101,13 @@
        <td>False</td>
     </tr>
     <tr>
-      <td><input type="checkbox"></td>
+      <td><input type="checkbox" class="checkbox"></td>
        <td>Mech</td>
        <td>ASY-14360-004</td>
        <td>Assy, Bottom Housing, Comet Wifi 8120</td>
-       <td>1</td>
-       <td></td>
-       <td></td>
+       <td id="partQuantity">1</td>
+       <td>00191910</td>
+       <td>$55.00</td>
        <td>Mark Riley</td>
        <td>12/11/2014 3:08 PM</td>
        <td>False</td>

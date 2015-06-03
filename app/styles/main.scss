@@ -848,7 +848,7 @@ float:left;
 }
 
 .form-inline{
-  
+
   position: absolute;
 
   margin-top:40px;
@@ -861,7 +861,7 @@ margin-left: 14%;
 label{
   font-weight: 300;
   font-family: inherit;
-  font-size: 13px;
+  font-size: 12px;
 }
 .work-order-info-grid textarea{
  width: 80%;
@@ -1003,6 +1003,12 @@ margin: 0;
  .radio-inline{margin-top:2px;}
  input[type="radio"]{
    margin-top:0;
+
+ }
+ input[type="checkbox"]{
+   //margin: 0;
+   width: auto;
+   box-shadow: none;
 
  }
 }
@@ -1490,7 +1496,9 @@ border-bottom: 3px solid transparent;
 
 }
 
-
+.modal-tabs>li>a{
+  color: gray;
+}
 .progress-tabs>li:last-child>a{
 border-right: none;
 }

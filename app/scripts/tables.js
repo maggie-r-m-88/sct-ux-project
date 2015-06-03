@@ -55,8 +55,43 @@ $(".page-view").click(function(){
 });
 
 $("th").click(function(){
-  
+
    $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
 
+
+});
+
+
+///checkbox editable text
+
+function divClicked() {
+    var divHtml = $(this).html();
+    var editableText = $("<input id=" + "changeInput" + "/>");
+    editableText.val(divHtml);
+    $(this).replaceWith(editableText);
+    editableText.focus();
+    // setup the blur event for this new textarea
+    editableText.blur(editableTextBlurred);
+}
+
+function editableTextBlurred() {
+    var html = $(this).val();
+    var viewableText = $("<div id=" + "changedInput" + "/>");
+    viewableText.html(html);
+    $(this).replaceWith(viewableText);
+    // setup the click event for this new div
+    viewableText.click(divClicked);
+}
+
+
+
+$(".checkbox").change(function() {
+    if(this.checked) {
+
+         $("#partQuantity").click(divClicked);
+
+
+
+    }
 
 });
