@@ -1482,7 +1482,7 @@ float: left;
 
 
 .progress-tabs>li>a{
-padding: 8px 20px;
+padding: 3px 20px 10px 20px;
 
 /* top | right | bottom | left */
  border-radius: 0;
@@ -1493,6 +1493,8 @@ padding: 8px 20px;
 color: gray;
 position: relative;
 border-bottom: 3px solid transparent;
+//border:1px solid red;
+font-size: 15px;
 
 }
 
@@ -1521,23 +1523,21 @@ background: transparent!important;
 color: #000;
 font-weight:bold;
 position: relative;
-border-bottom: 4px solid $darkblue;
+
 //text-shadow: 4px 4px 20px rgba(150, 150, 150, 1);
 
 // background: $darkblue;
 // color: #fff;
-// border-radius: 4px 4px 0 0;
+//border-right: 3px solid $darkblue;
 
-//background: #ddd;
-//color: $darkblue;
-//border-bottom: none;
+
 
 }
 .update-work-order-body{
 //border-top: 2px solid #7a7a7a;
 //border-top: 1px solid #ddd;
 border-top: 4px solid #1f487c;
-margin-top: -4px;
+margin-top: 0px;
 
 border-top: 4px solid $darkblue;
 
@@ -1628,4 +1628,11 @@ float: left;
 .radio-input {
    display: inline-block;
     vertical-align: top;
+}
+
+#changedInput{
+  margin-top:4px;
+}
+#changeInput{
+  border: none;
 }

@@ -12,6 +12,8 @@
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../bower_components/alertify.js/themes/alertify.core.css" />
+    <link rel="stylesheet" href="../bower_components/alertify.js/themes/alertify.bootstrap.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <link rel="stylesheet" href="styles/font-awesome/css/font-awesome.min.css">
@@ -47,7 +49,7 @@
 
 </div>
     <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
-    <a href="#"><li><i class="fa fa-sign-out"></i></li></a>
+    <a href="#"><li><i class="fa fa-cog"></i></li></a>
   </div>
 
   <div id="toggle-top" class="clearfix">
@@ -802,16 +804,13 @@
        <option value="five">Ready for Repair</option>
     </select>
 
-  <!--  <button class="grid-panel-button"><i class="fa fa-wrench"></i>Parts List</button>
-    <button class="grid-panel-button"><i class="fa fa-trash-o"></i>Delete</button> -->
+      <a data-toggle="modal" href="#partsModal">  <button type="button" class="btn btn-default small" style="margin-left: 20px;"><i class="fa fa-wrench"></i>Add Parts</button></a>
 
-      <a data-toggle="modal" href="#partsModal">  <button type="button" class="btn btn-default small"><i class="fa fa-wrench"></i>Parts List</button></a>
-    <button type="button" class="btn btn-default small" style="margin-left:10px;"><i class="fa fa-trash-o"></i>Delete</button>
 
 
 
 </div>
-<div style="float:right;margin-right: 40px;">
+<div style="float:left;margin-left: 20px;">
   <b>Quick Add:</b>
     <input  class="form-control work-order-views shortinput parts-select">
 
@@ -833,11 +832,7 @@
             <h4>Parts List</h4>
            </a>
            </li>
-        <li>
-            <a href="#B" role="tab" data-toggle="tab">
-              <h4> New Part</h4>
-            </a>
-        </li>
+
         <li>
             <a href="#C" role="tab" data-toggle="tab">  <h4> Add Part</h4></a>
         </li>
@@ -892,11 +887,13 @@
 
 
                                <tr>
+
                                    <th class="checkbox-sm-table" data-field="checkbox">
-                          <input type="checkbox"></th>
+                          <input type="checkbox" class="checkbox"></th>
                                    <th data-field="id">Part Type  <i class="fa fa-sort-desc"></i></th>
                                    <th data-field="name">Part Number <i class="fa fa-sort-desc"></i></th>
                                    <th data-field="price">Description <i class="fa fa-sort-desc"></i></th>
+                                  <th data-field="status">Quantity<i class="fa fa-sort-desc"></i></th>
                                    <th data-field="bounce">Warrantable <i class="fa fa-sort-desc"></i></th>
                                    <th data-field="price">Price <i class="fa fa-sort-desc"></i></th>
                                    <th data-field="bounce">Default Problem <i class="fa fa-sort-desc"></i></th>
@@ -904,21 +901,23 @@
                            </thead>
                            <tbody>
                              <tr>
-                               <td><input type="checkbox"></td>
+                               <td><input type="checkbox" class="checkbox"></td>
                                <td>Repair Code</td>
                                <td>Labor Rate 1</td>
                                <td>Labor Rate 1</td>
+                               <td id="partQuantity">1</td>
                                <td>False</td>
                                <td>$25.00</td>
                                <td></td>
 
                             </tr>
                             <tr>
-                              <td><input type="checkbox"></td>
+                              <td><input type="checkbox" class="checkbox"></td>
 
                               <td>Repair Code</td>
                               <td>.SW Upgrade</td>
                               <td>SW Upgrade</td>
+                              <td id="partQuantity">1</td>
                               <td>True</td>
                               <td></td>
                               <td>Device Level (NFF)-No Fault Found</td>
@@ -930,6 +929,7 @@
                                <td>Repair Code</td>
                                <td>Labor Rate 2</td>
                                <td>Labor Rate 2</td>
+                               <td id="partQuantity">1</td>
                                <td>False</td>
                                <td>$50.00</td>
                                <td></td>
@@ -942,62 +942,7 @@
                            </div>
 
                         </div><!---end of A-->
-                        <div class="tab-pane fade" id="B">
-                          <p class="text-warning"><small>Please enter the following information to add a new part to the database.</small></p>
-                          <div class="work-order-info-grid">
-                            <div class="double-column">
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Part Number:</p>
-                                <p class="alignright-dbl"><span class="asterisk_input">  </span> <input></p>
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Description:</p>
-                                <p class="alignright-dbl"><span class="asterisk_input">  </span><input> </p><!--select here-->
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Part Type Code:</p>
-                                <p class="alignright-dbl">
-                                  <select class="form-control small shortinput dbl-input">
-                                    <option value="one">Phone (Standard Phone)
-                                  </select>
-                                </p>
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl"> Class Code:</p><!--select-->
-                                <p class="alignright-dbl">
-                                  <select class="form-control small shortinput dbl-input">
-                                    <option value="one">Depot Service
-                                  </select>
 
-                                </p>
-                              </div>
-                            </div><!--end of col 1-->
-                            <div class="double-column">
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Warrantable:</p>
-                                <p class="alignright-dbl"><input type="checkbox"></p><!---check here-->
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Serialized:</p>
-                                <p class="alignright-dbl"><input type="checkbox"></p><!--check here-->
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Cost:</p>
-                                <p class="alignright-dbl"><input></p>
-                              </div>
-                              <div class="clearfix">
-                                <p class="alignleft-dbl">Price:</p>
-                                <p class="alignright-dbl"><input></p>
-                              </div>
-                            </div>
-
-                          </div><!---end of grid-->
-                          <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save</button>
-                          </div>
-
-                        </div><!--end of B-->
                         <div class="tab-pane fade" id="C">
                           <p class="text-warning"><small>Please enter the following information to add a new part to the Work Order parts list.</small></p>
 
@@ -1077,7 +1022,7 @@
            <th data-field="id">Part Type<i class="fa fa-sort-desc"></i></th>
            <th data-field="name">Part Number<i class="fa fa-sort-desc"></i></th>
            <th data-field="price">Description<i class="fa fa-sort-desc"></i></th>
-           <th data-field="status">Quantity<i class="fa fa-sort-desc"></i></th>
+        <!--   <th data-field="status">Quantity<i class="fa fa-sort-desc"></i></th>-->
            <th data-field="serial">Serial ID<i class="fa fa-sort-desc"></i></th>
            <th data-field="serial">Price<i class="fa fa-sort-desc"></i></th>
            <th data-field="model">User Name<i class="fa fa-sort-desc"></i></th>
@@ -1092,7 +1037,7 @@
        <td>Mech</td>
        <td>ASY-112837-003</td>
        <td>Bottom Cover ASY 8300 Black</td>
-       <td id="partQuantity">1</td>
+      <!-- <td id="partQuantity">1</td>-->
        <td>02923920</td>
        <td>$0.00</td>
        <td>Mark Riley</td>
@@ -1105,7 +1050,7 @@
        <td>Mech</td>
        <td>ASY-14360-004</td>
        <td>Assy, Bottom Housing, Comet Wifi 8120</td>
-       <td id="partQuantity">1</td>
+       <!--<td id="partQuantity">1</td>-->
        <td>00191910</td>
        <td>$55.00</td>
        <td>Mark Riley</td>
@@ -1121,7 +1066,7 @@
 </section>
 <section>
   <dt>
-   <h3 class="panel-title small grid-panel action-panel"><i class="fa fa-bullseye"></i>Actions</h3>
+   <!--<h3 class="panel-title small grid-panel action-panel"><i class="fa fa-bullseye"></i>Actions</h3>-->
  </dt>
  <dd>
 <div style="border-top:none;">
@@ -1455,7 +1400,7 @@ kkfj
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <script src="../bower_components/alertify.js/lib/alertify.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
