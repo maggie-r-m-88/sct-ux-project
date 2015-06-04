@@ -1468,14 +1468,20 @@ border: 2px solid red;
 
 
 .asterisk_input:before {
-content:" *";
+content:"I";
 color: #c12e2a;
 
 position: absolute;
 margin: 0px 0px 0px 0px;
 font-size: large;
-padding: 0 5px 0 0; }
-
+//padding: 0 5px 0 0;
+margin-top:-2px;
+position:absolute;
+ }
+ input:required,
+ textarea:required {
+   border-left: 2px solid red !important;
+ }
 .progress-tabs{
 float: left;
 }

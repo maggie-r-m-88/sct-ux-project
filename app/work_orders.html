@@ -721,16 +721,17 @@
         </div>
       <div id="clearfix">
          <p class="alignleft">Airtime Minutes:</p>
-         <p class="alignright"><span class="asterisk_input">  </span> <input>    </p>
+         <p class="alignright"> <input required>    </p>
       </div>
       <div id="clearfix">
          <p class="alignleft">Device Condition:</p>
          <p class="alignright">
+
            <label class="radio-inline">
-                  <input type="radio" id="inlineCheckbox1" value="option1"> Damaged
+                  <input type="radio" name="inlineRadioOptions" id="inlineCheckbox1" value="option1"> Damaged
               </label>
               <label class="radio-inline">
-                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Fair
+                  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked> Fair
               </label>
 
 
@@ -745,11 +746,11 @@
        </div>
        <div id="clearfix">
          <p class="alignleft">Software Ver In:</p>
-         <p class="alignright"><span class="asterisk_input">  </span> <input type="test" value="04/05/2015 9:24 AM" readonly="readonly"></p>
+         <p class="alignright"> <input type="test" value="04/05/2015 9:24 AM" readonly="readonly" required></p>
       </div>
       <div id="clearfix">
         <p class="alignleft">Software Ver Out:</p>
-        <p class="alignright"><span class="asterisk_input">  </span> <input></p>
+        <p class="alignright"> <input required></p>
      </div>
 
 </div><!--end of tri-column 2-->
@@ -959,13 +960,13 @@
                               <div class="clearfix">
                                 <p class="alignleft-dbl">Part Number:</p>
                                 <p class="alignright-dbl">
-                                <input>
+                                <input required>
                                 </p>
                               </div>
                               <div class="clearfix">
                                 <p class="alignleft-dbl"> Serial Number:</p><!--select-->
                                 <p class="alignright-dbl">
-                                <input>
+                                <input required>
 
                                 </p>
                               </div>
@@ -1074,8 +1075,8 @@
        <div id="action-buttons">
          <div style="float:left;">
            <button id="Finish-Repair-Button"type="button" class="btn btn-primary small" style=" margin-right:10px">Finish Repair</button>
-           <button id="Expedite-Button" type="button" class="btn btn-default small" style=" margin-right:10px">Awaiting Parts</button>
-           <button type="button" class="btn btn-default small" style=" margin-right:10px">Cannot Repair</button>
+           <button id="Expedite-Button" type="button" class="btn btn-primary small" style=" margin-right:10px">Awaiting Parts</button>
+           <button type="button" class="btn btn-primary small" style=" margin-right:10px">Cannot Repair</button>
          </div>
          <div style="float:right;">
            <div class="btn-group">
