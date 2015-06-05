@@ -326,13 +326,18 @@ $(function() {
    $(".inbox-size").draggable();
  });
 
-///quantity
-(function ($) {
-  $('.spinner .btn:first-of-type').on('click', function() {
-    $(this).closest("input")
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-  });
-  $('.spinner .btn:last-of-type').on('click', function() {
-    $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-  });
-})(jQuery);
+//  $(".checkbox").change(function(){
+//
+// ///quantity
+// (function ($) {
+//
+//
+//  $('.spinner .btn:first-of-type').on('click', function() {
+//    $(this).closest("input")
+//    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
+//   });
+//   $('.spinner .btn:last-of-type').on('click', function() {
+//     $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
+//   });
+// })(jQuery);
+// });
