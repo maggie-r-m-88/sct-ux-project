@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-     <script src="/resources/demos/external/jquery-mousewheel/jquery.mousewheel.js"></script>
+
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
@@ -191,14 +191,14 @@
 
 
            <tr>
-               <th data-field="id">WO Code <i class="fa fa-sort-desc"></i></th>
-               <th data-field="name">Name <i class="fa fa-sort-desc"></i></th>
-               <th data-field="price">Create Timestamp Local<i class="fa fa-sort-desc"></i></th>
-               <th data-field="status">Status<i class="fa fa-sort-desc"></i></th>
-               <th data-field="serial">Serial #<i class="fa fa-sort-desc"></i></th>
-               <th data-field="serial">Program<i class="fa fa-sort-desc"></i></th>
-               <th data-field="model">Model<i class="fa fa-sort-desc"></i></th>
-               <th data-field="bounce">Bounce<i class="fa fa-sort-desc"></i></th>
+               <th data-field="id">WO Code<i class="fa fa-sort-desc"></i></th>
+               <th data-field="name">Name <i class="fa fa-sort-desc sortToggle"></i></th>
+               <th data-field="price">Create Timestamp Local<i class="fa fa-sort-desc sortToggle "></i></th>
+               <th data-field="status">Status<i class="fa fa-sort-desc sortToggle"></i></th>
+               <th data-field="serial">Serial #<i class="fa fa-sort-desc sortToggle"></i></th>
+               <th data-field="serial">Program<i class="fa fa-sort-desc sortToggle"></i></th>
+               <th data-field="model">Model<i class="fa fa-sort-desc sortToggle"></i></th>
+               <th data-field="bounce">Bounce<i class="fa fa-sort-desc sortToggle"></i></th>
            </tr>
 
        </thead>
@@ -813,8 +813,8 @@
 
 </div>
 <div style="float:left;margin-left: 20px;">
-  <b>Quick Add:</b>
-    <input  class="form-control work-order-views shortinput parts-select">
+  <!--<b>Quick Add:</b>-->
+    <input  class="form-control work-order-views shortinput parts-select" style="font-size:12px;" placeholder="Quick Add:">
 
   </div>
 </div>
@@ -892,13 +892,13 @@
 
                                    <th class="checkbox-sm-table" data-field="checkbox">
                           <input type="checkbox" class="checkbox"></th>
-                                   <th data-field="id">Part Type  <i class="fa fa-sort-desc"></i></th>
-                                   <th data-field="name">Part Number <i class="fa fa-sort-desc"></i></th>
-                                   <th data-field="price">Description <i class="fa fa-sort-desc"></i></th>
-                                  <th data-field="status">Quantity<i class="fa fa-sort-desc"></i></th>
-                                   <th data-field="bounce">Warrantable <i class="fa fa-sort-desc"></i></th>
-                                   <th data-field="price">Price <i class="fa fa-sort-desc"></i></th>
-                                   <th data-field="bounce">Default Problem <i class="fa fa-sort-desc"></i></th>
+                                   <th data-field="id">Part Type  <i class="fa fa-sort-desc sortToggle"></i></th>
+                                   <th data-field="name">Part Number <i class="fa fa-sort-desc  sortToggle"></i></th>
+                                   <th data-field="price">Description <i class="fa fa-sort-desc  sortToggle"></i></th>
+                                  <th data-field="status">Quantity<i class="fa fa-sort-desc  sortToggle"></i></th>
+                                   <th data-field="bounce">Warrantable <i class="fa fa-sort-desc  sortToggle"></i></th>
+                                   <th data-field="price">Price <i class="fa fa-sort-desc  sortToggle"></i></th>
+                                   <th data-field="bounce">Default Problem <i class="fa fa-sort-desc sortToggle"></i></th>
                                </tr>
                            </thead>
                            <tbody>
@@ -1047,16 +1047,16 @@
        <tr>
            <th class="checkbox-sm-table" data-field="checkbox">
   <input type="checkbox" ></th>
-           <th data-field="id">Part Type<i class="fa fa-sort-desc"></i></th>
+           <th data-field="id">Part Type<i class="fa fa-sort-desc sortToggle"></i></th>
            <th data-field="name">Part Number<i class="fa fa-sort-desc"></i></th>
-           <th data-field="price">Description<i class="fa fa-sort-desc"></i></th>
+           <th data-field="price">Description<i class="fa fa-sort-desc  sortToggle"></i></th>
         <!--   <th data-field="status">Quantity<i class="fa fa-sort-desc"></i></th>-->
-           <th data-field="serial">Serial ID<i class="fa fa-sort-desc"></i></th>
-           <th data-field="serial">Price<i class="fa fa-sort-desc"></i></th>
-           <th data-field="model">User Name<i class="fa fa-sort-desc"></i></th>
-           <th data-field="bounce">Create Timestamp<i class="fa fa-sort-desc"></i></th>
-           <th data-field="bounce">Warrantable<i class="fa fa-sort-desc"></i></th>
-           <th data-field="bounce">In Inventory<i class="fa fa-sort-desc"></i></th>
+           <th data-field="serial">Serial ID<i class="fa fa-sort-desc sortToggle"></i></th>
+           <th data-field="serial">Price<i class="fa fa-sort-desc sortToggle"></i></th>
+           <th data-field="model">User Name<i class="fa fa-sort-desc sortToggle"></i></th>
+           <th data-field="bounce">Create Timestamp<i class="fa fa-sort-desc  sortToggle"></i></th>
+           <th data-field="bounce">Warrantable<i class="fa fa-sort-desc  sortToggle"></i></th>
+           <th data-field="bounce">In Inventory<i class="fa fa-sort-desc  sortToggle"></i></th>
        </tr>
    </thead>
    <tbody>
@@ -1161,7 +1161,7 @@
 </ul>
 <div class="tab-content">
   <div class="tab-pane" id="1">
-    <table class="table table-condensed volumes small">
+    <table class="table table-condensed volumes small referenceTable" >
       <thead>
         <tr>
           <th>Update Time Local</th>
@@ -1225,7 +1225,7 @@
   <!--  <div class="product-table-console">
     <a href="#"><button>Add Attachment</button></a>
   </div>-->
-    <table class="table table-condensed small volumes">
+    <table class="table table-condensed small volumes referenceTable">
       <thead>
         <tr>
           <th class="attachment-table"> <button data-toggle="modal" href="#newAttachmentModal" ><i class="fa fa-paperclip"></i>New</button>
@@ -1281,7 +1281,7 @@
   </div>
   <div class="tab-pane" id="3">
 
-    <table class="table table-condensed small volumes">
+    <table class="table table-condensed small volumes referenceTable">
       <thead>
         <tr>
           <th class="attachment-table"> <button data-toggle="modal" href="#newNoteModal" ><i class="fa fa-pencil"></i>New</button>
@@ -1353,7 +1353,7 @@
 
 
   <div class="tab-pane" id="4">
-    <table class="table table-condensed volumes small">
+    <table class="table table-condensed volumes small referenceTable">
       <thead>
         <tr>
           <th>Work Order Code</th>

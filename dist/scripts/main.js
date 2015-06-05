@@ -56,8 +56,11 @@ $(".page-view").click(function(){
 });
 
 $("th").click(function(){
-
+  $(this).find('i').removeClass('sortToggle');
    $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
+ $(this).siblings().find('i').addClass('sortToggle');
+
+
 
 
 });
@@ -327,6 +330,7 @@ $(function() {
 ///quantity
 (function ($) {
   $('.spinner .btn:first-of-type').on('click', function() {
+    $(this).closest("input")
     $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
   });
   $('.spinner .btn:last-of-type').on('click', function() {
