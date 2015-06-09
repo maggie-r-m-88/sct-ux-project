@@ -174,13 +174,13 @@ color: white;
    height: 100%;
    background: $darkblue;
    min-width: 1000px;
-   //border: 2px solid red;
+
 }
 
 header {
  width:100%;
  background: $darkblue;
- min-width: 1000px;
+
  height: 50px;
  position:fixed;
  z-index: 10000;
@@ -265,9 +265,14 @@ text-decoration: underline;
 }
 
 
+
 .user-dashboard .dropdown-menu li{
  display: block;
  margin-left: 0;
+}
+
+.username-menu{
+  float: left;
 }
 #sidebar-wrapper {
    margin-left: -140px;

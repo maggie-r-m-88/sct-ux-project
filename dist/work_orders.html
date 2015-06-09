@@ -17,37 +17,33 @@
     <script src="scripts/vendor/modernizr.js"></script>
   </head>
   <body>
-<header>
-  <div id="header-logo">
-<img src="../images/SCTwhite.png"/>
+  <header>
+    <div id="header-logo"><img src="../images/SCTwhite.png"/>
+    </div>
+    <div class="user-dashboard">
+      <div class="username-menu dropdown">
+         <a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span id="username">Maggie Martin</span><i class="fa fa-angle-down"></i>
+         </a>
+         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+           <li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">Select Group</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">User Settings</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Preferences</a></li>
+           <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
 
-</div>
-  <div class="user-dashboard">
-    <div style="float:left" class="dropdown">
-<a class=" dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-<span id="username">Maggie Martin</span>
-<i class="fa fa-angle-down"></i>
-</a>
-<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-<li role="presentation"><a data-toggle="modal" role="menuitem" tabindex="-1" href="#myModal">Select Group</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#">User Settings</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Preferences</a></li>
-<li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
-
-</ul>
-
-
-
-</div>
-    <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
-    <a href="#"><li><i class="fa fa-cog"></i></li></a>
-  </div>
+         </ul>
+       </div>
+         <a href="#"><li><i class="fa fa-question-circle"></i></li></a>
+         <a href="#"><li><i class="fa fa-cog"></i></li></a>
+    </div>
 
   <div id="toggle-top" class="clearfix">
-    <button>Full Screen</button>
+  <button>Full Screen</button>
   </div>
-</header>
-    <div id="wrapper" class="active">
+
+  </header>
+
+
+  <div id="wrapper" class="active">
       <!--modal goes here-->
       <div id="myModal" class="modal fade">
               <div class="modal-dialog">
@@ -74,31 +70,28 @@
       <!--modal-->
         <!-- Sidebar -->
               <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-        <ul id="sidebar_menu" class="sidebar-nav">
-             <li class="sidebar-brand">
-               <a id="menu-toggle" href="#">
-                 <span id="main_icon"><i class="fa fa-angle-left"></i></span>
-               </a>
-             </li>
-        </ul>
+  <div id="sidebar-wrapper">
+      <ul id="sidebar_menu" class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a id="menu-toggle" href="#"><span id="main_icon"><i class="fa fa-angle-left"></i></span>
+          </a>
+        </li>
+      </ul>
 
-          <ul class="sidebar-nav-links">
-
-            <a href="index.html"><li >Dashboard</li></a>
+      <ul class="sidebar-nav-links">
+    <a href="index.html"><li >Dashboard</li></a>
             <a href="work_orders.html">  <li class="sidebar-active-tab">Work Orders</li></a>
             <a href="shipping.html">  <li>Shipping</li></a>
             <a href="#">  <li>Inventory</li></a>
             <a href="reporting.html">  <li>Reporting</li></a>
 
-          </ul>
-        </div>
+      </ul>
+  </div>
 
-        <!-- Page content -->
+<!-- Page content -->
   <div id="page-content-wrapper">
-
     <div class="tab-container">
-    <ul class="nav nav-tabs">
+      <ul class="nav nav-tabs">
            <li class="active"><a data-toggle="tab" href="#work-order-list"><i class="fa fa-list-alt"></i>Work Order List</a></a></li>
            <li><a data-toggle="tab" href="#search-form"><i class="fa fa-search"></i>Find Customer</a></li>
            <li><a data-toggle="tab" href="#"><i class="fa fa-file-o"></i>Create Work Order</a></li>
@@ -106,17 +99,13 @@
            <li><a data-toggle="tab" href="#sectionB"><i class="fa fa-exchange"></i>Quick Status</a></li>
 
 
-       </ul>
+      </ul>
     </div><!--end of tab container-->
 
-       <div class="tab-content">
-
-           <div id="work-order-list" class="tab-pane fade in active">
-             <div class="work-order-list-container">
-
-
-
-               <div class="work-order-list-console small">
+    <div class="tab-content"><!---Secondary Navigation tab content goes here-->
+      <div id="work-order-list" class="tab-pane fade in active">
+        <div class="work-order-list-container">
+            <div class="work-order-list-console small">
 
                 <div class="console-col-1">
 
@@ -133,8 +122,9 @@
 
            </ul>
          </div>
-               <div class="view-select"><p><b>View:</b>
-               <select class="form-control work-order-views small">
+        <div class="view-select">
+          <p><b>View:</b>
+            <select class="form-control work-order-views small">
                 <option value="one">Lenovo View</option>
                 <option value="two">All Work Orders</option>
                 <option value="three">Open Work Orders</option>
@@ -142,21 +132,22 @@
                 <option value="five">Ready for Repair</option>
              </select>
 
-           <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
-         </p>
+             <button id="search-popout" type="submit" class="btn btn-primary toggler small" data-prod-cat="1"><span><i class="fa fa-search"></i></span></button>
+          </p>
 
-               </div>
-               <div class="search-popout">
-                 <div class="btn-group btn-group-sm" role="group">
-                   <button type="submit" class="btn btn-default">Go</button>
-                 <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
-
-                 <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
+        </div>
+        <div class="search-popout">
+            <div class="btn-group btn-group-sm" role="group">
+                <button type="submit" class="btn btn-default">Go</button>
+                <button id="clear-search" type="submit" class="btn btn-default">Clear</button>
+                <button id="lock-search" class="btn btn-default"><i class="fa fa-unlock-alt" style="padding:2px;"></i></button>
                </div>
              </div>
-              </div>
+        </div>
 
       </div><!---end work work order list console-->
+
+
       <div class="console-col-2 small">
         <a href="#">Lenovo View</a>
         <a href="#">All Work Orders</a>
@@ -175,8 +166,6 @@
           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
           <td><span><i class="fa fa-search"></i></span><input type="text"></td>
-
-
           </tr>
 
 
