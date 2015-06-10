@@ -5,13 +5,14 @@
 //color pallette
 
 
-$darkblue: #1f487c;
-//$darkblue: #edf1ea;
-$superlightblue: #ebf1f8;
-//$superlightblue:#e9eaed;
+$dark-bg-color: #1f487c;
+//$dark-bg-color: #edf1ea;
 
-$lightblue: #337ab7;
-//$lightblue: #000;
+$light-bg-color: #ebf1f8;
+//$light-bg-color:#e9eaed;
+
+$med-color: #337ab7;
+//$med-color: #000;
 
 $tabactivelink: #2a74ba;
 //$tablinkhover: #a3b3bf;
@@ -61,7 +62,7 @@ $forestgreen: #6f988b;
 // Custom Styles
 body {
 //background: #fafafa;
-background: $superlightblue;
+background: $light-bg-color;
 //background:  #ebf1f8;
  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  color: #333;
@@ -167,14 +168,14 @@ color: white;
    padding-top: 40px;
    transition: all .4s ease 0s;
    height: 100%;
-   background: $darkblue;
+   background: $dark-bg-color;
    min-width: 1000px;
 
 }
 
 header {
  width:100%;
- background: $darkblue;
+ background: $dark-bg-color;
  height: 50px;
  position:fixed;
  z-index: 10000;
@@ -203,7 +204,7 @@ margin-right: 30px;
 border-bottom-left-radius: 8px;
 border-bottom-right-radius: 8px;
 color: white;
-background: $lightblue;
+background: $med-color;
 border: 1px;
 opacity: .8;
 }
@@ -328,7 +329,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
    background: linear-gradient(to right,  rgba(43,136,217,1) 0%,rgba(32,124,202,1) 30%,rgba(59,103,158,1) 100%); /* W3C */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2b88d9', endColorstr='#3b679e',GradientType=1 ); /* IE6-8 */
 
-   border-right: 2px solid  $darkblue;
+   border-right: 2px solid $dark-bg-color;
    border-radius: 2px;
 
 }
@@ -387,7 +388,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2571a4', end
 
 
 .sidebar-nav-links li:hover{
- background: $darkblue;
+ background: $dark-bg-color;
  border-top: 1px solid #373737;
  border-bottom: 1px solid #1A1A1A;
 opacity: .6;
@@ -398,7 +399,7 @@ box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
 }
 
 .sidebar-nav-links .sidebar-active-tab{
- background: $darkblue;
+ background: $dark-bg-color;
   border-top: 1px solid #373737;
      border-bottom: 1px solid #1A1A1A;
 opacity: 1;
@@ -422,7 +423,7 @@ box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
  width: 100%;
  height: auto;
  padding-left:0;
- background: $superlightblue;
+ background: $light-bg-color;
  margin-top: 20px;
 }
 
@@ -458,7 +459,7 @@ background: #fff;
  min-width: 760px;
  padding-left: 10px;
  margin-bottom: 8px;
- background-color: $darkblue;
+ background-color: $dark-bg-color;
 
 
 }
@@ -476,7 +477,7 @@ background: #fff;
 
 
 .product-table>li>a, #product-table>li>a{
-color: $lightblue;
+color: $med-color;
 transition: all 0.3s ease;
 border: 2px solid transparent;
 border-bottom: none;
@@ -488,14 +489,14 @@ border-bottom: none;
 #product-table>li.active>a{
  background: #fff;
  border:2px solid #ddd;
- color: $darkblue;
+ color: $dark-bg-color;
  border-bottom: none;
 
 }
 
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
  color: $tabactivelink;
- background: $superlightblue;
+ background: $light-bg-color;
 }
 
 .nav-tabs>li>a:hover{
@@ -504,7 +505,7 @@ border-bottom: none;
  border: 1px solid transparent;
 }
 .tab-content{
- background: $superlightblue;
+ background: $light-bg-color;
  margin-top: 0;
 
 }
@@ -732,10 +733,10 @@ padding: 10px 15px;
 .table-footer{
  overflow: auto;
  width: 100%;
- background: $superlightblue;
+ background: $light-bg-color;
 p{
  float: left;
- color: $lightblue;
+ color: $med-color;
  font-weight: bold;
  padding-top: 25px;
 }
@@ -767,6 +768,7 @@ button i{
 .work-order-info-grid{
 background: #fff;
  border-right: 2px solid #ddd;
+ border-left: 2px solid #ddd;
 border-top-left-radius: 3px;
 border-top-right-radius: 3px;
  width: 100%;
@@ -1110,7 +1112,7 @@ height: 250px;
 .refresher{
  position: absolute;
  font-size: 12px;
- font-color: $lightblue;
+ font-color: $med-color;
  padding: 5px 15px;
 a{
   display: inline;
@@ -1123,7 +1125,7 @@ a{
  font-size: 12px;
  padding: 5px 50%;
  line-height: 12px;
- font-color: $lightblue;
+ font-color: $med-color;
 
 }
 .line-graph-container img{
@@ -1373,7 +1375,7 @@ table .fa-sort, .fa-sort-desc, .fa-sort-asc{
  width: 900px;
 }
 .modal-content{
- background: $superlightblue;
+ background: $light-bg-color;
 }
 
 .modal-footer{
@@ -1437,7 +1439,7 @@ position: relative;
 .update-work-order-body{
 border-top: 4px solid #1f487c;
 margin-top: 0px;
-border-top: 4px solid $darkblue;
+border-top: 4px solid $dark-bg-color;
 
 }
 .progress-tabs>li.active>a:after{
@@ -1448,7 +1450,7 @@ border-top: 4px solid $darkblue;
  left: 40%;
  width: 0px;
  height: 0px;
- border-color: transparent transparent $darkblue;
+ border-color: transparent transparent $dark-bg-color;
  border-style: solid;
  border-width: 8px;
 }
@@ -1491,7 +1493,7 @@ float: left;
  }
 
  .current a{
- //  border-bottom: 3px solid $lightblue;
+
    color: #000;
    font-weight: bold;
    text-decoration: none;
