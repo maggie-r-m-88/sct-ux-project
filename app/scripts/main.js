@@ -53,8 +53,6 @@ $("th").click(function(){
  $(this).siblings().find('i').addClass('sortToggle');
 
 
-
-
 });
 
 
