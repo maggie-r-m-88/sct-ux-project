@@ -457,12 +457,7 @@ background: #fff;
  //border: 2px solid red;
 }
 
-.attachment-table button{
- text-transform: uppercase;
- color: $forestgreen;
- font-weight:bold;
 
-}
 .tab-container{
  width: 100%;
  height:auto;
@@ -576,12 +571,6 @@ text-indent: 0;
 tbody tr{
  transition: all 0.3s ease;
 }
-tbody tr:hover{
-//  background-color: #fce030;
-
-
-}
-
 
 tr:nth-child(even) {
    background-color: #f9f9f9;
@@ -619,6 +608,7 @@ select{
  color: $forestgreen;
  font-weight:bold;
  padding-right: 20px;
+ font-size: 17px;
 }
 
 
@@ -649,7 +639,7 @@ width: 100%;
  background: #f5f5f5;
  padding:8px;
  padding-left: 0;
-//  height: auto;
+
 margin: 0;
 }
 
@@ -1540,22 +1530,10 @@ background: transparent!important;
 color: #000;
 font-weight:bold;
 position: relative;
-
-//text-shadow: 4px 4px 20px rgba(150, 150, 150, 1);
-
-// background: $darkblue;
-// color: #fff;
-//border-right: 3px solid $darkblue;
-
-
-
 }
 .update-work-order-body{
-//border-top: 2px solid #7a7a7a;
-//border-top: 1px solid #ddd;
 border-top: 4px solid #1f487c;
 margin-top: 0px;
-
 border-top: 4px solid $darkblue;
 
 }

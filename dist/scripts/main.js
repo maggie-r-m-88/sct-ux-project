@@ -1,8 +1,10 @@
 
 $("#lock-search").click(function(e){
-  e.preventDefault();
-  $(this).find('i').toggleClass('fa-unlock-alt fa-lock');
 
+  e.preventDefault();
+
+  $(this).find('i').toggleClass('fa-unlock-alt fa-lock');
+  console.log("heloo");
 });
 
 $(".toggler").click(function(e){
@@ -43,17 +45,7 @@ $(document).ready(function(){
     });
 });
 
-$(document).ready(function(){
 
-  //$('#product-table a:first').tab('show');
-$(".page-view").click(function(){
-
-  $("#how-many").html($("#how-many").text() == 'Displaying 1-10 of 10 work orders' ? 'Displaying 1-5 of 10 work orders' : 'Displaying 1-10 of 10 work orders');
-  $('.cat'+$(this).attr('data-prod-cat')).toggle();
-
-
-});
-});
 
 $("th").click(function(){
   $(this).find('i').removeClass('sortToggle');
@@ -66,39 +58,6 @@ $("th").click(function(){
 });
 
 
-///checkbox editable text
-
-function divClicked() {
-    var divHtml = $(this).html();
-    var editableText = $("<input id=" + "changeInput" + "/>");
-    editableText.val(divHtml);
-    $(this).replaceWith(editableText);
-    editableText.focus();
-    // setup the blur event for this new textarea
-    editableText.blur(editableTextBlurred);
-}
-
-function editableTextBlurred() {
-    var html = $(this).val();
-    var viewableText = $("<div id=" + "changedInput" + "/>");
-    viewableText.html(html);
-    $(this).replaceWith(viewableText);
-    // setup the click event for this new div
-    viewableText.click(divClicked);
-}
-
-
-
-$(".checkbox").change(function() {
-    if(this.checked) {
-
-         $("#partQuantity").click(divClicked);
-
-
-
-    }
-
-});
 
 
 function prepareList() {
@@ -193,8 +152,6 @@ $('#queue-input-time li').on('click', function() {
 
         var allPanels = $('.update-work-order-body > section > dd')
 
-      //  var allTiles = $('.update-work-order-body > section > dt > a > .tiles').fadeIn();
-
         $('.update-work-order-body> section > dt > h3 > i').click(function() {
   $(this).parent().parent().next().toggle();
    $(this).toggleClass('fa-minus-circle fa-plus-circle');
@@ -259,7 +216,7 @@ $("#expand-status-info-table").click(function() {
 $( '#messages-select-all' ).click( function () {
    $( '#user-inbox input[type="checkbox"]' ).prop('checked', this.checked)
  });
-///pie chart svg
+
 
 (function ($, document) {
   $.fn.easyaspie = function () {
@@ -326,22 +283,6 @@ $(function() {
    $( ".line-graph" ).draggable();
    $(".inbox-size").draggable();
  });
-
-//  $(".checkbox").change(function(){
-//
-// ///quantity
-// (function ($) {
-//
-//
-//  $('.spinner .btn:first-of-type').on('click', function() {
-//    $(this).closest("input")
-//    $('.spinner input').val( parseInt($('.spinner input').val(), 10) + 1);
-//   });
-//   $('.spinner .btn:last-of-type').on('click', function() {
-//     $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
-//   });
-// })(jQuery);
-// });
 
 $(".line-graph .panel-heading i").click(function(){
 
