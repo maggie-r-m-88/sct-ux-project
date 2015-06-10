@@ -48,6 +48,7 @@ $(document).ready(function(){
 
 
 $("th").click(function(){
+
   $(this).find('i').removeClass('sortToggle');
    $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
  $(this).siblings().find('i').addClass('sortToggle');

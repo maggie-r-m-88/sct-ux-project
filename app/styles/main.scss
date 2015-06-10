@@ -105,8 +105,7 @@ background: $superlightblue;
 
 #login-console-container img{
 height: 100%;
-
- display: inline-block;
+display: inline-block;
 
 
 }
@@ -115,7 +114,6 @@ height: 100%;
  height: 230px;
  width: 405px;
  position: absolute;
-
  display: inline-block;
 
 }
@@ -127,15 +125,13 @@ height: 100%;
 
 }
 #login-console .form-horizontal{
-
  min-width: 600px;
  margin-top: 30px;
 }
 
 
 #login-console .form-group{
-
-margin-left: 15px;
+ margin-left: 15px;
 }
 
 #login-help{
@@ -168,8 +164,7 @@ color: white;
 }
 #wrapper {
    padding-left: 40px;
-  padding-top: 40px;
-
+   padding-top: 40px;
    transition: all .4s ease 0s;
    height: 100%;
    background: $darkblue;
@@ -180,12 +175,10 @@ color: white;
 header {
  width:100%;
  background: $darkblue;
-
  height: 50px;
  position:fixed;
  z-index: 10000;
  top:0;
-
  left:0;
 
 }
@@ -196,6 +189,7 @@ header {
 .slide-up{
  margin-top: -59px;
 }
+
 button:focus {outline:0;}
 //toggle top
 #toggle-top{
@@ -400,7 +394,7 @@ opacity: .6;
 -webkit-box-shadow: -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
 -moz-box-shadow:    -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
 box-shadow:         -3px 3px 16px 0px rgba(50, 50, 50, 0.75);
-//mixin
+
 }
 
 .sidebar-nav-links .sidebar-active-tab{
@@ -476,20 +470,17 @@ background: #fff;
 
 .nav-tabs>li>a{
  color: $tabinactivecolor;
-
  transition: all 0.3s ease;
 
 }
 
 
 .product-table>li>a, #product-table>li>a{
- //color:#5e686f;
- color: $lightblue;
- transition: all 0.3s ease;
+color: $lightblue;
+transition: all 0.3s ease;
 border: 2px solid transparent;
 border-bottom: none;
 
-//border: 2px solid red;
 }
 
 .product-table>li.empty>a{ color:#5e686f;}
@@ -498,7 +489,6 @@ border-bottom: none;
  background: #fff;
  border:2px solid #ddd;
  color: $darkblue;
-
  border-bottom: none;
 
 }
@@ -532,9 +522,6 @@ border-bottom: none;
 
 
 }
-#parts-list-tab{
-  border: 2px solid red;
-}
 
 
 table{
@@ -544,7 +531,9 @@ table{
 .cat1, .cat3{
 background: #eee;
 border: 1px solid #ccc;
+
 i{  position: absolute; padding: 5px;}
+
 .fa-search{
   opacity: .4;
 }
@@ -631,7 +620,6 @@ select{
 
 .work-order-list-console{
 height: 35px;
-
 width: 100%;
 }
 
@@ -639,15 +627,12 @@ width: 100%;
  background: #f5f5f5;
  padding:8px;
  padding-left: 0;
-
-margin: 0;
+ margin: 0;
 }
 
 .console-col-1{
-
  width:100%;
  height: 35px;
-
  float:left;
 }
 .console-col-2{
@@ -742,15 +727,8 @@ position: absolute;
 padding: 10px 15px;
 
 }
-.update-view{
- width: 150px;
- display: inline;
 
-}
-#small-search-button{
- position: absolute;
- margin-left: -140pxpx;
-}
+
 .table-footer{
  overflow: auto;
  width: 100%;
@@ -788,9 +766,7 @@ button i{
 
 .work-order-info-grid{
 background: #fff;
-
-   border-left: 2px solid #ddd;
-   border-right: 2px solid #ddd;
+ border-right: 2px solid #ddd;
 border-top-left-radius: 3px;
 border-top-right-radius: 3px;
  width: 100%;
@@ -802,7 +778,6 @@ padding: 5px;
 
 }
 .action-button-container{
-
  padding: 10px 55px;
  width: 100%;
  height: auto;
@@ -821,7 +796,6 @@ padding: 5px;
 #action-buttons{
  width: 100%;
  overflow: visible;
-
  margin-left: auto;
  margin-right: auto;
 }
@@ -854,7 +828,7 @@ float:left;
 
   margin-top:40px;
 margin-left: 14%;
-  //line-height:14px;
+
 }
 .radio{
   display:inline;
@@ -917,19 +891,6 @@ border-top:none;
 
 }
 
-.action-panel{
- background:none;
- border:none;
- border-top:2px solid #ddd;
- padding-top: 10px;
-}
-
-.grid-panel-link{
- text-transform: none;
- color: #337ab7;
-
- padding:0 25px;
-}
 .current-link{
  text-decoration:underline;
 
@@ -937,31 +898,12 @@ border-top:none;
 .panel-title>a{
  color: #337ab7;
 }
-.grid-panel-button{
- //text-transform: uppercase;
- margin-top: -2px;
- color: $forestgreen;
-margin: 0 20px;
-background: rgba(237,237,237,1);
-background: -moz-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(237,237,237,1)), color-stop(77%, rgba(246,246,246,1)), color-stop(100%, rgba(255,255,255,1)));
-background: -webkit-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
-background: -o-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
-background: -ms-linear-gradient(top, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
-background: linear-gradient(to bottom, rgba(237,237,237,1) 0%, rgba(246,246,246,1) 77%, rgba(255,255,255,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
-border: 1px solid #bbb;
- padding:3px;
- font-weight:bold;
- i{
-   padding-right:5px;
- }
-}
+
 #parts-list-console{
  background: #fff;
  border-left: 2px solid #ccc;
  border-right: 2px solid #ccc;
-overflow: auto;
+ overflow: auto;
  width: 100%;
  padding-left: 40px;
  font-size: 12px;
@@ -1371,23 +1313,6 @@ padding: 20px;
  margin-left: 10px;
 
 }
-.angle-form{
- font-size: 12px;
- color: black;
- padding-left: 10px;
-}
-.no-border{
- border-bottom: none;
-}
-
-footer{
- border: 2px solid red;
- height: 40px;
- width: 100%;
-}
-
-
-
 
 .dropdown-toggle-item{
   font-weight: bold;
@@ -1427,7 +1352,7 @@ button:focus {outline:0;}
 
 table .fa-sort, .fa-sort-desc, .fa-sort-asc{
  padding: 3px 5px;
- //display: none;
+
 
 }
 
@@ -1454,31 +1379,9 @@ table .fa-sort, .fa-sort-desc, .fa-sort-asc{
 .modal-footer{
  text-align:center;
 }
-.bookmarks{
-float: left;
-font-size: 12px;
-border: 2px solid red;
 
 
-}
 
-.bookmarks li{
- padding: 3px;
- display: inline;
-}
-
-
-.asterisk_input:before {
-content:"I";
-color: #c12e2a;
-
-position: absolute;
-margin: 0px 0px 0px 0px;
-font-size: large;
-//padding: 0 5px 0 0;
-margin-top:-2px;
-position:absolute;
- }
  input:required,
  textarea:required {
    border-left: 2px solid #c12e2a !important;
@@ -1563,23 +1466,7 @@ border-top: 4px solid $darkblue;
   border-width: 10px;
 
 }
-//
-// #triage{background: #b3dba3; }
-// #progress-1:hover{
-// background:#f5e8a3;}
-// #progress-2:hover, #progress-4:hover{
-// background: #f2dede;
 
-//   background-color: #b3dba3;
-//   background-color: #f5e8a3;
-//   background-color: #f3884f;
-
-//   color:#66c294;
-//   color: #f13737;
-//   color: #f17837;
-//   color: #6232f1;
-
-// }
 .queue-input, .find-input {
 float: left;
 
